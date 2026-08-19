@@ -442,7 +442,11 @@
 
 <header>
 
-    <img src="mentirosos.png" alt="NewGenesis Corporation" class="logo">
+    <img
+        src="IMG-20260819-WA0053.jpg"
+        alt="NewGenesis Corporation"
+        class="logo"
+    >
 
     <h1>NEWGENESIS</h1>
 
@@ -480,9 +484,6 @@
 
 <main>
 
-
-    <!-- INÍCIO -->
-
     <section id="inicio" class="tela ativa">
 
         <h2>
@@ -499,7 +500,6 @@
             descobertas científicas em possibilidades reais.
         </p>
 
-
         <div class="banner">
 
             <h3>
@@ -512,11 +512,9 @@
 
         </div>
 
-
         <h3>
             NOSSOS AVANÇOS
         </h3>
-
 
         <div class="blocos">
 
@@ -533,7 +531,6 @@
 
             </div>
 
-
             <div class="bloco">
 
                 <h4>
@@ -546,7 +543,6 @@
                 </p>
 
             </div>
-
 
             <div class="bloco">
 
@@ -563,17 +559,14 @@
 
         </div>
 
-
         <div class="ano">
             NEWGENESIS CORPORATION • 1983
         </div>
-
 
         <p class="aviso">
             Alguns conteúdos e projetos encontram-se restritos
             aos departamentos autorizados.
         </p>
-
 
         <div class="pista">
 
@@ -585,8 +578,6 @@
 
     </section>
 
-
-    <!-- EMPRESA -->
 
     <section id="empresa" class="tela">
 
@@ -618,8 +609,6 @@
 
     </section>
 
-
-    <!-- PESQUISA -->
 
     <section id="pesquisa" class="tela">
 
@@ -657,8 +646,6 @@
     </section>
 
 
-    <!-- DIREÇÃO -->
-
     <section id="direcao" class="tela">
 
         <h2>DIREÇÃO E PESQUISA</h2>
@@ -671,7 +658,6 @@
             dos projetos internos.
         </p>
 
-
         <h4>RICHARD MELO</h4>
 
         <p>
@@ -679,7 +665,6 @@
             Atua na coordenação dos programas científicos
             e experimentais da empresa.
         </p>
-
 
         <h4>CARLOS DE SOUZA</h4>
 
@@ -689,15 +674,12 @@
             A causa de sua morte permanece desconhecida.
         </p>
 
-
         <button class="voltar" onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
         </button>
 
     </section>
 
-
-    <!-- CONTATO -->
 
     <section id="contato" class="tela">
 
@@ -732,8 +714,6 @@
     </section>
 
 
-    <!-- NG-001 -->
-
     <section id="arquivo" class="tela">
 
         <h2>DOCUMENTAÇÃO INTERNA</h2>
@@ -759,7 +739,6 @@
             ao Departamento de Pesquisa e Desenvolvimento.
         </p>
 
-
         <div class="arquivo-link">
 
             <p>
@@ -776,13 +755,11 @@
 
         </div>
 
-
         <button class="voltar" onclick="abrirTela('inicio')">
             ← VOLTAR
         </button>
 
     </section>
-
 
 </main>
 
@@ -793,8 +770,6 @@
 
 </footer>
 
-
-<!-- FRASES QUE APARECEM ÀS 01:20 -->
 
 <div class="corrompido" id="corrompido">
 
@@ -830,7 +805,6 @@
         FRACASSO
     </div>
 
-
     <div class="mensagem-central">
 
         Você veio pra investigar?
@@ -856,11 +830,6 @@
 
 <script>
 
-let temporizador;
-
-
-/* TROCA DE TELAS */
-
 function abrirTela(nome) {
 
     const telas = document.querySelectorAll(".tela");
@@ -872,11 +841,8 @@ function abrirTela(nome) {
     document.getElementById(nome).classList.add("ativa");
 
     window.scrollTo(0, 0);
-
 }
 
-
-/* ATIVAÇÃO DAS 01:20 */
 
 function verificarHorario() {
 
@@ -885,7 +851,6 @@ function verificarHorario() {
     const horas = agora.getHours();
 
     const minutos = agora.getMinutes();
-
 
     if (horas === 1 && minutos === 20) {
 
@@ -897,8 +862,6 @@ function verificarHorario() {
 
 }
 
-
-/* VERIFICA O RELÓGIO A CADA SEGUNDO */
 
 setInterval(verificarHorario, 1000);
 
