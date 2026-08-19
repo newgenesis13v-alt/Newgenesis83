@@ -7,133 +7,200 @@
     <title>NewGenesis Corporation</title>
 
     <style>
+
+        /* FUNDO */
+
         body {
             margin: 0;
-            background: #e8e3d3;
+            background: #ffffff;
             color: #202020;
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        /* HEADER */
+
         header {
-            background: #252b2f;
-            color: #f2ead5;
-            padding: 40px 20px;
+            background: #174a3a;
+            color: #ffffff;
+            padding: 45px 20px;
             text-align: center;
-            border-bottom: 8px solid #b49a52;
+            border-bottom: 8px solid #c5a95b;
         }
 
         header h1 {
             margin: 0;
-            font-size: 42px;
-            letter-spacing: 6px;
+            font-size: 44px;
+            letter-spacing: 7px;
         }
 
         header p {
-            margin: 10px 0 0;
+            margin: 12px 0 0;
             font-size: 13px;
             letter-spacing: 3px;
         }
 
+        /* MENU */
+
         nav {
-            background: #d2c08a;
+            background: #f2f2f2;
             padding: 15px 10px;
             text-align: center;
+            border-bottom: 1px solid #cccccc;
         }
 
         nav button {
-            background: #252b2f;
-            color: #f2ead5;
+            background: #174a3a;
+            color: #ffffff;
             border: none;
-            padding: 11px 14px;
+            padding: 11px 15px;
             margin: 4px;
             font-weight: bold;
             cursor: pointer;
+            transition: 0.2s;
         }
 
         nav button:hover {
-            background: #3b4449;
+            background: #24664f;
+            transform: translateY(-2px);
         }
+
+        /* ÁREA PRINCIPAL */
 
         main {
             max-width: 850px;
-            margin: 30px auto;
+            margin: 35px auto;
             padding: 0 20px;
         }
 
+        /* TELAS */
+
         .tela {
             display: none;
-            background: #f5f0df;
-            border: 2px solid #252b2f;
-            padding: 30px;
+            background: #ffffff;
+            border: 2px solid #174a3a;
+            padding: 35px;
             min-height: 350px;
             box-sizing: border-box;
         }
 
         .tela.ativa {
             display: block;
+            animation: aparecer 0.45s ease;
         }
 
+        /* ANIMAÇÃO */
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* TÍTULOS */
+
         .tela h2 {
-            color: #252b2f;
+            color: #174a3a;
             font-size: 28px;
-            border-bottom: 3px solid #b49a52;
+            border-bottom: 3px solid #c5a95b;
             padding-bottom: 12px;
         }
 
         .tela h3 {
-            color: #252b2f;
+            color: #174a3a;
             margin-top: 30px;
         }
 
         .tela h4 {
-            color: #252b2f;
-            margin-bottom: 5px;
+            color: #174a3a;
             margin-top: 25px;
+            margin-bottom: 5px;
         }
 
+        /* BOTÃO VOLTAR */
+
         .voltar {
-            background: #252b2f;
-            color: #f2ead5;
+            background: #174a3a;
+            color: #ffffff;
             border: none;
             padding: 12px 20px;
             margin-top: 30px;
             font-weight: bold;
             cursor: pointer;
+            transition: 0.2s;
         }
 
+        .voltar:hover {
+            background: #24664f;
+        }
+
+        /* RODAPÉ */
+
         footer {
-            background: #252b2f;
-            color: #f2ead5;
+            background: #174a3a;
+            color: #ffffff;
             text-align: center;
             padding: 25px;
             margin-top: 30px;
             font-size: 12px;
         }
+
     </style>
 </head>
 
 <body>
 
 <header>
+
     <h1>NEWGENESIS</h1>
-    <p>CIÊNCIA • DESENVOLVIMENTO • FUTURO</p>
+
+    <p>
+        CIÊNCIA • DESENVOLVIMENTO • FUTURO
+    </p>
+
 </header>
 
+
 <nav>
-    <button onclick="abrirTela('inicio')">INÍCIO</button>
-    <button onclick="abrirTela('empresa')">A EMPRESA</button>
-    <button onclick="abrirTela('pesquisa')">PESQUISA</button>
-    <button onclick="abrirTela('direcao')">DIREÇÃO</button>
-    <button onclick="abrirTela('contato')">CONTATO</button>
+
+    <button onclick="abrirTela('inicio')">
+        INÍCIO
+    </button>
+
+    <button onclick="abrirTela('empresa')">
+        A EMPRESA
+    </button>
+
+    <button onclick="abrirTela('pesquisa')">
+        PESQUISA
+    </button>
+
+    <button onclick="abrirTela('direcao')">
+        DIREÇÃO
+    </button>
+
+    <button onclick="abrirTela('contato')">
+        CONTATO
+    </button>
+
 </nav>
+
 
 <main>
 
-    <!-- TELA INICIAL -->
+
+    <!-- INÍCIO -->
 
     <section id="inicio" class="tela ativa">
 
-        <h2>Bem-vindo à NewGenesis</h2>
+        <h2>
+            Bem-vindo à NewGenesis
+        </h2>
 
         <p>
             A NewGenesis Corporation dedica-se ao desenvolvimento
@@ -145,7 +212,9 @@
             descobertas científicas em possibilidades reais.
         </p>
 
-        <h3>UMA NOVA ERA COMEÇA AQUI.</h3>
+        <h3>
+            UMA NOVA ERA COMEÇA AQUI.
+        </h3>
 
         <p>
             Utilize o menu acima para conhecer nossa empresa.
@@ -154,11 +223,13 @@
     </section>
 
 
-    <!-- TELA EMPRESA -->
+    <!-- EMPRESA -->
 
     <section id="empresa" class="tela">
 
-        <h2>A EMPRESA</h2>
+        <h2>
+            A EMPRESA
+        </h2>
 
         <p>
             Fundada com o objetivo de expandir os limites da ciência,
@@ -168,28 +239,38 @@
 
         <p>
             Nossa missão é simples:
-            <strong>criar hoje aquilo que será necessário amanhã.</strong>
+            <strong>
+                criar hoje aquilo que será necessário amanhã.
+            </strong>
         </p>
 
-        <h3>NOSSA MISSÃO</h3>
+        <h3>
+            NOSSA MISSÃO
+        </h3>
 
         <p>
             Desenvolver soluções científicas capazes de transformar
             a sociedade e abrir novos caminhos para o futuro.
         </p>
 
-        <button class="voltar" onclick="abrirTela('inicio')">
+        <button
+            class="voltar"
+            onclick="abrirTela('inicio')">
+
             ← VOLTAR AO INÍCIO
+
         </button>
 
     </section>
 
 
-    <!-- TELA PESQUISA -->
+    <!-- PESQUISA -->
 
     <section id="pesquisa" class="tela">
 
-        <h2>PESQUISA E DESENVOLVIMENTO</h2>
+        <h2>
+            PESQUISA E DESENVOLVIMENTO
+        </h2>
 
         <p>
             Nossos laboratórios trabalham continuamente em projetos
@@ -202,27 +283,37 @@
             de segurança e confidencialidade.
         </p>
 
-        <h3>LABORATÓRIOS</h3>
+        <h3>
+            LABORATÓRIOS
+        </h3>
 
         <p>
             Pesquisadores e engenheiros trabalham diariamente para
             transformar descobertas científicas em aplicações reais.
         </p>
 
-        <button class="voltar" onclick="abrirTela('inicio')">
+        <button
+            class="voltar"
+            onclick="abrirTela('inicio')">
+
             ← VOLTAR AO INÍCIO
+
         </button>
 
     </section>
 
 
-    <!-- TELA DIREÇÃO -->
+    <!-- DIREÇÃO -->
 
     <section id="direcao" class="tela">
 
-        <h2>DIREÇÃO E PESQUISA</h2>
+        <h2>
+            DIREÇÃO E PESQUISA
+        </h2>
 
-        <h4>BENJAMIM CROSS</h4>
+        <h4>
+            BENJAMIM CROSS
+        </h4>
 
         <p>
             Diretor Executivo da NewGenesis Corporation.
@@ -230,7 +321,10 @@
             dos projetos internos.
         </p>
 
-        <h4>RICHARD MELO</h4>
+
+        <h4>
+            RICHARD MELO
+        </h4>
 
         <p>
             Diretor de Pesquisa e Desenvolvimento.
@@ -238,7 +332,10 @@
             e experimentais da empresa.
         </p>
 
-        <h4>CARLOS DE SOUZA</h4>
+
+        <h4>
+            CARLOS DE SOUZA
+        </h4>
 
         <p>
             Pesquisador e membro da equipe de desenvolvimento.
@@ -246,21 +343,30 @@
             A causa de sua morte permanece desconhecida.
         </p>
 
-        <button class="voltar" onclick="abrirTela('inicio')">
+
+        <button
+            class="voltar"
+            onclick="abrirTela('inicio')">
+
             ← VOLTAR AO INÍCIO
+
         </button>
 
     </section>
 
 
-    <!-- TELA CONTATO -->
+    <!-- CONTATO -->
 
     <section id="contato" class="tela">
 
-        <h2>CONTATO</h2>
+        <h2>
+            CONTATO
+        </h2>
 
         <p>
-            <strong>NEWGENESIS CORPORATION</strong>
+            <strong>
+                NEWGENESIS CORPORATION
+            </strong>
         </p>
 
         <p>
@@ -271,7 +377,9 @@
             Telefone: (000) 0000-1983
         </p>
 
-        <h3>HORÁRIO DE ATENDIMENTO</h3>
+        <h3>
+            HORÁRIO DE ATENDIMENTO
+        </h3>
 
         <p>
             Segunda a sexta-feira
@@ -281,16 +389,24 @@
             08:00 — 17:00
         </p>
 
-        <button class="voltar" onclick="abrirTela('inicio')">
+        <button
+            class="voltar"
+            onclick="abrirTela('inicio')">
+
             ← VOLTAR AO INÍCIO
+
         </button>
 
     </section>
 
+
 </main>
 
+
 <footer>
+
     NEWGENESIS CORPORATION • TODOS OS DIREITOS RESERVADOS
+
 </footer>
 
 
@@ -301,15 +417,20 @@ function abrirTela(nome) {
     const telas = document.querySelectorAll(".tela");
 
     telas.forEach(function(tela) {
+
         tela.classList.remove("ativa");
+
     });
 
-    document.getElementById(nome).classList.add("ativa");
+    document
+        .getElementById(nome)
+        .classList.add("ativa");
 
     window.scrollTo(0, 0);
+
 }
 
 </script>
 
 </body>
-        </html>
+    </html>
