@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fratturato </title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            background: #000;
+            color: #ddd;
+            font-family: monospace;
+        }
+
+        .arquivo {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: normal;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .status {
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        p {
+            margin: 22px 0;
+            line-height: 1.6;
+        }
+
+        .c {
+            color: #bbb;
+        }
+
+        .b {
+            color: #888;
+        }
+
+        .silencio {
+            color: #444;
+            margin: 35px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="arquivo">
+
+    <h1>?????????/h1>
+
+    <div class="status">
+        ARQUIVO: CARLOS DE SOUZA<br>
+        STATUS: falecido
+    </div>
+
+    <p class="c"><b>C:</b> Você disse que eu era importante para a NewGenesis.</p>
+
+    <p class="b"><b>B:</b> Eu disse que você era útil.</p>
+
+    <p class="c"><b>C:</b> Então é isso? Depois de iz?</p>
+
+    <p class="b"><b>B:</b> Você falhou.</p>
+
+    <p class="c"><b>C:</b> Eu tentei avisar você. Os testes estão indo longe demais.</p>
+
+    <p class="b"><b>B:</b> E você acha que eu não sei disso?</p>
+
+    <p class="c"><b>C:</b> Benjamim... isso não é mais sobre a empresa.</p>
+
+    <p class="b"><b>B:</b> Nunca foi.</p>
+
+    <p class="c"><b>C:</b> Eu não vou continuar.</p>
+
+    <p class="b"><b>B:</b> Então você finalmente entendeu.</p>
+
+    <p class="c"><b>C:</b> Entendi o quê?</p>
+
+    <p class="b"><b>B:</b> Que pessoas fracas não podem decidir o futuro.</p>
+
+    <p class="c"><b>C:</b> Fraco?</p>
+
+    <p class="b"><b>B:</b> Você hesitou. Questionou. Teve medo.</p>
+
+    <p class="c"><b>C:</b> Eu tive consciência.</p>
+
+    <p class="b"><b>B:</b> Não. Você teve medo.</p>
+
+    <p class="c"><b>C:</b> Você vai mesmo fazer isso?</p>
+
+    <p class="b"><b>B:</b> Carlos, olhe para você. Você nem consegue ficar diante de mim e ainda acha que pode enfrentar o que estamos construindo.</p>
+
+    <p class="c"><b>C:</b> Você está cometendo um erro.</p>
+
+    <p class="b"><b>B:</b> Talvez.</p>
+
+    <p class="c"><b>C:</b> Eles vão descobrir.</p>
+
+    <p class="b"><b>B:</b> Quem?</p>
+
+    <p class="c"><b>C:</b> Todos.</p>
+
+    <p class="b"><b>B:</b> Eles vão descobrir apenas aquilo que eu permitir.</p>
+
+    <p class="c"><b>C:</b> Você é um monstro.</p>
+
+    <p class="b"><b>B:</b> E você é fraco.</p>
+
+    <p class="c"><b>C:</b> Eu espero que um dia alguém faça você pagar por isso.</p>
+
+    <p class="b"><b>B:</b> Eu também.</p>
+
+    <p class="c"><b>C:</b> ...O que isso significa?</p>
+
+    <p class="b"><b>B:</b> Significa que você já não faz parte do futuro.</p>
+
+    <p class="c"><b>C:</b> Benjamim...</p>
+
+    <p class="b"><b>B:</b> Adeus, Carlos.</p>
+
+    <div class="silencio">
+        [ SILÊNCIO ]
+    </div>
+
+    <p class="b"><b>B:</b> Agora podemos continuar.</p>
+
+</div>
+
+</body>
+</html>
