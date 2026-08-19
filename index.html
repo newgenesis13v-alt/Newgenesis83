@@ -19,7 +19,7 @@
             color: #f2ead5;
             padding: 40px 20px;
             text-align: center;
-            border-bottom: 8px solid #c5a95b;
+            border-bottom: 8px solid #b49a52;
         }
 
         header h1 {
@@ -29,72 +29,74 @@
         }
 
         header p {
-            margin-top: 10px;
-            font-size: 14px;
-            letter-spacing: 2px;
+            margin: 10px 0 0;
+            font-size: 13px;
+            letter-spacing: 3px;
         }
 
         nav {
-            background: #c5a95b;
+            background: #d2c08a;
             padding: 15px 10px;
             text-align: center;
         }
 
         nav button {
-            background: none;
+            background: #252b2f;
+            color: #f2ead5;
             border: none;
-            color: #252b2f;
+            padding: 11px 14px;
+            margin: 4px;
             font-weight: bold;
-            margin: 5px 8px;
-            font-size: 14px;
             cursor: pointer;
         }
 
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 30px 20px;
+        nav button:hover {
+            background: #3b4449;
         }
 
-        .page {
+        main {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .tela {
+            display: none;
             background: #f5f0df;
             border: 2px solid #252b2f;
             padding: 30px;
-            display: none;
+            min-height: 350px;
+            box-sizing: border-box;
         }
 
-        .page.active {
+        .tela.ativa {
             display: block;
         }
 
-        h2 {
+        .tela h2 {
             color: #252b2f;
             font-size: 28px;
-            margin-top: 0;
+            border-bottom: 3px solid #b49a52;
+            padding-bottom: 12px;
         }
 
-        h3 {
+        .tela h3 {
             color: #252b2f;
+            margin-top: 30px;
         }
 
-        h4 {
+        .tela h4 {
             color: #252b2f;
-            margin-top: 25px;
             margin-bottom: 5px;
-        }
-
-        .linha {
-            border: none;
-            border-top: 2px solid #c5a95b;
-            margin: 25px 0;
+            margin-top: 25px;
         }
 
         .voltar {
-            margin-top: 30px;
             background: #252b2f;
             color: #f2ead5;
             border: none;
             padding: 12px 20px;
+            margin-top: 30px;
             font-weight: bold;
             cursor: pointer;
         }
@@ -104,8 +106,8 @@
             color: #f2ead5;
             text-align: center;
             padding: 25px;
-            font-size: 12px;
             margin-top: 30px;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -118,18 +120,18 @@
 </header>
 
 <nav>
-    <button onclick="mostrarPagina('inicio')">INÍCIO</button>
-    <button onclick="mostrarPagina('empresa')">A EMPRESA</button>
-    <button onclick="mostrarPagina('pesquisa')">PESQUISA</button>
-    <button onclick="mostrarPagina('direcao')">DIREÇÃO</button>
-    <button onclick="mostrarPagina('contato')">CONTATO</button>
+    <button onclick="abrirTela('inicio')">INÍCIO</button>
+    <button onclick="abrirTela('empresa')">A EMPRESA</button>
+    <button onclick="abrirTela('pesquisa')">PESQUISA</button>
+    <button onclick="abrirTela('direcao')">DIREÇÃO</button>
+    <button onclick="abrirTela('contato')">CONTATO</button>
 </nav>
 
 <main>
 
-    <!-- INÍCIO -->
+    <!-- TELA INICIAL -->
 
-    <section id="inicio" class="page active">
+    <section id="inicio" class="tela ativa">
 
         <h2>Bem-vindo à NewGenesis</h2>
 
@@ -143,20 +145,18 @@
             descobertas científicas em possibilidades reais.
         </p>
 
-        <hr class="linha">
-
         <h3>UMA NOVA ERA COMEÇA AQUI.</h3>
 
         <p>
-            Explore nossas áreas de atuação através do menu acima.
+            Utilize o menu acima para conhecer nossa empresa.
         </p>
 
     </section>
 
 
-    <!-- EMPRESA -->
+    <!-- TELA EMPRESA -->
 
-    <section id="empresa" class="page">
+    <section id="empresa" class="tela">
 
         <h2>A EMPRESA</h2>
 
@@ -171,25 +171,23 @@
             <strong>criar hoje aquilo que será necessário amanhã.</strong>
         </p>
 
-        <hr class="linha">
-
-        <h3>MISSÃO</h3>
+        <h3>NOSSA MISSÃO</h3>
 
         <p>
             Desenvolver soluções científicas capazes de transformar
             a sociedade e abrir novos caminhos para o futuro.
         </p>
 
-        <button class="voltar" onclick="mostrarPagina('inicio')">
-            ← VOLTAR
+        <button class="voltar" onclick="abrirTela('inicio')">
+            ← VOLTAR AO INÍCIO
         </button>
 
     </section>
 
 
-    <!-- PESQUISA -->
+    <!-- TELA PESQUISA -->
 
-    <section id="pesquisa" class="page">
+    <section id="pesquisa" class="tela">
 
         <h2>PESQUISA E DESENVOLVIMENTO</h2>
 
@@ -204,25 +202,23 @@
             de segurança e confidencialidade.
         </p>
 
-        <hr class="linha">
-
-        <h3>LABORATÓRIOS NEWGENESIS</h3>
+        <h3>LABORATÓRIOS</h3>
 
         <p>
-            Nossos pesquisadores trabalham diariamente para transformar
-            descobertas científicas em aplicações reais.
+            Pesquisadores e engenheiros trabalham diariamente para
+            transformar descobertas científicas em aplicações reais.
         </p>
 
-        <button class="voltar" onclick="mostrarPagina('inicio')">
-            ← VOLTAR
+        <button class="voltar" onclick="abrirTela('inicio')">
+            ← VOLTAR AO INÍCIO
         </button>
 
     </section>
 
 
-    <!-- DIREÇÃO -->
+    <!-- TELA DIREÇÃO -->
 
-    <section id="direcao" class="page">
+    <section id="direcao" class="tela">
 
         <h2>DIREÇÃO E PESQUISA</h2>
 
@@ -250,16 +246,16 @@
             A causa de sua morte permanece desconhecida.
         </p>
 
-        <button class="voltar" onclick="mostrarPagina('inicio')">
-            ← VOLTAR
+        <button class="voltar" onclick="abrirTela('inicio')">
+            ← VOLTAR AO INÍCIO
         </button>
 
     </section>
 
 
-    <!-- CONTATO -->
+    <!-- TELA CONTATO -->
 
-    <section id="contato" class="page">
+    <section id="contato" class="tela">
 
         <h2>CONTATO</h2>
 
@@ -275,14 +271,18 @@
             Telefone: (000) 0000-1983
         </p>
 
-        <hr class="linha">
+        <h3>HORÁRIO DE ATENDIMENTO</h3>
 
         <p>
-            © 1983 NewGenesis Corporation
+            Segunda a sexta-feira
         </p>
 
-        <button class="voltar" onclick="mostrarPagina('inicio')">
-            ← VOLTAR
+        <p>
+            08:00 — 17:00
+        </p>
+
+        <button class="voltar" onclick="abrirTela('inicio')">
+            ← VOLTAR AO INÍCIO
         </button>
 
     </section>
@@ -296,15 +296,15 @@
 
 <script>
 
-function mostrarPagina(pagina) {
+function abrirTela(nome) {
 
-    let paginas = document.querySelectorAll(".page");
+    const telas = document.querySelectorAll(".tela");
 
-    paginas.forEach(function(item) {
-        item.classList.remove("active");
+    telas.forEach(function(tela) {
+        tela.classList.remove("ativa");
     });
 
-    document.getElementById(pagina).classList.add("active");
+    document.getElementById(nome).classList.add("ativa");
 
     window.scrollTo(0, 0);
 }
@@ -312,4 +312,4 @@ function mostrarPagina(pagina) {
 </script>
 
 </body>
-    </html>
+        </html>
