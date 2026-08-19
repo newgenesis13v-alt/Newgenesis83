@@ -13,6 +13,7 @@
             background: #ffffff;
             color: #222222;
             font-family: Arial, Helvetica, sans-serif;
+            transition: 0.3s;
         }
 
         header {
@@ -105,10 +106,6 @@
             color: #ffffff;
             font-size: 25px;
             margin-top: 0;
-        }
-
-        .banner p {
-            font-size: 14px;
         }
 
         .blocos {
@@ -239,47 +236,6 @@
             transform: translateY(-2px);
         }
 
-        /* MENSAGEM DE INATIVIDADE */
-
-        #mensagemEstranha {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #ffffff;
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        #mensagemEstranha div {
-            max-width: 500px;
-            padding: 30px;
-        }
-
-        #mensagemEstranha h2 {
-            color: #174a3a;
-            font-size: 20px;
-            letter-spacing: 2px;
-        }
-
-        #mensagemEstranha p {
-            color: #555555;
-            font-size: 13px;
-        }
-
-        #mensagemEstranha button {
-            margin-top: 25px;
-            background: #174a3a;
-            color: #ffffff;
-            border: none;
-            padding: 10px 18px;
-            cursor: pointer;
-        }
-
         footer {
             background: #174a3a;
             color: #ffffff;
@@ -287,6 +243,170 @@
             padding: 25px;
             margin-top: 30px;
             font-size: 12px;
+        }
+
+
+        /* =====================================
+           MODO 01:20
+        ===================================== */
+
+        body.modo-0120 {
+            background: #111111;
+            color: #eeeeee;
+            overflow-x: hidden;
+        }
+
+        body.modo-0120 header {
+            background: #111111;
+            border-bottom: 1px solid #333333;
+            text-align: left;
+            padding: 25px;
+        }
+
+        body.modo-0120 header h1 {
+            font-size: 25px;
+            letter-spacing: 3px;
+        }
+
+        body.modo-0120 header p {
+            color: #777777;
+        }
+
+        body.modo-0120 nav {
+            background: #111111;
+            border-bottom: 1px solid #333333;
+        }
+
+        body.modo-0120 nav button {
+            background: #111111;
+            color: #555555;
+            border: 1px solid #222222;
+        }
+
+        body.modo-0120 main {
+            position: relative;
+        }
+
+        body.modo-0120 .tela.ativa {
+            background: #111111;
+            border: 1px solid #333333;
+            color: #dddddd;
+        }
+
+        body.modo-0120 .tela h2,
+        body.modo-0120 .tela h3,
+        body.modo-0120 .tela h4 {
+            color: #bbbbbb;
+        }
+
+        body.modo-0120 .banner {
+            background: #111111;
+            border-left: 2px solid #555555;
+            text-align: left;
+        }
+
+        body.modo-0120 .bloco {
+            border-color: #333333;
+            background: #111111;
+        }
+
+        body.modo-0120 .ano {
+            color: #666666;
+            border-color: #333333;
+        }
+
+        body.modo-0120 footer {
+            background: #111111;
+            color: #555555;
+            border-top: 1px solid #333333;
+        }
+
+        body.modo-0120 .corrompido {
+            display: block;
+        }
+
+        .corrompido {
+            display: none;
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .frase {
+            position: absolute;
+            color: #777777;
+            font-family: monospace;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .frase1 {
+            top: 12%;
+            left: 7%;
+        }
+
+        .frase2 {
+            top: 25%;
+            right: 8%;
+        }
+
+        .frase3 {
+            bottom: 23%;
+            left: 10%;
+        }
+
+        .frase4 {
+            bottom: 12%;
+            right: 15%;
+        }
+
+        .frase5 {
+            top: 43%;
+            left: 3%;
+            transform: rotate(-4deg);
+        }
+
+        .frase6 {
+            top: 68%;
+            right: 4%;
+            transform: rotate(3deg);
+        }
+
+        .frase7 {
+            top: 8%;
+            right: 30%;
+        }
+
+        .frase8 {
+            bottom: 5%;
+            left: 35%;
+        }
+
+        .mensagem-central {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            text-align: center;
+            color: #dddddd;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .mensagem-central strong {
+            display: block;
+            margin-top: 20px;
+            font-family: monospace;
+            font-size: 17px;
+            letter-spacing: 3px;
+        }
+
+        .mensagem-central em {
+            font-size: 23px;
         }
 
     </style>
@@ -442,9 +562,7 @@
 
     <section id="empresa" class="tela">
 
-        <h2>
-            A EMPRESA
-        </h2>
+        <h2>A EMPRESA</h2>
 
         <p>
             Fundada com o objetivo de expandir os limites da ciência,
@@ -459,9 +577,7 @@
             </strong>
         </p>
 
-        <h3>
-            NOSSA FILOSOFIA
-        </h3>
+        <h3>NOSSA FILOSOFIA</h3>
 
         <p>
             Acreditamos que cada descoberta possui o potencial
@@ -479,9 +595,7 @@
 
     <section id="pesquisa" class="tela">
 
-        <h2>
-            PESQUISA E DESENVOLVIMENTO
-        </h2>
+        <h2>PESQUISA E DESENVOLVIMENTO</h2>
 
         <p>
             Nossos laboratórios trabalham continuamente em projetos
@@ -494,18 +608,14 @@
             de segurança e confidencialidade.
         </p>
 
-        <h3>
-            LABORATÓRIOS NEWGENESIS
-        </h3>
+        <h3>LABORATÓRIOS NEWGENESIS</h3>
 
         <p>
             Pesquisadores e engenheiros trabalham diariamente para
             transformar descobertas científicas em aplicações reais.
         </p>
 
-        <h3>
-            CONFIDENCIALIDADE
-        </h3>
+        <h3>CONFIDENCIALIDADE</h3>
 
         <p>
             Determinados projetos permanecem restritos aos membros
@@ -523,14 +633,9 @@
 
     <section id="direcao" class="tela">
 
-        <h2>
-            DIREÇÃO E PESQUISA
-        </h2>
+        <h2>DIREÇÃO E PESQUISA</h2>
 
-
-        <h4>
-            BENJAMIM CROSS
-        </h4>
+        <h4>BENJAMIM CROSS</h4>
 
         <p>
             Diretor Executivo da NewGenesis Corporation.
@@ -539,9 +644,7 @@
         </p>
 
 
-        <h4>
-            RICHARD MELO
-        </h4>
+        <h4>RICHARD MELO</h4>
 
         <p>
             Diretor de Pesquisa e Desenvolvimento.
@@ -550,9 +653,7 @@
         </p>
 
 
-        <h4>
-            CARLOS DE SOUZA
-        </h4>
+        <h4>CARLOS DE SOUZA</h4>
 
         <p>
             Pesquisador e membro da equipe de desenvolvimento.
@@ -572,14 +673,10 @@
 
     <section id="contato" class="tela">
 
-        <h2>
-            CONTATO
-        </h2>
+        <h2>CONTATO</h2>
 
         <p>
-            <strong>
-                NEWGENESIS CORPORATION
-            </strong>
+            <strong>NEWGENESIS CORPORATION</strong>
         </p>
 
         <p>
@@ -590,9 +687,7 @@
             Telefone: (000) 0000-1983
         </p>
 
-        <h3>
-            HORÁRIO DE ATENDIMENTO
-        </h3>
+        <h3>HORÁRIO DE ATENDIMENTO</h3>
 
         <p>
             Segunda a sexta-feira
@@ -613,22 +708,16 @@
 
     <section id="arquivo" class="tela">
 
-        <h2>
-            DOCUMENTAÇÃO INTERNA
-        </h2>
+        <h2>DOCUMENTAÇÃO INTERNA</h2>
 
         <div class="restrito">
 
-            <h3>
-                ACESSO RESTRITO
-            </h3>
+            <h3>ACESSO RESTRITO</h3>
 
             <p class="codigo">
-
                 ARQUIVO: NG-001<br>
                 STATUS: INCOMPLETO<br>
                 CLASSIFICAÇÃO: INTERNO
-
             </p>
 
         </div>
@@ -646,9 +735,7 @@
         <div class="arquivo-link">
 
             <p>
-                <strong>
-                    REFERÊNCIA ENCONTRADA:
-                </strong>
+                <strong>REFERÊNCIA ENCONTRADA:</strong>
             </p>
 
             <p>
@@ -679,27 +766,60 @@
 </footer>
 
 
-<!-- MENSAGEM DE INATIVIDADE -->
+<!-- FRASES QUE APARECEM ÀS 01:20 -->
 
-<div id="mensagemEstranha">
+<div class="corrompido" id="corrompido">
 
-    <div>
+    <div class="frase frase1">
+        MICHAEL
+    </div>
 
-        <h2>
-            alguém?
-        </h2>
+    <div class="frase frase2">
+        VANTA 13
+    </div>
 
-        <p>
-            Esta página permaneceu aberta por muito tempo.
-        </p>
+    <div class="frase frase3">
+        CARLOS
+    </div>
 
-        <p>
-            Nenhuma atividade registrada.
-        </p>
+    <div class="frase frase4">
+        FRACASSO
+    </div>
 
-        <button onclick="fecharMensagem()">
-            CONTINUAR
-        </button>
+    <div class="frase frase5">
+        MICHAEL
+    </div>
+
+    <div class="frase frase6">
+        VANTA 13
+    </div>
+
+    <div class="frase frase7">
+        CARLOS
+    </div>
+
+    <div class="frase frase8">
+        FRACASSO
+    </div>
+
+
+    <div class="mensagem-central">
+
+        Você veio pra investigar?
+
+        <br>
+
+        Oh oh oh, meu pequeno,
+
+        <br>
+
+        <em>
+            eu ainda estou aqui
+        </em>
+
+        <strong>
+            O NOVO MUNDO ESTÁ VINDO
+        </strong>
 
     </div>
 
@@ -711,73 +831,50 @@
 let temporizador;
 
 
-function iniciarTemporizador() {
-
-    clearTimeout(temporizador);
-
-    temporizador = setTimeout(function() {
-
-        const inicio = document.getElementById("inicio");
-
-        if (inicio.classList.contains("ativa")) {
-
-            document.getElementById("mensagemEstranha").style.display = "flex";
-
-        }
-
-    }, 30000);
-
-}
-
-
-function fecharMensagem() {
-
-    document.getElementById("mensagemEstranha").style.display = "none";
-
-    iniciarTemporizador();
-
-}
-
+/* TROCA DE TELAS */
 
 function abrirTela(nome) {
 
     const telas = document.querySelectorAll(".tela");
 
     telas.forEach(function(tela) {
-
         tela.classList.remove("ativa");
-
     });
 
     document.getElementById(nome).classList.add("ativa");
 
     window.scrollTo(0, 0);
 
-    clearTimeout(temporizador);
+}
 
-    if (nome === "inicio") {
 
-        iniciarTemporizador();
+/* ATIVAÇÃO DAS 01:20 */
+
+function verificarHorario() {
+
+    const agora = new Date();
+
+    const horas = agora.getHours();
+
+    const minutos = agora.getMinutes();
+
+
+    if (horas === 1 && minutos === 20) {
+
+        document.body.classList.add("modo-0120");
+
+        document.getElementById("corrompido").style.display = "block";
 
     }
 
 }
 
 
-document.addEventListener("click", function() {
+/* VERIFICA O RELÓGIO A CADA SEGUNDO */
 
-    const inicio = document.getElementById("inicio");
+setInterval(verificarHorario, 1000);
 
-    if (inicio.classList.contains("ativa")) {
-
-        iniciarTemporizador();
-
-    }
-
-});
-
-
-iniciarTemporizador();
+verificarHorario();
 
 </script>
 
