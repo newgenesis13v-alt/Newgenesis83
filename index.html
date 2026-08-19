@@ -105,10 +105,6 @@
             margin-top: 0;
         }
 
-        .banner p {
-            font-size: 14px;
-        }
-
         .blocos {
             display: flex;
             gap: 15px;
@@ -162,10 +158,6 @@
             cursor: pointer;
         }
 
-        .pista button:hover {
-            color: #174a3a;
-        }
-
         .tela h2 {
             color: #174a3a;
             font-size: 28px;
@@ -213,11 +205,45 @@
             line-height: 1.8;
         }
 
-        .estranho {
-            margin-top: 35px;
+        .arquivo-link {
+            margin-top: 25px;
+            padding: 15px;
+            border: 1px solid #174a3a;
+            background: #f7f7f7;
+        }
+
+        .arquivo-link button {
+            background: #174a3a;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .vanta {
+            border: 2px solid #174a3a;
+            padding: 25px;
+            margin-top: 25px;
+            background: #f7f7f7;
+        }
+
+        .vanta h3 {
+            margin-top: 0;
+            letter-spacing: 2px;
+        }
+
+        .registro {
             font-family: monospace;
-            font-size: 12px;
-            color: #555555;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .observacao {
+            margin-top: 25px;
+            padding: 15px;
+            border-left: 4px solid #c5a95b;
+            background: #ffffff;
         }
 
         footer {
@@ -247,25 +273,15 @@
 
 <nav>
 
-    <button onclick="abrirTela('inicio')">
-        INÍCIO
-    </button>
+    <button onclick="abrirTela('inicio')">INÍCIO</button>
 
-    <button onclick="abrirTela('empresa')">
-        A EMPRESA
-    </button>
+    <button onclick="abrirTela('empresa')">A EMPRESA</button>
 
-    <button onclick="abrirTela('pesquisa')">
-        PESQUISA
-    </button>
+    <button onclick="abrirTela('pesquisa')">PESQUISA</button>
 
-    <button onclick="abrirTela('direcao')">
-        DIREÇÃO
-    </button>
+    <button onclick="abrirTela('direcao')">DIREÇÃO</button>
 
-    <button onclick="abrirTela('contato')">
-        CONTATO
-    </button>
+    <button onclick="abrirTela('contato')">CONTATO</button>
 
 </nav>
 
@@ -277,9 +293,7 @@
 
     <section id="inicio" class="tela ativa">
 
-        <h2>
-            Bem-vindo à NewGenesis
-        </h2>
+        <h2>Bem-vindo à NewGenesis</h2>
 
         <p>
             A NewGenesis Corporation dedica-se ao desenvolvimento
@@ -294,9 +308,7 @@
 
         <div class="banner">
 
-            <h3>
-                UM NOVO AMANHÃ COMEÇA HOJE.
-            </h3>
+            <h3>UM NOVO AMANHÃ COMEÇA HOJE.</h3>
 
             <p>
                 Pesquisa. Descoberta. Desenvolvimento.
@@ -305,40 +317,44 @@
         </div>
 
 
-        <h3>
-            NOSSOS AVANÇOS
-        </h3>
+        <h3>NOSSOS AVANÇOS</h3>
 
 
         <div class="blocos">
 
             <div class="bloco">
+
                 <h4>CIÊNCIA</h4>
 
                 <p>
                     Investimos no estudo e desenvolvimento
                     de novas possibilidades científicas.
                 </p>
+
             </div>
 
 
             <div class="bloco">
+
                 <h4>TECNOLOGIA</h4>
 
                 <p>
                     Criamos soluções destinadas a transformar
                     o futuro da sociedade.
                 </p>
+
             </div>
 
 
             <div class="bloco">
+
                 <h4>DESENVOLVIMENTO</h4>
 
                 <p>
                     Nossos especialistas trabalham para transformar
                     descobertas em aplicações reais.
                 </p>
+
             </div>
 
         </div>
@@ -354,8 +370,6 @@
             aos departamentos autorizados.
         </p>
 
-
-        <!-- PRIMEIRA PISTA -->
 
         <div class="pista">
 
@@ -392,11 +406,6 @@
         <p>
             Acreditamos que cada descoberta possui o potencial
             de transformar o mundo.
-        </p>
-
-        <p>
-            Por isso, buscamos novas formas de compreender,
-            desenvolver e aplicar o conhecimento científico.
         </p>
 
         <button class="voltar" onclick="abrirTela('inicio')">
@@ -450,7 +459,6 @@
 
         <h2>DIREÇÃO E PESQUISA</h2>
 
-
         <h4>BENJAMIM CROSS</h4>
 
         <p>
@@ -492,9 +500,7 @@
         <h2>CONTATO</h2>
 
         <p>
-            <strong>
-                NEWGENESIS CORPORATION
-            </strong>
+            <strong>NEWGENESIS CORPORATION</strong>
         </p>
 
         <p>
@@ -512,7 +518,7 @@
         </p>
 
         <p>
-            08:00 — 17:00
+            08:00 — 01:20
         </p>
 
         <button class="voltar" onclick="abrirTela('inicio')">
@@ -522,19 +528,15 @@
     </section>
 
 
-    <!-- PRIMEIRA ÁREA SECRETA -->
+    <!-- NG-001 -->
 
     <section id="arquivo" class="tela">
 
-        <h2>
-            DOCUMENTAÇÃO INTERNA
-        </h2>
+        <h2>DOCUMENTAÇÃO INTERNA</h2>
 
         <div class="restrito">
 
-            <h3>
-                ACESSO RESTRITO
-            </h3>
+            <h3>ACESSO RESTRITO</h3>
 
             <p class="codigo">
                 ARQUIVO: NG-001<br>
@@ -544,24 +546,127 @@
 
         </div>
 
-
         <p>
             Este registro não está disponível para consulta pública.
         </p>
 
         <p>
-            Caso você tenha chegado até aqui por engano,
-            retorne à página principal.
+            Parte da documentação foi encaminhada ao
+            Departamento de Pesquisa e Desenvolvimento.
         </p>
 
 
-        <p class="estranho">
-            registro parcialmente corrompido...
-        </p>
+        <div class="arquivo-link">
+
+            <p>
+                <strong>REFERÊNCIA ENCONTRADA:</strong>
+            </p>
+
+            <p>
+                Registro experimental V-13.
+            </p>
+
+            <button onclick="abrirTela('vanta')">
+                CONSULTAR REGISTRO V-13
+            </button>
+
+        </div>
 
 
         <button class="voltar" onclick="abrirTela('inicio')">
             ← VOLTAR
+        </button>
+
+    </section>
+
+
+    <!-- VANTA 13 -->
+
+    <section id="vanta" class="tela">
+
+        <h2>VANTA 13</h2>
+
+        <div class="vanta">
+
+            <h3>
+                PROJETO EXPERIMENTAL
+            </h3>
+
+            <p class="registro">
+
+                PROJETO: VANTA 13<br>
+                DEPARTAMENTO: PESQUISA E DESENVOLVIMENTO<br>
+                RESPONSÁVEL: RICHARD MELO<br>
+                SUPERVISÃO: BENJAMIM CROSS<br>
+                STATUS: ATIVO<br>
+                CLASSIFICAÇÃO: RESTRITO
+
+            </p>
+
+        </div>
+
+
+        <h3>OBJETIVO DO PROJETO</h3>
+
+        <p>
+            O Vanta 13 é um projeto experimental desenvolvido
+            pela NewGenesis com o objetivo de estudar alterações
+            provocadas pelos procedimentos do programa.
+        </p>
+
+        <p>
+            Os pesquisadores procuram determinar se os resultados
+            observados podem ser reproduzidos de forma controlada.
+        </p>
+
+
+        <h3>REGISTRO DE PARTICIPANTE</h3>
+
+
+        <div class="vanta">
+
+            <h3>MICHAEL</h3>
+
+            <p class="registro">
+
+                PARTICIPANTE: MICHAEL<br>
+                STATUS: ENCERRADO<br>
+                PROGRAMA: VANTA 13<br>
+                RESPONSÁVEL LEGAL: MARIA CARTER<br>
+                RELAÇÃO: MÃE DE MICHAEL
+
+            </p>
+
+
+            <div class="observacao">
+
+                <strong>OBSERVAÇÃO:</strong>
+
+                <p>
+                    Maria Carter foi registrada como responsável legal
+                    pelo participante durante o período de acompanhamento.
+                </p>
+
+                <p>
+                    Após o encerramento do registro, não foram localizados
+                    documentos adicionais relacionados à responsável legal.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <h3>NOTA INTERNA</h3>
+
+        <p>
+            Os resultados obtidos durante os primeiros testes
+            não correspondem às previsões iniciais.
+        </p>
+
+
+        <button class="voltar" onclick="abrirTela('arquivo')">
+            ← VOLTAR AO NG-001
         </button>
 
     </section>
@@ -596,4 +701,4 @@ function abrirTela(nome) {
 </script>
 
 </body>
-    </html>
+                    </html>
