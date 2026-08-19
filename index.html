@@ -15,9 +15,9 @@
         }
 
         header {
-            background: #193b32;
+            background: #252b2f;
             color: #f2ead5;
-            padding: 35px 20px;
+            padding: 40px 20px;
             text-align: center;
             border-bottom: 8px solid #c5a95b;
         }
@@ -36,15 +36,18 @@
 
         nav {
             background: #c5a95b;
-            padding: 12px;
+            padding: 15px 10px;
             text-align: center;
         }
 
-        nav a {
-            color: #193b32;
-            text-decoration: none;
+        nav button {
+            background: none;
+            border: none;
+            color: #252b2f;
             font-weight: bold;
-            margin: 0 12px;
+            margin: 5px 8px;
+            font-size: 14px;
+            cursor: pointer;
         }
 
         main {
@@ -53,36 +56,56 @@
             padding: 30px 20px;
         }
 
-        .welcome {
+        .page {
             background: #f5f0df;
-            border: 2px solid #193b32;
+            border: 2px solid #252b2f;
             padding: 30px;
-            margin-bottom: 25px;
+            display: none;
         }
 
-        .welcome h2 {
-            color: #193b32;
+        .page.active {
+            display: block;
+        }
+
+        h2 {
+            color: #252b2f;
             font-size: 28px;
-        }
-
-        .section {
-            background: #f5f0df;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-left: 7px solid #c5a95b;
-        }
-
-        .section h3 {
-            color: #193b32;
             margin-top: 0;
         }
 
+        h3 {
+            color: #252b2f;
+        }
+
+        h4 {
+            color: #252b2f;
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+
+        .linha {
+            border: none;
+            border-top: 2px solid #c5a95b;
+            margin: 25px 0;
+        }
+
+        .voltar {
+            margin-top: 30px;
+            background: #252b2f;
+            color: #f2ead5;
+            border: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
         footer {
-            background: #193b32;
+            background: #252b2f;
             color: #f2ead5;
             text-align: center;
             padding: 25px;
             font-size: 12px;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -95,15 +118,19 @@
 </header>
 
 <nav>
-    <a href="#">INÍCIO</a>
-    <a href="#empresa">A EMPRESA</a>
-    <a href="#pesquisa">PESQUISA</a>
-    <a href="#contato">CONTATO</a>
+    <button onclick="mostrarPagina('inicio')">INÍCIO</button>
+    <button onclick="mostrarPagina('empresa')">A EMPRESA</button>
+    <button onclick="mostrarPagina('pesquisa')">PESQUISA</button>
+    <button onclick="mostrarPagina('direcao')">DIREÇÃO</button>
+    <button onclick="mostrarPagina('contato')">CONTATO</button>
 </nav>
 
 <main>
 
-    <section class="welcome">
+    <!-- INÍCIO -->
+
+    <section id="inicio" class="page active">
+
         <h2>Bem-vindo à NewGenesis</h2>
 
         <p>
@@ -115,10 +142,23 @@
             Desde nossa fundação, trabalhamos para transformar
             descobertas científicas em possibilidades reais.
         </p>
+
+        <hr class="linha">
+
+        <h3>UMA NOVA ERA COMEÇA AQUI.</h3>
+
+        <p>
+            Explore nossas áreas de atuação através do menu acima.
+        </p>
+
     </section>
 
-    <section class="section" id="empresa">
-        <h3>A EMPRESA</h3>
+
+    <!-- EMPRESA -->
+
+    <section id="empresa" class="page">
+
+        <h2>A EMPRESA</h2>
 
         <p>
             Fundada com o objetivo de expandir os limites da ciência,
@@ -130,10 +170,28 @@
             Nossa missão é simples:
             <strong>criar hoje aquilo que será necessário amanhã.</strong>
         </p>
+
+        <hr class="linha">
+
+        <h3>MISSÃO</h3>
+
+        <p>
+            Desenvolver soluções científicas capazes de transformar
+            a sociedade e abrir novos caminhos para o futuro.
+        </p>
+
+        <button class="voltar" onclick="mostrarPagina('inicio')">
+            ← VOLTAR
+        </button>
+
     </section>
 
-    <section class="section" id="pesquisa">
-        <h3>PESQUISA E DESENVOLVIMENTO</h3>
+
+    <!-- PESQUISA -->
+
+    <section id="pesquisa" class="page">
+
+        <h2>PESQUISA E DESENVOLVIMENTO</h2>
 
         <p>
             Nossos laboratórios trabalham continuamente em projetos
@@ -145,13 +203,68 @@
             Alguns projetos são realizados sob protocolos internos
             de segurança e confidencialidade.
         </p>
-    </section>
 
-    <section class="section" id="contato">
-        <h3>CONTATO</h3>
+        <hr class="linha">
+
+        <h3>LABORATÓRIOS NEWGENESIS</h3>
 
         <p>
-            NEWGENESIS CORPORATION
+            Nossos pesquisadores trabalham diariamente para transformar
+            descobertas científicas em aplicações reais.
+        </p>
+
+        <button class="voltar" onclick="mostrarPagina('inicio')">
+            ← VOLTAR
+        </button>
+
+    </section>
+
+
+    <!-- DIREÇÃO -->
+
+    <section id="direcao" class="page">
+
+        <h2>DIREÇÃO E PESQUISA</h2>
+
+        <h4>BENJAMIM CROSS</h4>
+
+        <p>
+            Diretor Executivo da NewGenesis Corporation.
+            Responsável pela administração geral e supervisão
+            dos projetos internos.
+        </p>
+
+        <h4>RICHARD MELO</h4>
+
+        <p>
+            Diretor de Pesquisa e Desenvolvimento.
+            Atua na coordenação dos programas científicos
+            e experimentais da empresa.
+        </p>
+
+        <h4>CARLOS DE SOUZA</h4>
+
+        <p>
+            Pesquisador e membro da equipe de desenvolvimento.
+            Carlos de Souza faleceu em circunstâncias não divulgadas.
+            A causa de sua morte permanece desconhecida.
+        </p>
+
+        <button class="voltar" onclick="mostrarPagina('inicio')">
+            ← VOLTAR
+        </button>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section id="contato" class="page">
+
+        <h2>CONTATO</h2>
+
+        <p>
+            <strong>NEWGENESIS CORPORATION</strong>
         </p>
 
         <p>
@@ -162,9 +275,16 @@
             Telefone: (000) 0000-1983
         </p>
 
+        <hr class="linha">
+
         <p>
             © 1983 NewGenesis Corporation
         </p>
+
+        <button class="voltar" onclick="mostrarPagina('inicio')">
+            ← VOLTAR
+        </button>
+
     </section>
 
 </main>
@@ -173,5 +293,23 @@
     NEWGENESIS CORPORATION • TODOS OS DIREITOS RESERVADOS
 </footer>
 
+
+<script>
+
+function mostrarPagina(pagina) {
+
+    let paginas = document.querySelectorAll(".page");
+
+    paginas.forEach(function(item) {
+        item.classList.remove("active");
+    });
+
+    document.getElementById(pagina).classList.add("active");
+
+    window.scrollTo(0, 0);
+}
+
+</script>
+
 </body>
-  </html>
+    </html>
