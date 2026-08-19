@@ -50,10 +50,12 @@
             margin: 4px;
             font-weight: bold;
             cursor: pointer;
+            transition: 0.2s;
         }
 
         nav button:hover {
             background: #24664f;
+            transform: translateY(-2px);
         }
 
         main {
@@ -73,6 +75,21 @@
 
         .tela.ativa {
             display: block;
+            animation: aparecer 0.45s ease;
+        }
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
         }
 
         .banner {
@@ -88,6 +105,10 @@
             color: #ffffff;
             font-size: 25px;
             margin-top: 0;
+        }
+
+        .banner p {
+            font-size: 14px;
         }
 
         .blocos {
@@ -169,6 +190,12 @@
             margin-top: 30px;
             font-weight: bold;
             cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .voltar:hover {
+            background: #24664f;
+            transform: translateY(-2px);
         }
 
         .restrito {
@@ -204,6 +231,12 @@
             padding: 10px 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .arquivo-link a:hover {
+            background: #24664f;
+            transform: translateY(-2px);
         }
 
         /* MENSAGEM DE INATIVIDADE */
@@ -274,15 +307,25 @@
 
 <nav>
 
-    <button onclick="abrirTela('inicio')">INÍCIO</button>
+    <button onclick="abrirTela('inicio')">
+        INÍCIO
+    </button>
 
-    <button onclick="abrirTela('empresa')">A EMPRESA</button>
+    <button onclick="abrirTela('empresa')">
+        A EMPRESA
+    </button>
 
-    <button onclick="abrirTela('pesquisa')">PESQUISA</button>
+    <button onclick="abrirTela('pesquisa')">
+        PESQUISA
+    </button>
 
-    <button onclick="abrirTela('direcao')">DIREÇÃO</button>
+    <button onclick="abrirTela('direcao')">
+        DIREÇÃO
+    </button>
 
-    <button onclick="abrirTela('contato')">CONTATO</button>
+    <button onclick="abrirTela('contato')">
+        CONTATO
+    </button>
 
 </nav>
 
@@ -294,7 +337,9 @@
 
     <section id="inicio" class="tela ativa">
 
-        <h2>Bem-vindo à NewGenesis</h2>
+        <h2>
+            Bem-vindo à NewGenesis
+        </h2>
 
         <p>
             A NewGenesis Corporation dedica-se ao desenvolvimento
@@ -309,7 +354,9 @@
 
         <div class="banner">
 
-            <h3>UM NOVO AMANHÃ COMEÇA HOJE.</h3>
+            <h3>
+                UM NOVO AMANHÃ COMEÇA HOJE.
+            </h3>
 
             <p>
                 Pesquisa. Descoberta. Desenvolvimento.
@@ -318,14 +365,18 @@
         </div>
 
 
-        <h3>NOSSOS AVANÇOS</h3>
+        <h3>
+            NOSSOS AVANÇOS
+        </h3>
 
 
         <div class="blocos">
 
             <div class="bloco">
 
-                <h4>CIÊNCIA</h4>
+                <h4>
+                    CIÊNCIA
+                </h4>
 
                 <p>
                     Investimos no estudo e desenvolvimento
@@ -337,7 +388,9 @@
 
             <div class="bloco">
 
-                <h4>TECNOLOGIA</h4>
+                <h4>
+                    TECNOLOGIA
+                </h4>
 
                 <p>
                     Criamos soluções destinadas a transformar
@@ -349,7 +402,9 @@
 
             <div class="bloco">
 
-                <h4>DESENVOLVIMENTO</h4>
+                <h4>
+                    DESENVOLVIMENTO
+                </h4>
 
                 <p>
                     Nossos especialistas trabalham para transformar
@@ -387,7 +442,9 @@
 
     <section id="empresa" class="tela">
 
-        <h2>A EMPRESA</h2>
+        <h2>
+            A EMPRESA
+        </h2>
 
         <p>
             Fundada com o objetivo de expandir os limites da ciência,
@@ -402,7 +459,9 @@
             </strong>
         </p>
 
-        <h3>NOSSA FILOSOFIA</h3>
+        <h3>
+            NOSSA FILOSOFIA
+        </h3>
 
         <p>
             Acreditamos que cada descoberta possui o potencial
@@ -420,7 +479,9 @@
 
     <section id="pesquisa" class="tela">
 
-        <h2>PESQUISA E DESENVOLVIMENTO</h2>
+        <h2>
+            PESQUISA E DESENVOLVIMENTO
+        </h2>
 
         <p>
             Nossos laboratórios trabalham continuamente em projetos
@@ -433,14 +494,18 @@
             de segurança e confidencialidade.
         </p>
 
-        <h3>LABORATÓRIOS NEWGENESIS</h3>
+        <h3>
+            LABORATÓRIOS NEWGENESIS
+        </h3>
 
         <p>
             Pesquisadores e engenheiros trabalham diariamente para
             transformar descobertas científicas em aplicações reais.
         </p>
 
-        <h3>CONFIDENCIALIDADE</h3>
+        <h3>
+            CONFIDENCIALIDADE
+        </h3>
 
         <p>
             Determinados projetos permanecem restritos aos membros
@@ -458,9 +523,14 @@
 
     <section id="direcao" class="tela">
 
-        <h2>DIREÇÃO E PESQUISA</h2>
+        <h2>
+            DIREÇÃO E PESQUISA
+        </h2>
 
-        <h4>BENJAMIM CROSS</h4>
+
+        <h4>
+            BENJAMIM CROSS
+        </h4>
 
         <p>
             Diretor Executivo da NewGenesis Corporation.
@@ -469,7 +539,9 @@
         </p>
 
 
-        <h4>RICHARD MELO</h4>
+        <h4>
+            RICHARD MELO
+        </h4>
 
         <p>
             Diretor de Pesquisa e Desenvolvimento.
@@ -478,7 +550,9 @@
         </p>
 
 
-        <h4>CARLOS DE SOUZA</h4>
+        <h4>
+            CARLOS DE SOUZA
+        </h4>
 
         <p>
             Pesquisador e membro da equipe de desenvolvimento.
@@ -498,10 +572,14 @@
 
     <section id="contato" class="tela">
 
-        <h2>CONTATO</h2>
+        <h2>
+            CONTATO
+        </h2>
 
         <p>
-            <strong>NEWGENESIS CORPORATION</strong>
+            <strong>
+                NEWGENESIS CORPORATION
+            </strong>
         </p>
 
         <p>
@@ -512,7 +590,9 @@
             Telefone: (000) 0000-1983
         </p>
 
-        <h3>HORÁRIO DE ATENDIMENTO</h3>
+        <h3>
+            HORÁRIO DE ATENDIMENTO
+        </h3>
 
         <p>
             Segunda a sexta-feira
@@ -533,16 +613,22 @@
 
     <section id="arquivo" class="tela">
 
-        <h2>DOCUMENTAÇÃO INTERNA</h2>
+        <h2>
+            DOCUMENTAÇÃO INTERNA
+        </h2>
 
         <div class="restrito">
 
-            <h3>ACESSO RESTRITO</h3>
+            <h3>
+                ACESSO RESTRITO
+            </h3>
 
             <p class="codigo">
+
                 ARQUIVO: NG-001<br>
                 STATUS: INCOMPLETO<br>
                 CLASSIFICAÇÃO: INTERNO
+
             </p>
 
         </div>
@@ -560,7 +646,9 @@
         <div class="arquivo-link">
 
             <p>
-                <strong>REFERÊNCIA ENCONTRADA:</strong>
+                <strong>
+                    REFERÊNCIA ENCONTRADA:
+                </strong>
             </p>
 
             <p>
@@ -591,14 +679,14 @@
 </footer>
 
 
-<!-- MENSAGEM QUE APARECE APÓS INATIVIDADE -->
+<!-- MENSAGEM DE INATIVIDADE -->
 
 <div id="mensagemEstranha">
 
     <div>
 
         <h2>
-            VOCÊ AINDA ESTÁ AÍ?
+            alguém?
         </h2>
 
         <p>
@@ -621,6 +709,7 @@
 <script>
 
 let temporizador;
+
 
 function iniciarTemporizador() {
 
@@ -655,7 +744,9 @@ function abrirTela(nome) {
     const telas = document.querySelectorAll(".tela");
 
     telas.forEach(function(tela) {
+
         tela.classList.remove("ativa");
+
     });
 
     document.getElementById(nome).classList.add("ativa");
@@ -665,7 +756,9 @@ function abrirTela(nome) {
     clearTimeout(temporizador);
 
     if (nome === "inicio") {
+
         iniciarTemporizador();
+
     }
 
 }
@@ -676,7 +769,9 @@ document.addEventListener("click", function() {
     const inicio = document.getElementById("inicio");
 
     if (inicio.classList.contains("ativa")) {
+
         iniciarTemporizador();
+
     }
 
 });
@@ -687,4 +782,4 @@ iniciarTemporizador();
 </script>
 
 </body>
-            </html>
+    </html>
