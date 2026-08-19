@@ -8,16 +8,12 @@
 
     <style>
 
-        /* FUNDO */
-
         body {
             margin: 0;
             background: #ffffff;
-            color: #202020;
+            color: #222222;
             font-family: Arial, Helvetica, sans-serif;
         }
-
-        /* HEADER */
 
         header {
             background: #174a3a;
@@ -38,8 +34,6 @@
             font-size: 13px;
             letter-spacing: 3px;
         }
-
-        /* MENU */
 
         nav {
             background: #f2f2f2;
@@ -64,15 +58,11 @@
             transform: translateY(-2px);
         }
 
-        /* ÁREA PRINCIPAL */
-
         main {
-            max-width: 850px;
+            max-width: 900px;
             margin: 35px auto;
             padding: 0 20px;
         }
-
-        /* TELAS */
 
         .tela {
             display: none;
@@ -88,8 +78,6 @@
             animation: aparecer 0.45s ease;
         }
 
-        /* ANIMAÇÃO */
-
         @keyframes aparecer {
             from {
                 opacity: 0;
@@ -102,7 +90,62 @@
             }
         }
 
-        /* TÍTULOS */
+        .banner {
+            background: #174a3a;
+            color: #ffffff;
+            padding: 35px 25px;
+            margin: 25px 0;
+            text-align: center;
+            border-left: 8px solid #c5a95b;
+        }
+
+        .banner h3 {
+            color: #ffffff;
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        .banner p {
+            font-size: 14px;
+        }
+
+        .blocos {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .bloco {
+            flex: 1;
+            min-width: 180px;
+            border: 1px solid #cccccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .bloco h4 {
+            color: #174a3a;
+            margin-top: 0;
+        }
+
+        .ano {
+            text-align: center;
+            margin-top: 35px;
+            padding: 15px;
+            border-top: 1px solid #c5a95b;
+            border-bottom: 1px solid #c5a95b;
+            color: #174a3a;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .aviso {
+            margin-top: 30px;
+            font-size: 11px;
+            color: #777777;
+            text-align: center;
+        }
 
         .tela h2 {
             color: #174a3a;
@@ -122,8 +165,6 @@
             margin-bottom: 5px;
         }
 
-        /* BOTÃO VOLTAR */
-
         .voltar {
             background: #174a3a;
             color: #ffffff;
@@ -132,14 +173,7 @@
             margin-top: 30px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.2s;
         }
-
-        .voltar:hover {
-            background: #24664f;
-        }
-
-        /* RODAPÉ */
 
         footer {
             background: #174a3a;
@@ -168,25 +202,15 @@
 
 <nav>
 
-    <button onclick="abrirTela('inicio')">
-        INÍCIO
-    </button>
+    <button onclick="abrirTela('inicio')">INÍCIO</button>
 
-    <button onclick="abrirTela('empresa')">
-        A EMPRESA
-    </button>
+    <button onclick="abrirTela('empresa')">A EMPRESA</button>
 
-    <button onclick="abrirTela('pesquisa')">
-        PESQUISA
-    </button>
+    <button onclick="abrirTela('pesquisa')">PESQUISA</button>
 
-    <button onclick="abrirTela('direcao')">
-        DIREÇÃO
-    </button>
+    <button onclick="abrirTela('direcao')">DIREÇÃO</button>
 
-    <button onclick="abrirTela('contato')">
-        CONTATO
-    </button>
+    <button onclick="abrirTela('contato')">CONTATO</button>
 
 </nav>
 
@@ -212,12 +236,73 @@
             descobertas científicas em possibilidades reais.
         </p>
 
+
+        <div class="banner">
+
+            <h3>
+                UM NOVO AMANHÃ COMEÇA HOJE.
+            </h3>
+
+            <p>
+                Pesquisa. Descoberta. Desenvolvimento.
+            </p>
+
+        </div>
+
+
         <h3>
-            UMA NOVA ERA COMEÇA AQUI.
+            NOSSOS AVANÇOS
         </h3>
 
-        <p>
-            Utilize o menu acima para conhecer nossa empresa.
+
+        <div class="blocos">
+
+            <div class="bloco">
+
+                <h4>CIÊNCIA</h4>
+
+                <p>
+                    Investimos no estudo e desenvolvimento
+                    de novas possibilidades científicas.
+                </p>
+
+            </div>
+
+
+            <div class="bloco">
+
+                <h4>TECNOLOGIA</h4>
+
+                <p>
+                    Criamos soluções destinadas a transformar
+                    o futuro da sociedade.
+                </p>
+
+            </div>
+
+
+            <div class="bloco">
+
+                <h4>DESENVOLVIMENTO</h4>
+
+                <p>
+                    Nossos especialistas trabalham para transformar
+                    descobertas em aplicações reais.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="ano">
+            NEWGENESIS CORPORATION • 1983
+        </div>
+
+
+        <p class="aviso">
+            Alguns conteúdos e projetos encontram-se restritos
+            aos departamentos autorizados.
         </p>
 
     </section>
@@ -227,9 +312,7 @@
 
     <section id="empresa" class="tela">
 
-        <h2>
-            A EMPRESA
-        </h2>
+        <h2>A EMPRESA</h2>
 
         <p>
             Fundada com o objetivo de expandir os limites da ciência,
@@ -244,21 +327,20 @@
             </strong>
         </p>
 
-        <h3>
-            NOSSA MISSÃO
-        </h3>
+        <h3>NOSSA FILOSOFIA</h3>
 
         <p>
-            Desenvolver soluções científicas capazes de transformar
-            a sociedade e abrir novos caminhos para o futuro.
+            Acreditamos que cada descoberta possui o potencial
+            de transformar o mundo.
         </p>
 
-        <button
-            class="voltar"
-            onclick="abrirTela('inicio')">
+        <p>
+            Por isso, buscamos novas formas de compreender,
+            desenvolver e aplicar o conhecimento científico.
+        </p>
 
+        <button class="voltar" onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
-
         </button>
 
     </section>
@@ -268,9 +350,7 @@
 
     <section id="pesquisa" class="tela">
 
-        <h2>
-            PESQUISA E DESENVOLVIMENTO
-        </h2>
+        <h2>PESQUISA E DESENVOLVIMENTO</h2>
 
         <p>
             Nossos laboratórios trabalham continuamente em projetos
@@ -283,21 +363,22 @@
             de segurança e confidencialidade.
         </p>
 
-        <h3>
-            LABORATÓRIOS
-        </h3>
+        <h3>LABORATÓRIOS NEWGENESIS</h3>
 
         <p>
             Pesquisadores e engenheiros trabalham diariamente para
             transformar descobertas científicas em aplicações reais.
         </p>
 
-        <button
-            class="voltar"
-            onclick="abrirTela('inicio')">
+        <h3>CONFIDENCIALIDADE</h3>
 
+        <p>
+            Determinados projetos permanecem restritos aos membros
+            autorizados da organização.
+        </p>
+
+        <button class="voltar" onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
-
         </button>
 
     </section>
@@ -307,13 +388,10 @@
 
     <section id="direcao" class="tela">
 
-        <h2>
-            DIREÇÃO E PESQUISA
-        </h2>
+        <h2>DIREÇÃO E PESQUISA</h2>
 
-        <h4>
-            BENJAMIM CROSS
-        </h4>
+
+        <h4>BENJAMIM CROSS</h4>
 
         <p>
             Diretor Executivo da NewGenesis Corporation.
@@ -322,9 +400,7 @@
         </p>
 
 
-        <h4>
-            RICHARD MELO
-        </h4>
+        <h4>RICHARD MELO</h4>
 
         <p>
             Diretor de Pesquisa e Desenvolvimento.
@@ -333,9 +409,7 @@
         </p>
 
 
-        <h4>
-            CARLOS DE SOUZA
-        </h4>
+        <h4>CARLOS DE SOUZA</h4>
 
         <p>
             Pesquisador e membro da equipe de desenvolvimento.
@@ -344,12 +418,8 @@
         </p>
 
 
-        <button
-            class="voltar"
-            onclick="abrirTela('inicio')">
-
+        <button class="voltar" onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
-
         </button>
 
     </section>
@@ -359,9 +429,7 @@
 
     <section id="contato" class="tela">
 
-        <h2>
-            CONTATO
-        </h2>
+        <h2>CONTATO</h2>
 
         <p>
             <strong>
@@ -377,9 +445,7 @@
             Telefone: (000) 0000-1983
         </p>
 
-        <h3>
-            HORÁRIO DE ATENDIMENTO
-        </h3>
+        <h3>HORÁRIO DE ATENDIMENTO</h3>
 
         <p>
             Segunda a sexta-feira
@@ -389,12 +455,8 @@
             08:00 — 17:00
         </p>
 
-        <button
-            class="voltar"
-            onclick="abrirTela('inicio')">
-
+        <button class="voltar" onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
-
         </button>
 
     </section>
@@ -417,14 +479,10 @@ function abrirTela(nome) {
     const telas = document.querySelectorAll(".tela");
 
     telas.forEach(function(tela) {
-
         tela.classList.remove("ativa");
-
     });
 
-    document
-        .getElementById(nome)
-        .classList.add("ativa");
+    document.getElementById(nome).classList.add("ativa");
 
     window.scrollTo(0, 0);
 
@@ -433,4 +491,4 @@ function abrirTela(nome) {
 </script>
 
 </body>
-    </html>
+                </html>
