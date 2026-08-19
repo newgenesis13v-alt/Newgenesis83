@@ -147,6 +147,25 @@
             text-align: center;
         }
 
+        .pista {
+            margin-top: 35px;
+            text-align: center;
+            font-size: 9px;
+            color: #eeeeee;
+        }
+
+        .pista button {
+            background: none;
+            border: none;
+            color: #eeeeee;
+            font-size: 9px;
+            cursor: pointer;
+        }
+
+        .pista button:hover {
+            color: #174a3a;
+        }
+
         .tela h2 {
             color: #174a3a;
             font-size: 28px;
@@ -173,6 +192,32 @@
             margin-top: 30px;
             font-weight: bold;
             cursor: pointer;
+        }
+
+        .restrito {
+            border: 2px solid #222222;
+            padding: 25px;
+            margin-top: 25px;
+            background: #f7f7f7;
+        }
+
+        .restrito h3 {
+            color: #222222;
+            margin-top: 0;
+            letter-spacing: 2px;
+        }
+
+        .codigo {
+            font-family: monospace;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .estranho {
+            margin-top: 35px;
+            font-family: monospace;
+            font-size: 12px;
+            color: #555555;
         }
 
         footer {
@@ -202,15 +247,25 @@
 
 <nav>
 
-    <button onclick="abrirTela('inicio')">INÍCIO</button>
+    <button onclick="abrirTela('inicio')">
+        INÍCIO
+    </button>
 
-    <button onclick="abrirTela('empresa')">A EMPRESA</button>
+    <button onclick="abrirTela('empresa')">
+        A EMPRESA
+    </button>
 
-    <button onclick="abrirTela('pesquisa')">PESQUISA</button>
+    <button onclick="abrirTela('pesquisa')">
+        PESQUISA
+    </button>
 
-    <button onclick="abrirTela('direcao')">DIREÇÃO</button>
+    <button onclick="abrirTela('direcao')">
+        DIREÇÃO
+    </button>
 
-    <button onclick="abrirTela('contato')">CONTATO</button>
+    <button onclick="abrirTela('contato')">
+        CONTATO
+    </button>
 
 </nav>
 
@@ -258,38 +313,32 @@
         <div class="blocos">
 
             <div class="bloco">
-
                 <h4>CIÊNCIA</h4>
 
                 <p>
                     Investimos no estudo e desenvolvimento
                     de novas possibilidades científicas.
                 </p>
-
             </div>
 
 
             <div class="bloco">
-
                 <h4>TECNOLOGIA</h4>
 
                 <p>
                     Criamos soluções destinadas a transformar
                     o futuro da sociedade.
                 </p>
-
             </div>
 
 
             <div class="bloco">
-
                 <h4>DESENVOLVIMENTO</h4>
 
                 <p>
                     Nossos especialistas trabalham para transformar
                     descobertas em aplicações reais.
                 </p>
-
             </div>
 
         </div>
@@ -304,6 +353,17 @@
             Alguns conteúdos e projetos encontram-se restritos
             aos departamentos autorizados.
         </p>
+
+
+        <!-- PRIMEIRA PISTA -->
+
+        <div class="pista">
+
+            <button onclick="abrirTela('arquivo')">
+                documentação interna
+            </button>
+
+        </div>
 
     </section>
 
@@ -462,6 +522,51 @@
     </section>
 
 
+    <!-- PRIMEIRA ÁREA SECRETA -->
+
+    <section id="arquivo" class="tela">
+
+        <h2>
+            DOCUMENTAÇÃO INTERNA
+        </h2>
+
+        <div class="restrito">
+
+            <h3>
+                ACESSO RESTRITO
+            </h3>
+
+            <p class="codigo">
+                ARQUIVO: NG-001<br>
+                STATUS: INCOMPLETO<br>
+                CLASSIFICAÇÃO: INTERNO
+            </p>
+
+        </div>
+
+
+        <p>
+            Este registro não está disponível para consulta pública.
+        </p>
+
+        <p>
+            Caso você tenha chegado até aqui por engano,
+            retorne à página principal.
+        </p>
+
+
+        <p class="estranho">
+            registro parcialmente corrompido...
+        </p>
+
+
+        <button class="voltar" onclick="abrirTela('inicio')">
+            ← VOLTAR
+        </button>
+
+    </section>
+
+
 </main>
 
 
@@ -491,4 +596,4 @@ function abrirTela(nome) {
 </script>
 
 </body>
-                </html>
+    </html>
