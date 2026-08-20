@@ -8,59 +8,358 @@
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#e8e3d4;color:#25251f;font-family:Georgia,"Times New Roman",serif}
-header{background:#173f35;color:#eee9d8;text-align:center;padding:28px 15px 22px;border-bottom:6px solid #b39a55}
-.logo{width:230px;max-width:75%;display:block;margin:auto auto 15px}
-header h1{margin:0;font-size:38px;letter-spacing:7px}
-header p{font-size:11px;letter-spacing:3px}
-nav{background:#d8d2c2;text-align:center;padding:10px;border-bottom:2px solid #9d947e}
-nav button,.voltar{background:#173f35;color:#eee9d8;border:2px solid #102f28;padding:9px 13px;margin:3px;font-weight:bold;cursor:pointer}
-nav button:hover,.voltar:hover{background:#295c4d;transform:translateY(-2px)}
-main{max-width:900px;margin:30px auto;padding:0 18px}
-.tela{display:none;background:#f3efe3;border:2px solid #173f35;padding:30px;min-height:350px;box-shadow:5px 5px #c0b8a4}
-.tela.ativa{display:block;animation:entrada .4s}
-@keyframes entrada{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-h2{color:#173f35;border-bottom:3px double #b39a55;padding-bottom:10px}
-h3,h4{color:#173f35}
-.banner{background:#173f35;color:#eee9d8;padding:25px;text-align:center;border-left:8px solid #b39a55;margin:25px 0}
-.banner h3{color:#eee9d8}
-.blocos{display:flex;gap:12px;flex-wrap:wrap}
-.bloco{flex:1;min-width:180px;background:#e9e4d6;border:1px solid #aaa18c;padding:17px}
-.ano{text-align:center;margin-top:30px;padding:15px;border-top:2px solid #b39a55;border-bottom:2px solid #b39a55;color:#173f35;font-weight:bold}
-.aviso{text-align:center;font-size:11px;color:#68655b}
-.pista{text-align:center;margin-top:30px}
-.pista button{background:none;border:0;color:#aaa18c;font:9px monospace;cursor:pointer}
-.restrito{background:#ded9ca;border:2px solid #4a483f;padding:20px;margin-top:20px}
-.codigo{font:13px monospace;line-height:1.8}
-footer{background:#173f35;color:#eee9d8;text-align:center;padding:20px;margin-top:30px;font-size:11px}
 
-/* EVENTO 02:15 */
-.corrompido{display:none}
-body.modo-0215{background:#050000;color:#fff;overflow:hidden}
+body{
+margin:0;
+background:#e8e3d4;
+color:#25251f;
+font-family:Georgia,"Times New Roman",serif
+}
+
+header{
+background:#173f35;
+color:#eee9d8;
+text-align:center;
+padding:28px 15px 22px;
+border-bottom:6px solid #b39a55
+}
+
+.logo{
+width:230px;
+max-width:75%;
+display:block;
+margin:auto auto 15px
+}
+
+header h1{
+margin:0;
+font-size:38px;
+letter-spacing:7px
+}
+
+header p{
+font-size:11px;
+letter-spacing:3px
+}
+
+nav{
+background:#d8d2c2;
+text-align:center;
+padding:10px;
+border-bottom:2px solid #9d947e
+}
+
+nav button,.voltar{
+background:#173f35;
+color:#eee9d8;
+border:2px solid #102f28;
+padding:9px 13px;
+margin:3px;
+font-weight:bold;
+cursor:pointer
+}
+
+nav button:hover,.voltar:hover{
+background:#295c4d;
+transform:translateY(-2px)
+}
+
+main{
+max-width:900px;
+margin:30px auto;
+padding:0 18px
+}
+
+.tela{
+display:none;
+background:#f3efe3;
+border:2px solid #173f35;
+padding:30px;
+min-height:350px;
+box-shadow:5px 5px #c0b8a4
+}
+
+.tela.ativa{
+display:block;
+animation:entrada .4s
+}
+
+@keyframes entrada{
+from{opacity:0;transform:translateY(10px)}
+to{opacity:1;transform:none}
+}
+
+h2{
+color:#173f35;
+border-bottom:3px double #b39a55;
+padding-bottom:10px
+}
+
+h3,h4{
+color:#173f35
+}
+
+.banner{
+background:#173f35;
+color:#eee9d8;
+padding:25px;
+text-align:center;
+border-left:8px solid #b39a55;
+margin:25px 0
+}
+
+.banner h3{
+color:#eee9d8
+}
+
+.blocos{
+display:flex;
+gap:12px;
+flex-wrap:wrap
+}
+
+.bloco{
+flex:1;
+min-width:180px;
+background:#e9e4d6;
+border:1px solid #aaa18c;
+padding:17px
+}
+
+.ano{
+text-align:center;
+margin-top:30px;
+padding:15px;
+border-top:2px solid #b39a55;
+border-bottom:2px solid #b39a55;
+color:#173f35;
+font-weight:bold
+}
+
+.aviso{
+text-align:center;
+font-size:11px;
+color:#68655b
+}
+
+.pista{
+text-align:center;
+margin-top:30px
+}
+
+.pista button{
+background:none;
+border:0;
+color:#aaa18c;
+font:9px monospace;
+cursor:pointer
+}
+
+.restrito{
+background:#ded9ca;
+border:2px solid #4a483f;
+padding:20px;
+margin-top:20px
+}
+
+.codigo{
+font:13px monospace;
+line-height:1.8
+}
+
+.telefone{
+background:#e1dccd;
+border-left:5px solid #b39a55;
+padding:15px;
+margin-top:20px;
+font-weight:bold
+}
+
+.vanta{
+background:#17201d;
+color:#eee9d8;
+border:2px solid #173f35;
+padding:22px;
+margin-top:20px
+}
+
+.vanta h3{
+color:#b39a55;
+letter-spacing:2px
+}
+
+.vanta .codigo{
+color:#d5d0c2
+}
+
+footer{
+background:#173f35;
+color:#eee9d8;
+text-align:center;
+padding:20px;
+margin-top:30px;
+font-size:11px
+}
+
+
+/* EVENTO 01:20 ATÉ 01:32 */
+
+.corrompido{
+display:none
+}
+
+body.modo-0215{
+background:#050000;
+color:#fff;
+overflow:hidden
+}
+
 body.modo-0215>header,
 body.modo-0215>nav,
 body.modo-0215>main,
-body.modo-0215>footer{display:none}
-body.modo-0215 .corrompido{display:block;position:fixed;inset:0;width:100vw;height:100vh;overflow:hidden;z-index:99999;background:radial-gradient(circle,#720000,#420000 30%,#170000 65%,#020000);animation:pulsar .13s infinite alternate}
-.corrompido:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,0,0,.13) 0,rgba(255,0,0,.13) 1px,transparent 1px,transparent 4px);pointer-events:none}
-.frase{position:absolute;color:#f11;font:bold 14px monospace;letter-spacing:2px;text-shadow:3px 0 #300,-3px 0 red;animation:tremor .12s infinite}
-.f1{top:5%;left:4%}.f2{top:12%;left:30%}.f3{top:8%;right:5%;font-size:25px}.f4{top:20%;left:10%}.f5{top:28%;right:12%}.f6{top:35%;left:3%;font-size:25px}.f7{top:42%;left:35%}.f8{top:48%;right:4%}.f9{top:55%;left:8%;font-size:22px}.f10{top:62%;right:15%}.f11{top:70%;left:4%;font-size:25px}.f12{top:78%;left:38%}.f13{top:85%;right:5%;font-size:24px}.f14{top:92%;left:12%}
-.central{position:absolute;top:50%;left:50%;width:90%;transform:translate(-50%,-50%);text-align:center;font-size:21px;line-height:1.7;text-shadow:0 0 6px red,0 0 15px red;animation:tremcentral .15s infinite}
-.central em{display:inline-block;color:red;font-size:28px;font-weight:bold}
-.central strong{display:block;margin-top:20px;color:red;font: bold 15px monospace;letter-spacing:4px;animation:pisca .35s infinite}
-.fundo{position:absolute;font:bold 15vw monospace;color:rgba(255,0,0,.07);white-space:nowrap;transform:rotate(-8deg);pointer-events:none}
-@keyframes pulsar{from{filter:brightness(.8) contrast(1.2)}to{filter:brightness(1.2) contrast(1.6)}}
-@keyframes tremor{0%{transform:translate(0)}25%{transform:translate(2px,-1px)}50%{transform:translate(-2px,2px)}75%{transform:translate(1px,-2px)}100%{transform:translate(-1px,1px)}}
-@keyframes tremcentral{0%{transform:translate(-50%,-50%)}50%{transform:translate(-49%,-51%)}100%{transform:translate(-51%,-49%)}}
-@keyframes pisca{0%,40%,100%{opacity:1}50%,70%{opacity:.2}}
+body.modo-0215>footer{
+display:none
+}
+
+body.modo-0215 .corrompido{
+display:block;
+position:fixed;
+inset:0;
+width:100vw;
+height:100vh;
+overflow:hidden;
+z-index:99999;
+background:radial-gradient(circle,#720000,#420000 30%,#170000 65%,#020000);
+animation:pulsar .13s infinite alternate
+}
+
+.corrompido:before{
+content:"";
+position:absolute;
+inset:0;
+background:repeating-linear-gradient(
+0deg,
+rgba(255,0,0,.13) 0,
+rgba(255,0,0,.13) 1px,
+transparent 1px,
+transparent 4px
+);
+pointer-events:none
+}
+
+.frase{
+position:absolute;
+color:#f11;
+font:bold 14px monospace;
+letter-spacing:2px;
+text-shadow:3px 0 #300,-3px 0 red;
+animation:tremor .12s infinite
+}
+
+.f1{top:5%;left:4%}
+.f2{top:12%;left:30%}
+.f3{top:8%;right:5%;font-size:25px}
+.f4{top:20%;left:10%}
+.f5{top:28%;right:12%}
+.f6{top:35%;left:3%;font-size:25px}
+.f7{top:42%;left:35%}
+.f8{top:48%;right:4%}
+.f9{top:55%;left:8%;font-size:22px}
+.f10{top:62%;right:15%}
+.f11{top:70%;left:4%;font-size:25px}
+.f12{top:78%;left:38%}
+.f13{top:85%;right:5%;font-size:24px}
+.f14{top:92%;left:12%}
+
+.central{
+position:absolute;
+top:50%;
+left:50%;
+width:90%;
+transform:translate(-50%,-50%);
+text-align:center;
+font-size:21px;
+line-height:1.7;
+text-shadow:0 0 6px red,0 0 15px red;
+animation:tremcentral .15s infinite
+}
+
+.central em{
+display:inline-block;
+color:red;
+font-size:28px;
+font-weight:bold
+}
+
+.central strong{
+display:block;
+margin-top:20px;
+color:red;
+font:bold 15px monospace;
+letter-spacing:4px;
+animation:pisca .35s infinite
+}
+
+.fundo{
+position:absolute;
+font:bold 15vw monospace;
+color:rgba(255,0,0,.07);
+white-space:nowrap;
+transform:rotate(-8deg);
+pointer-events:none
+}
+
+@keyframes pulsar{
+from{filter:brightness(.8) contrast(1.2)}
+to{filter:brightness(1.2) contrast(1.6)}
+}
+
+@keyframes tremor{
+0%{transform:translate(0)}
+25%{transform:translate(2px,-1px)}
+50%{transform:translate(-2px,2px)}
+75%{transform:translate(1px,-2px)}
+100%{transform:translate(-1px,1px)}
+}
+
+@keyframes tremcentral{
+0%{transform:translate(-50%,-50%)}
+50%{transform:translate(-49%,-51%)}
+100%{transform:translate(-51%,-49%)}
+}
+
+@keyframes pisca{
+0%,40%,100%{opacity:1}
+50%,70%{opacity:.2}
+}
 
 @media(max-width:600px){
-header h1{font-size:27px;letter-spacing:4px}
-main{padding:0 12px}
-.tela{padding:22px}
-.central{font-size:17px}
-.central em{font-size:23px}
-.central strong{font-size:11px}
+
+header h1{
+font-size:27px;
+letter-spacing:4px
+}
+
+main{
+padding:0 12px
+}
+
+.tela{
+padding:22px
+}
+
+.central{
+font-size:17px
+}
+
+.central em{
+font-size:23px
+}
+
+.central strong{
+font-size:11px
+}
+
 }
 </style>
 </head>
@@ -68,166 +367,540 @@ main{padding:0 12px}
 <body>
 
 <header>
-<img src="IMG-20260819-WA0053.jpg" class="logo" alt="NewGenesis Corporation">
+
+<img src="IMG-20260819-WA0053.jpg"
+class="logo"
+alt="NewGenesis Corporation">
+
 <h1>NEWGENESIS</h1>
+
 <p>CIÊNCIA • DESENVOLVIMENTO • FUTURO</p>
+
 </header>
 
+
 <nav>
+
 <button onclick="abrirTela('inicio')">INÍCIO</button>
+
 <button onclick="abrirTela('empresa')">A EMPRESA</button>
+
 <button onclick="abrirTela('pesquisa')">PESQUISA</button>
+
 <button onclick="abrirTela('direcao')">DIREÇÃO</button>
+
+<button onclick="abrirTela('vanta')">VANTA 13</button>
+
 <button onclick="abrirTela('contato')">CONTATO</button>
+
 </nav>
+
 
 <main>
 
+
+<!-- INÍCIO -->
+
 <section id="inicio" class="tela ativa">
+
 <h2>Bem-vindo à NewGenesis</h2>
-<p>A NewGenesis Corporation dedica-se ao desenvolvimento de novas tecnologias para um futuro melhor.</p>
-<p>Desde nossa fundação, trabalhamos para transformar descobertas científicas em possibilidades reais.</p>
+
+<p>
+A NewGenesis Corporation dedica-se ao desenvolvimento
+de novas tecnologias para um futuro melhor.
+</p>
+
+<p>
+Desde nossa fundação, trabalhamos para transformar
+descobertas científicas em possibilidades reais.
+</p>
 
 <div class="banner">
+
 <h3>UM NOVO AMANHÃ COMEÇA HOJE.</h3>
-<p>Pesquisa. Descoberta. Desenvolvimento.</p>
+
+<p>
+Pesquisa. Descoberta. Desenvolvimento.
+</p>
+
 </div>
+
 
 <h3>NOSSOS AVANÇOS</h3>
 
+
 <div class="blocos">
-<div class="bloco"><h4>CIÊNCIA</h4><p>Estudo e desenvolvimento de novas possibilidades científicas.</p></div>
-<div class="bloco"><h4>TECNOLOGIA</h4><p>Soluções destinadas a transformar o futuro da sociedade.</p></div>
-<div class="bloco"><h4>DESENVOLVIMENTO</h4><p>Transformamos descobertas em aplicações reais.</p></div>
+
+<div class="bloco">
+
+<h4>CIÊNCIA</h4>
+
+<p>
+Estudo e desenvolvimento de novas
+possibilidades científicas.
+</p>
+
 </div>
 
-<div class="ano">NEWGENESIS CORPORATION • 1983</div>
 
-<p class="aviso">Alguns conteúdos e projetos encontram-se restritos aos departamentos autorizados.</p>
+<div class="bloco">
+
+<h4>TECNOLOGIA</h4>
+
+<p>
+Soluções destinadas a transformar
+o futuro da sociedade.
+</p>
+
+</div>
+
+
+<div class="bloco">
+
+<h4>DESENVOLVIMENTO</h4>
+
+<p>
+Transformamos descobertas em
+aplicações reais.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="ano">
+NEWGENESIS CORPORATION • 1983
+</div>
+
+
+<p class="aviso">
+Alguns conteúdos e projetos encontram-se restritos
+aos departamentos autorizados.
+</p>
+
 
 <div class="pista">
-<button onclick="abrirTela('arquivo')">documentação interna</button>
+
+<button onclick="abrirTela('arquivo')">
+documentação interna
+</button>
+
 </div>
+
 </section>
+
+
+<!-- EMPRESA -->
 
 <section id="empresa" class="tela">
+
 <h2>A EMPRESA</h2>
-<p>Fundada com o objetivo de expandir os limites da ciência, a NewGenesis reúne pesquisadores, engenheiros e especialistas dedicados ao avanço tecnológico.</p>
-<p>Nossa missão é <strong>criar hoje aquilo que será necessário amanhã.</strong></p>
+
+<p>
+Fundada com o objetivo de expandir os limites da ciência,
+a NewGenesis reúne pesquisadores, engenheiros e especialistas
+dedicados ao avanço tecnológico.
+</p>
+
+<p>
+Nossa missão é
+<strong>criar hoje aquilo que será necessário amanhã.</strong>
+</p>
+
 <h3>NOSSA FILOSOFIA</h3>
-<p>Acreditamos que cada descoberta possui o potencial de transformar o mundo.</p>
+
+<p>
+Acreditamos que cada descoberta possui o potencial
+de transformar o mundo.
+</p>
+
 <h3>NOSSA HISTÓRIA</h3>
-<p>Desde 1983, a NewGenesis trabalha para redefinir as possibilidades da ciência moderna.</p>
-<button class="voltar" onclick="abrirTela('inicio')">VOLTAR</button>
+
+<p>
+Desde 1983, a NewGenesis trabalha para redefinir
+as possibilidades da ciência moderna.
+</p>
+
+<button class="voltar"
+onclick="abrirTela('inicio')">
+VOLTAR
+</button>
+
 </section>
+
+
+<!-- PESQUISA -->
 
 <section id="pesquisa" class="tela">
+
 <h2>PESQUISA E DESENVOLVIMENTO</h2>
-<p>O departamento de pesquisa concentra os principais projetos científicos da NewGenesis Corporation.</p>
+
+<p>
+O departamento de pesquisa concentra os principais
+projetos científicos da NewGenesis Corporation.
+</p>
+
 
 <div class="blocos">
-<div class="bloco"><h4>BIOLOGIA</h4><p>Estudos avançados sobre organismos, desenvolvimento e adaptação.</p></div>
-<div class="bloco"><h4>TECNOLOGIA</h4><p>Desenvolvimento de sistemas experimentais.</p></div>
-<div class="bloco"><h4>PROJETOS ESPECIAIS</h4><p>Projetos de acesso restrito.</p></div>
+
+<div class="bloco">
+
+<h4>BIOLOGIA</h4>
+
+<p>
+Estudos avançados sobre organismos,
+desenvolvimento e adaptação.
+</p>
+
 </div>
+
+
+<div class="bloco">
+
+<h4>TECNOLOGIA</h4>
+
+<p>
+Desenvolvimento de sistemas experimentais.
+</p>
+
+</div>
+
+
+<div class="bloco">
+
+<h4>PROJETOS ESPECIAIS</h4>
+
+<p>
+Projetos de acesso restrito.
+</p>
+
+</div>
+
+</div>
+
 
 <div class="restrito">
+
 <h3>ACESSO CONTROLADO</h3>
-<div class="codigo">STATUS: ATIVO<br>DEPARTAMENTO: PESQUISA<br>CLASSIFICAÇÃO: RESTRITA</div>
+
+<div class="codigo">
+
+STATUS: ATIVO<br>
+DEPARTAMENTO: PESQUISA<br>
+CLASSIFICAÇÃO: RESTRITA
+
 </div>
 
-<button class="voltar" onclick="abrirTela('inicio')">VOLTAR</button>
+</div>
+
+
+<button class="voltar"
+onclick="abrirTela('inicio')">
+VOLTAR
+</button>
+
 </section>
+
+
+<!-- DIREÇÃO -->
 
 <section id="direcao" class="tela">
+
 <h2>DIREÇÃO</h2>
-<p>A NewGenesis é administrada por uma equipe responsável pela coordenação de seus principais departamentos.</p>
+
+<p>
+A NewGenesis é administrada por uma equipe responsável
+pela coordenação de seus principais departamentos.
+</p>
+
 
 <div class="restrito">
+
 <h3>BENJAMIM CROSS</h3>
-<p>Diretor responsável pela administração e supervisão dos projetos da organização.</p>
+
+<p>
+Diretor responsável pela administração e supervisão
+dos projetos da organização.
+</p>
+
 </div>
 
+
 <div class="restrito">
+
 <h3>RICHARD MELO</h3>
-<p>Pesquisador associado ao departamento de desenvolvimento e pesquisa.</p>
+
+<p>
+Pesquisador associado ao departamento de desenvolvimento
+e pesquisa.
+</p>
+
 </div>
+
+
+<div class="restrito">
+
+<h3>CARLOS DE SOUZA</h3>
+
+<p>
+Ex-integrante da organização.
+Registros internos indicam seu desligamento
+sob circunstâncias não divulgadas publicamente.
+</p>
+
+<div class="codigo">
+
+STATUS: FALECIDO<br>
+ACESSO AO ARQUIVO: RESTRITO
+
+</div>
+
+</div>
+
 
 <h3>DEPARTAMENTOS</h3>
-<p>Pesquisa • Desenvolvimento • Administração • Segurança • Arquivos</p>
 
-<button class="voltar" onclick="abrirTela('inicio')">VOLTAR</button>
+<p>
+Pesquisa • Desenvolvimento • Administração • Segurança • Arquivos
+</p>
+
+
+<button class="voltar"
+onclick="abrirTela('inicio')">
+VOLTAR
+</button>
+
 </section>
 
-<section id="contato" class="tela">
-<h2>CONTATO</h2>
-<p>Para informações sobre a NewGenesis Corporation, entre em contato com nosso departamento administrativo.</p>
 
-<div class="banner">
-<h3>NEWGENESIS CORPORATION</h3>
-<p>CIÊNCIA • DESENVOLVIMENTO • FUTURO</p>
+<!-- VANTA 13 -->
+
+<section id="vanta" class="tela">
+
+<h2>PROJETO VANTA 13</h2>
+
+<p>
+O Projeto Vanta 13 pertence a uma divisão
+de pesquisa de acesso restrito da NewGenesis Corporation.
+</p>
+
+
+<div class="vanta">
+
+<h3>VANTA 13</h3>
+
+<div class="codigo">
+
+PROJETO: VANTA 13<br>
+CLASSIFICAÇÃO: CONFIDENCIAL<br>
+DEPARTAMENTO: PESQUISA<br>
+STATUS: ATIVO<br>
+ACESSO: RESTRITO
+
 </div>
 
-<h3>ATENDIMENTO</h3>
-<p>Departamento Administrativo</p>
-<p>NewGenesis Corporation</p>
-<p>Fundada em 1983</p>
+</div>
 
-<button class="voltar" onclick="abrirTela('inicio')">VOLTAR</button>
-</section>
-
-<section id="arquivo" class="tela">
-<h2>DOCUMENTAÇÃO INTERNA</h2>
 
 <div class="restrito">
+
+<h3>REGISTRO INTERNO</h3>
+
+<p>
+Informações relacionadas ao projeto não devem ser
+divulgadas fora dos departamentos autorizados.
+</p>
+
+<p>
+Somente funcionários com autorização específica
+podem consultar os arquivos completos.
+</p>
+
+</div>
+
+
+<div class="banner">
+
+<h3>ARQUIVO PROTEGIDO</h3>
+
+<p>
+NEWGENESIS CORPORATION • 1983
+</p>
+
+</div>
+
+
+<button class="voltar"
+onclick="abrirTela('inicio')">
+VOLTAR
+</button>
+
+</section>
+
+
+<!-- CONTATO -->
+
+<section id="contato" class="tela">
+
+<h2>CONTATO</h2>
+
+<p>
+Para informações sobre a NewGenesis Corporation,
+entre em contato com nosso departamento administrativo.
+</p>
+
+
+<div class="banner">
+
+<h3>NEWGENESIS CORPORATION</h3>
+
+<p>
+CIÊNCIA • DESENVOLVIMENTO • FUTURO
+</p>
+
+</div>
+
+
+<h3>ATENDIMENTO</h3>
+
+<p>
+Departamento Administrativo
+</p>
+
+<p>
+NewGenesis Corporation
+</p>
+
+<p>
+Fundada em 1983
+</p>
+
+
+<div class="telefone">
+
+📞 TELEFONE PARA CONTATO:<br><br>
+
+<strong>
+0000-8712
+</strong>
+
+</div>
+
+
+<button class="voltar"
+onclick="abrirTela('inicio')">
+VOLTAR
+</button>
+
+</section>
+
+
+<!-- DOCUMENTAÇÃO -->
+
+<section id="arquivo" class="tela">
+
+<h2>DOCUMENTAÇÃO INTERNA</h2>
+
+
+<div class="restrito">
+
 <h3>ACESSO RESTRITO</h3>
+
 <div class="codigo">
+
 ARQUIVO: NG-1983-001<br>
 STATUS: CONFIDENCIAL<br>
 ACESSO: AUTORIZADO<br>
 DEPARTAMENTO: ADMINISTRAÇÃO
-</div>
+
 </div>
 
-<p>Alguns arquivos encontram-se disponíveis apenas através de rotas internas.</p>
+</div>
 
-<button class="voltar" onclick="abrirTela('inicio')">VOLTAR</button>
+
+<p>
+Alguns arquivos encontram-se disponíveis apenas
+através de rotas internas.
+</p>
+
+
+<button class="voltar"
+onclick="abrirTela('inicio')">
+VOLTAR
+</button>
+
 </section>
+
 
 </main>
 
+
 <footer>
+
 NEWGENESIS CORPORATION © 1983
+
 </footer>
 
 
-<!-- EVENTO 02:15 -->
+<!-- EVENTO 01:20 ATÉ 01:32 -->
 
 <div class="corrompido">
 
-<div class="fundo" style="top:10%;left:-10%">NEWGENESIS</div>
-<div class="fundo" style="top:65%;left:-20%">VANTA 13</div>
+<div class="fundo"
+style="top:10%;left:-10%">
+NEWGENESIS
+</div>
+
+<div class="fundo"
+style="top:65%;left:-20%">
+VANTA 13
+</div>
+
 
 <div class="frase f1">MICHAEL</div>
+
 <div class="frase f2">VANTA 13</div>
+
 <div class="frase f3">CARLOS</div>
+
 <div class="frase f4">FRACASSO</div>
+
 <div class="frase f5">NÃO OLHE</div>
+
 <div class="frase f6">MICHAEL</div>
+
 <div class="frase f7">NEWGENESIS</div>
+
 <div class="frase f8">ELE ESTÁ AQUI</div>
+
 <div class="frase f9">VANTA</div>
+
 <div class="frase f10">13</div>
+
 <div class="frase f11">FRACASSO</div>
+
 <div class="frase f12">CARLOS</div>
+
 <div class="frase f13">MICHAEL</div>
+
 <div class="frase f14">VANTA 13</div>
 
+
 <div class="central">
+
 Você veio pra investigar?
+
 <br>
-<em>Oh oh oh meu pequeno...</em>
-<strong>EU AINDA ESTOU AQUI</strong>
+
+<em>
+Oh oh oh meu pequeno...
+</em>
+
+<strong>
+EU AINDA ESTOU AQUI
+</strong>
+
 </div>
 
 </div>
@@ -238,42 +911,69 @@ Você veio pra investigar?
 function abrirTela(id){
 
 document.querySelectorAll(".tela").forEach(function(tela){
+
 tela.classList.remove("ativa");
+
 });
 
 const tela=document.getElementById(id);
 
 if(tela){
+
 tela.classList.add("ativa");
+
 window.scrollTo(0,0);
-}
 
 }
 
+}
 
-let eventoAtivado=false;
+
+/* EVENTO DAS 01:20 ATÉ 01:32 */
 
 function verificarHorario(){
 
 const agora=new Date();
 
-if(
-agora.getHours()===2 &&
-agora.getMinutes()===15 &&
-!eventoAtivado
-){
+const hora=agora.getHours();
+const minuto=agora.getMinutes();
 
-eventoAtivado=true;
+const dentroDoEvento=
+hora===1 &&
+minuto>=20 &&
+minuto<32;
+
+
+/* ENTRE 01:20 E 01:31 */
+
+if(dentroDoEvento){
+
 document.body.classList.add("modo-0215");
 
 }
 
+/* A PARTIR DE 01:32 VOLTA AO NORMAL */
+
+else{
+
+document.body.classList.remove("modo-0215");
+
 }
 
+}
+
+
+/* VERIFICA IMEDIATAMENTE */
+
 verificarHorario();
+
+
+/* CONTINUA VERIFICANDO A CADA SEGUNDO */
+
 setInterval(verificarHorario,1000);
 
 </script>
 
+
 </body>
-                              </html>
+  </html>
