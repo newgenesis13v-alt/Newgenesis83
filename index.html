@@ -12,92 +12,99 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            background: #FFFFFF;
-            color: #202820;
+            background: #FFFFFFF;
+            color: #25251F;
             font-family: Georgia, "Times New Roman", serif;
             transition: 0.3s;
         }
 
-        /* =========================
+        /* =====================================
            HEADER
-        ========================= */
+        ===================================== */
 
         header {
-            background: #0B7728;
-            color: #FFFFFF;
-            padding: 30px 20px 25px;
+            background: #073F35;
+            color: #EEE9D8;
+            padding: 42px 20px 32px;
             text-align: center;
-            border-bottom: 7px solid #07551C;
+            border-bottom: 7px solid #B39A55;
         }
 
         .logo {
             display: block;
             width: 230px;
-            max-width: 75%;
+            max-width: 78%;
             height: auto;
-            margin: 0 auto 18px;
+            margin: 0 auto 25px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 38px;
-            letter-spacing: 8px;
+            font-size: 40px;
+            letter-spacing: 10px;
             font-family: "Times New Roman", serif;
+            font-weight: bold;
         }
 
         header p {
-            margin: 10px 0 0;
+            margin: 13px 0 0;
             font-size: 12px;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
+            color: #EEE9D8;
         }
 
-        /* =========================
+        /* =====================================
            NAVEGAÇÃO
-        ========================= */
+        ===================================== */
 
         nav {
-            background: #FFFFFF;
-            padding: 12px 8px;
+            background: #D8D2C2;
+            padding: 20px 10px;
             text-align: center;
-            border-bottom: 2px solid #0B7728;
+            border-bottom: 2px solid #9D947E;
         }
 
         nav button {
-            background: #0B7728;
-            color: #FFFFFF;
-            border: 2px solid #07551C;
-            padding: 9px 13px;
-            margin: 3px;
+            background: #073F35;
+            color: #EEE9D8;
+            border: 2px solid #102F28;
+            padding: 12px 17px;
+            margin: 4px;
             font-family: "Times New Roman", serif;
             font-weight: bold;
+            font-size: 14px;
             cursor: pointer;
             transition: 0.2s;
         }
 
         nav button:hover {
-            background: #07551C;
+            background: #295C4D;
             transform: translateY(-2px);
         }
 
-        /* =========================
+        /* =====================================
            CONTEÚDO
-        ========================= */
+        ===================================== */
 
         main {
             max-width: 900px;
-            margin: 30px auto;
+            margin: 35px auto;
             padding: 0 20px;
         }
 
         .tela {
             display: none;
-            background: #FFFFFF;
-            border: 2px solid #0B7728;
-            padding: 32px;
+            background: #F3EFE3;
+            border: 2px solid #073F35;
+            padding: 34px;
             min-height: 350px;
-            box-shadow: 5px 5px 0 #D8E8DC;
+            box-shadow: 6px 6px 0 #BEB7A5;
         }
 
         .tela.ativa {
@@ -117,33 +124,62 @@
             }
         }
 
-        /* =========================
+        /* =====================================
+           TÍTULOS
+        ===================================== */
+
+        .tela h2 {
+            color: #073F35;
+            font-size: 29px;
+            letter-spacing: 1px;
+            border-bottom: 3px double #B39A55;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+
+        .tela h3 {
+            color: #073F35;
+            margin-top: 32px;
+        }
+
+        .tela h4 {
+            color: #073F35;
+            margin-top: 27px;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+
+        /* =====================================
            BANNER
-        ========================= */
+        ===================================== */
 
         .banner {
-            background: #0B7728;
-            color: #FFFFFF;
-            padding: 30px 22px;
-            margin: 25px 0;
+            background: #073F35;
+            color: #EEE9D8;
+            padding: 32px 24px;
+            margin: 28px 0;
             text-align: center;
-            border-left: 9px solid #07551C;
+            border-left: 9px solid #B39A55;
         }
 
         .banner h3 {
-            color: #FFFFFF;
+            color: #EEE9D8;
             font-size: 24px;
             margin-top: 0;
             letter-spacing: 1px;
         }
 
-        /* =========================
+        .banner p {
+            margin-bottom: 0;
+        }
+
+        /* =====================================
            BLOCOS
-        ========================= */
+        ===================================== */
 
         .blocos {
             display: flex;
-            gap: 12px;
+            gap: 13px;
             flex-wrap: wrap;
             margin-top: 25px;
         }
@@ -151,50 +187,28 @@
         .bloco {
             flex: 1;
             min-width: 180px;
-            border: 1px solid #B8C9BC;
-            padding: 18px;
-            background: #F7FAF7;
+            border: 1px solid #AAA18C;
+            padding: 19px;
+            background: #E9E4D6;
         }
 
         .bloco h4 {
-            color: #0B7728;
+            color: #073F35;
             margin-top: 0;
             letter-spacing: 1px;
         }
 
-        /* =========================
-           TÍTULOS
-        ========================= */
-
-        .tela h2 {
-            color: #0B7728;
-            font-size: 27px;
-            border-bottom: 3px double #0B7728;
-            padding-bottom: 10px;
-        }
-
-        .tela h3 {
-            color: #0B7728;
-            margin-top: 30px;
-        }
-
-        .tela h4 {
-            color: #0B7728;
-            margin-top: 25px;
-            margin-bottom: 5px;
-        }
-
-        /* =========================
+        /* =====================================
            ANO
-        ========================= */
+        ===================================== */
 
         .ano {
             text-align: center;
-            margin-top: 35px;
-            padding: 15px;
-            border-top: 2px solid #0B7728;
-            border-bottom: 2px solid #0B7728;
-            color: #0B7728;
+            margin-top: 38px;
+            padding: 16px;
+            border-top: 2px solid #B39A55;
+            border-bottom: 2px solid #B39A55;
+            color: #073F35;
             font-weight: bold;
             letter-spacing: 3px;
         }
@@ -202,35 +216,39 @@
         .aviso {
             margin-top: 30px;
             font-size: 11px;
-            color: #686E68;
+            color: #68655B;
             text-align: center;
         }
 
+        /* =====================================
+           PISTA SECRETA
+        ===================================== */
+
         .pista {
-            margin-top: 35px;
+            margin-top: 36px;
             text-align: center;
             font-size: 9px;
-            color: #C7CEC8;
+            color: #C7C1B2;
         }
 
         .pista button {
             background: none;
             border: none;
-            color: #C7CEC8;
+            color: #C7C1B2;
             font-family: monospace;
             font-size: 9px;
             cursor: pointer;
         }
 
-        /* =========================
-           BOTÕES
-        ========================= */
+        /* =====================================
+           BOTÃO VOLTAR
+        ===================================== */
 
         .voltar {
-            background: #0B7728;
-            color: #FFFFFF;
-            border: 2px solid #07551C;
-            padding: 10px 18px;
+            background: #073F35;
+            color: #EEE9D8;
+            border: 2px solid #102F28;
+            padding: 11px 19px;
             margin-top: 30px;
             font-family: "Times New Roman", serif;
             font-weight: bold;
@@ -239,23 +257,23 @@
         }
 
         .voltar:hover {
-            background: #07551C;
+            background: #295C4D;
             transform: translateY(-2px);
         }
 
-        /* =========================
+        /* =====================================
            ÁREA RESTRITA
-        ========================= */
+        ===================================== */
 
         .restrito {
-            border: 2px solid #AAB5AC;
-            padding: 25px;
+            border: 2px solid #4A483F;
+            padding: 26px;
             margin-top: 25px;
-            background: #F1F4F1;
+            background: #DED9CA;
         }
 
         .restrito h3 {
-            color: #202820;
+            color: #292822;
             margin-top: 0;
             letter-spacing: 2px;
         }
@@ -266,22 +284,22 @@
             line-height: 1.8;
         }
 
-        /* =========================
+        /* =====================================
            ARQUIVO
-        ========================= */
+        ===================================== */
 
         .arquivo-link {
             margin-top: 25px;
-            padding: 15px;
-            border: 1px solid #0B7728;
-            background: #F7FAF7;
+            padding: 16px;
+            border: 1px solid #073F35;
+            background: #E4DFD1;
         }
 
         .arquivo-link a {
             display: inline-block;
-            background: #0B7728;
-            color: #FFFFFF;
-            padding: 10px 15px;
+            background: #073F35;
+            color: #EEE9D8;
+            padding: 11px 17px;
             text-decoration: none;
             font-family: "Times New Roman", serif;
             font-weight: bold;
@@ -289,22 +307,81 @@
         }
 
         .arquivo-link a:hover {
-            background: #07551C;
+            background: #295C4D;
             transform: translateY(-2px);
         }
 
-        /* =========================
+        /* =====================================
            FOOTER
-        ========================= */
+        ===================================== */
 
         footer {
-            background: #0B7728;
-            color: #FFFFFF;
+            background: #073F35;
+            color: #EEE9D8;
             text-align: center;
-            padding: 22px;
-            margin-top: 30px;
+            padding: 24px;
+            margin-top: 35px;
             font-size: 11px;
             letter-spacing: 1px;
+            border-top: 6px solid #B39A55;
+        }
+
+
+        /* =====================================
+           RESPONSIVO
+        ===================================== */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 35px 15px 28px;
+            }
+
+            .logo {
+                width: 220px;
+                max-width: 85%;
+            }
+
+            header h1 {
+                font-size: 31px;
+                letter-spacing: 7px;
+            }
+
+            header p {
+                font-size: 9px;
+                letter-spacing: 3px;
+            }
+
+            nav {
+                padding: 18px 8px;
+            }
+
+            nav button {
+                font-size: 13px;
+                padding: 11px 15px;
+            }
+
+            main {
+                margin: 25px auto;
+                padding: 0 12px;
+            }
+
+            .tela {
+                padding: 25px 20px;
+            }
+
+            .tela h2 {
+                font-size: 25px;
+            }
+
+            .banner {
+                padding: 27px 18px;
+            }
+
+            .bloco {
+                min-width: 100%;
+            }
+
         }
 
 
@@ -313,14 +390,14 @@
         ===================================== */
 
         body.modo-0120 {
-            background: #10120f;
-            color: #c7c7bd;
+            background: #10120F;
+            color: #C7C7BD;
             overflow-x: hidden;
         }
 
         body.modo-0120 header {
-            background: #10120f;
-            border-bottom: 1px solid #33382f;
+            background: #10120F;
+            border-bottom: 1px solid #33382F;
             text-align: left;
             padding: 22px;
         }
@@ -338,17 +415,17 @@
         }
 
         body.modo-0120 header p {
-            color: #666a61;
+            color: #666A61;
         }
 
         body.modo-0120 nav {
-            background: #10120f;
-            border-bottom: 1px solid #33382f;
+            background: #10120F;
+            border-bottom: 1px solid #33382F;
         }
 
         body.modo-0120 nav button {
-            background: #10120f;
-            color: #555a52;
+            background: #10120F;
+            color: #555A52;
             border: 1px solid #252925;
         }
 
@@ -357,43 +434,47 @@
         }
 
         body.modo-0120 .tela.ativa {
-            background: #10120f;
-            border: 1px solid #33382f;
-            color: #c7c7bd;
+            background: #10120F;
+            border: 1px solid #33382F;
+            color: #C7C7BD;
             box-shadow: none;
         }
 
         body.modo-0120 .tela h2,
         body.modo-0120 .tela h3,
         body.modo-0120 .tela h4 {
-            color: #aeb2a8;
+            color: #AEB2A8;
         }
 
         body.modo-0120 .banner {
-            background: #10120f;
-            border-left: 2px solid #555b51;
+            background: #10120F;
+            border-left: 2px solid #555B51;
             text-align: left;
         }
 
         body.modo-0120 .bloco {
-            border-color: #30352f;
-            background: #10120f;
+            border-color: #30352F;
+            background: #10120F;
         }
 
         body.modo-0120 .ano {
-            color: #666b62;
-            border-color: #30352f;
+            color: #666B62;
+            border-color: #30352F;
         }
 
         body.modo-0120 footer {
-            background: #10120f;
-            color: #555a52;
-            border-top: 1px solid #33382f;
+            background: #10120F;
+            color: #555A52;
+            border-top: 1px solid #33382F;
         }
 
         body.modo-0120 .corrompido {
             display: block;
         }
+
+        /* =====================================
+           CORROMPIDO
+        ===================================== */
 
         .corrompido {
             display: none;
@@ -406,7 +487,7 @@
 
         .frase {
             position: absolute;
-            color: #777d73;
+            color: #777D73;
             font-family: monospace;
             font-size: 13px;
             letter-spacing: 2px;
@@ -461,7 +542,7 @@
             transform: translate(-50%, -50%);
             width: 80%;
             text-align: center;
-            color: #d0d0c7;
+            color: #D0D0C7;
             font-family: Georgia, serif;
             font-size: 20px;
             line-height: 1.8;
@@ -482,7 +563,9 @@
     </style>
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -528,6 +611,11 @@
 
 <main>
 
+
+    <!-- ==============================
+         INÍCIO
+    =============================== -->
+
     <section id="inicio" class="tela ativa">
 
         <h2>
@@ -544,6 +632,7 @@
             descobertas científicas em possibilidades reais.
         </p>
 
+
         <div class="banner">
 
             <h3>
@@ -556,11 +645,14 @@
 
         </div>
 
+
         <h3>
             NOSSOS AVANÇOS
         </h3>
 
+
         <div class="blocos">
+
 
             <div class="bloco">
 
@@ -575,6 +667,7 @@
 
             </div>
 
+
             <div class="bloco">
 
                 <h4>
@@ -587,6 +680,7 @@
                 </p>
 
             </div>
+
 
             <div class="bloco">
 
@@ -601,16 +695,20 @@
 
             </div>
 
+
         </div>
+
 
         <div class="ano">
             NEWGENESIS CORPORATION • 1983
         </div>
 
+
         <p class="aviso">
             Alguns conteúdos e projetos encontram-se restritos
             aos departamentos autorizados.
         </p>
+
 
         <div class="pista">
 
@@ -623,9 +721,15 @@
     </section>
 
 
+    <!-- ==============================
+         EMPRESA
+    =============================== -->
+
     <section id="empresa" class="tela">
 
-        <h2>A EMPRESA</h2>
+        <h2>
+            A EMPRESA
+        </h2>
 
         <p>
             Fundada com o objetivo de expandir os limites da ciência,
@@ -640,23 +744,33 @@
             </strong>
         </p>
 
-        <h3>NOSSA FILOSOFIA</h3>
+        <h3>
+            NOSSA FILOSOFIA
+        </h3>
 
         <p>
             Acreditamos que cada descoberta possui o potencial
             de transformar o mundo.
         </p>
 
-        <button class="voltar" onclick="abrirTela('inicio')">
+        <button
+            class="voltar"
+            onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
         </button>
 
     </section>
 
 
+    <!-- ==============================
+         PESQUISA
+    =============================== -->
+
     <section id="pesquisa" class="tela">
 
-        <h2>PESQUISA E DESENVOLVIMENTO</h2>
+        <h2>
+            PESQUISA E DESENVOLVIMENTO
+        </h2>
 
         <p>
             Nossos laboratórios trabalham continuamente em projetos
@@ -669,32 +783,46 @@
             de segurança e confidencialidade.
         </p>
 
-        <h3>LABORATÓRIOS NEWGENESIS</h3>
+        <h3>
+            LABORATÓRIOS NEWGENESIS
+        </h3>
 
         <p>
             Pesquisadores e engenheiros trabalham diariamente para
             transformar descobertas científicas em aplicações reais.
         </p>
 
-        <h3>CONFIDENCIALIDADE</h3>
+        <h3>
+            CONFIDENCIALIDADE
+        </h3>
 
         <p>
             Determinados projetos permanecem restritos aos membros
             autorizados da organização.
         </p>
 
-        <button class="voltar" onclick="abrirTela('inicio')">
+        <button
+            class="voltar"
+            onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
         </button>
 
     </section>
 
 
+    <!-- ==============================
+         DIREÇÃO
+    =============================== -->
+
     <section id="direcao" class="tela">
 
-        <h2>DIREÇÃO E PESQUISA</h2>
+        <h2>
+            DIREÇÃO E PESQUISA
+        </h2>
 
-        <h4>BENJAMIM CROSS</h4>
+        <h4>
+            BENJAMIM CROSS
+        </h4>
 
         <p>
             Diretor Executivo da NewGenesis Corporation.
@@ -702,7 +830,10 @@
             dos projetos internos.
         </p>
 
-        <h4>RICHARD MELO</h4>
+
+        <h4>
+            RICHARD MELO
+        </h4>
 
         <p>
             Diretor de Pesquisa e Desenvolvimento.
@@ -710,7 +841,10 @@
             e experimentais da empresa.
         </p>
 
-        <h4>CARLOS DE SOUZA</h4>
+
+        <h4>
+            CARLOS DE SOUZA
+        </h4>
 
         <p>
             Pesquisador e membro da equipe de desenvolvimento.
@@ -718,19 +852,30 @@
             A causa de sua morte permanece desconhecida.
         </p>
 
-        <button class="voltar" onclick="abrirTela('inicio')">
+
+        <button
+            class="voltar"
+            onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
         </button>
 
     </section>
 
 
+    <!-- ==============================
+         CONTATO
+    =============================== -->
+
     <section id="contato" class="tela">
 
-        <h2>CONTATO</h2>
+        <h2>
+            CONTATO
+        </h2>
 
         <p>
-            <strong>NEWGENESIS CORPORATION</strong>
+            <strong>
+                NEWGENESIS CORPORATION
+            </strong>
         </p>
 
         <p>
@@ -741,7 +886,9 @@
             Telefone: (000) 0000-1983
         </p>
 
-        <h3>HORÁRIO DE ATENDIMENTO</h3>
+        <h3>
+            HORÁRIO DE ATENDIMENTO
+        </h3>
 
         <p>
             Segunda a sexta-feira
@@ -751,20 +898,31 @@
             08:00 — 01:20
         </p>
 
-        <button class="voltar" onclick="abrirTela('inicio')">
+        <button
+            class="voltar"
+            onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
         </button>
 
     </section>
 
 
+    <!-- ==============================
+         ARQUIVO INTERNO
+    =============================== -->
+
     <section id="arquivo" class="tela">
 
-        <h2>arquivo interno</h2>
+        <h2>
+            arquivo interno
+        </h2>
+
 
         <div class="restrito">
 
-            <h3>ACESSO RESTRITO</h3>
+            <h3>
+                ACESSO RESTRITO
+            </h3>
 
             <p class="codigo">
                 ARQUIVO: NG-001<br>
@@ -774,144 +932,7 @@
 
         </div>
 
+
         <p>
             Este registro não está disponível para consulta pública.
-        </p>
-
-        <p>
-            Parte da documentação deste arquivo foi encaminhada
-            ao Departamento de Pesquisa e Desenvolvimento.
-        </p>
-
-        <div class="arquivo-link">
-
-            <p>
-                <strong>?:</strong>
-            </p>
-
-            <p>
-                v13
-            </p>
-
-            <a href="vanta13.html">
-                CONSULTAR
-            </a>
-
-        </div>
-
-        <button class="voltar" onclick="abrirTela('inicio')">
-            ← VOLTAR
-        </button>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    NEWGENESIS CORPORATION • TODOS OS DIREITOS RESERVADOS
-
-</footer>
-
-
-<div class="corrompido" id="corrompido">
-
-    <div class="frase frase1">
-        MICHAEL
-    </div>
-
-    <div class="frase frase2">
-        VANTA 13
-    </div>
-
-    <div class="frase frase3">
-        CARLOS
-    </div>
-
-    <div class="frase frase4">
-        FRACASSO
-    </div>
-
-    <div class="frase frase5">
-        MICHAEL
-    </div>
-
-    <div class="frase frase6">
-        VANTA 13
-    </div>
-
-    <div class="frase frase7">
-        CARLOS
-    </div>
-
-    <div class="frase frase8">
-        FRACASSO
-    </div>
-
-    <div class="mensagem-central">
-
-        Você veio pra investigar?
-
-        <br>
-
-        Oh oh oh, meu pequeno,
-
-        <br>
-
-        <em>
-            eu ainda estou aqui
-        </em>
-
-        <strong>
-            O NOVO MUNDO ESTÁ VINDO
-        </strong>
-
-    </div>
-
-</div>
-
-
-<script>
-
-function abrirTela(nome) {
-
-    const telas = document.querySelectorAll(".tela");
-
-    telas.forEach(function(tela) {
-        tela.classList.remove("ativa");
-    });
-
-    document.getElementById(nome).classList.add("ativa");
-
-    window.scrollTo(0, 0);
-}
-
-
-function verificarHorario() {
-
-    const agora = new Date();
-
-    const horas = agora.getHours();
-
-    const minutos = agora.getMinutes();
-
-    if (horas === 1 && minutos === 20) {
-
-        document.body.classList.add("modo-0120");
-
-        document.getElementById("corrompido").style.display = "block";
-
-    }
-
-}
-
-
-setInterval(verificarHorario, 1000);
-
-verificarHorario();
-
-</script>
-
-</body>
-    </html>
+ 
