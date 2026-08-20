@@ -175,23 +175,6 @@ margin-top:20px;
 font-weight:bold
 }
 
-.vanta{
-background:#17201d;
-color:#eee9d8;
-border:2px solid #173f35;
-padding:22px;
-margin-top:20px
-}
-
-.vanta h3{
-color:#b39a55;
-letter-spacing:2px
-}
-
-.vanta .codigo{
-color:#d5d0c2
-}
-
 footer{
 background:#173f35;
 color:#eee9d8;
@@ -389,8 +372,6 @@ alt="NewGenesis Corporation">
 
 <button onclick="abrirTela('direcao')">DIREÇÃO</button>
 
-<button onclick="abrirTela('vanta')">VANTA 13</button>
-
 <button onclick="abrirTela('contato')">CONTATO</button>
 
 </nav>
@@ -428,7 +409,6 @@ Pesquisa. Descoberta. Desenvolvimento.
 
 <h3>NOSSOS AVANÇOS</h3>
 
-
 <div class="blocos">
 
 <div class="bloco">
@@ -442,7 +422,6 @@ possibilidades científicas.
 
 </div>
 
-
 <div class="bloco">
 
 <h4>TECNOLOGIA</h4>
@@ -453,7 +432,6 @@ o futuro da sociedade.
 </p>
 
 </div>
-
 
 <div class="bloco">
 
@@ -473,12 +451,10 @@ aplicações reais.
 NEWGENESIS CORPORATION • 1983
 </div>
 
-
 <p class="aviso">
 Alguns conteúdos e projetos encontram-se restritos
 aos departamentos autorizados.
 </p>
-
 
 <div class="pista">
 
@@ -541,7 +517,6 @@ O departamento de pesquisa concentra os principais
 projetos científicos da NewGenesis Corporation.
 </p>
 
-
 <div class="blocos">
 
 <div class="bloco">
@@ -555,7 +530,6 @@ desenvolvimento e adaptação.
 
 </div>
 
-
 <div class="bloco">
 
 <h4>TECNOLOGIA</h4>
@@ -565,7 +539,6 @@ Desenvolvimento de sistemas experimentais.
 </p>
 
 </div>
-
 
 <div class="bloco">
 
@@ -674,71 +647,6 @@ VOLTAR
 </section>
 
 
-<!-- VANTA 13 -->
-
-<section id="vanta" class="tela">
-
-<h2>PROJETO VANTA 13</h2>
-
-<p>
-O Projeto Vanta 13 pertence a uma divisão
-de pesquisa de acesso restrito da NewGenesis Corporation.
-</p>
-
-
-<div class="vanta">
-
-<h3>VANTA 13</h3>
-
-<div class="codigo">
-
-PROJETO: VANTA 13<br>
-CLASSIFICAÇÃO: CONFIDENCIAL<br>
-DEPARTAMENTO: PESQUISA<br>
-STATUS: ATIVO<br>
-ACESSO: RESTRITO
-
-</div>
-
-</div>
-
-
-<div class="restrito">
-
-<h3>REGISTRO INTERNO</h3>
-
-<p>
-Informações relacionadas ao projeto não devem ser
-divulgadas fora dos departamentos autorizados.
-</p>
-
-<p>
-Somente funcionários com autorização específica
-podem consultar os arquivos completos.
-</p>
-
-</div>
-
-
-<div class="banner">
-
-<h3>ARQUIVO PROTEGIDO</h3>
-
-<p>
-NEWGENESIS CORPORATION • 1983
-</p>
-
-</div>
-
-
-<button class="voltar"
-onclick="abrirTela('inicio')">
-VOLTAR
-</button>
-
-</section>
-
-
 <!-- CONTATO -->
 
 <section id="contato" class="tela">
@@ -782,7 +690,7 @@ Fundada em 1983
 📞 TELEFONE PARA CONTATO:<br><br>
 
 <strong>
-0000-8712
+[ COLOQUE O NÚMERO DE TELEFONE AQUI ]
 </strong>
 
 </div>
@@ -796,7 +704,7 @@ VOLTAR
 </section>
 
 
-<!-- DOCUMENTAÇÃO -->
+<!-- DOCUMENTAÇÃO INTERNA -->
 
 <section id="arquivo" class="tela">
 
@@ -805,7 +713,7 @@ VOLTAR
 
 <div class="restrito">
 
-<h3>ACESSO RESTRITO</h3>
+<h3>ARQUIVO NG-1983-001</h3>
 
 <div class="codigo">
 
@@ -815,6 +723,31 @@ ACESSO: AUTORIZADO<br>
 DEPARTAMENTO: ADMINISTRAÇÃO
 
 </div>
+
+</div>
+
+
+<!-- VANTA 13 ESCONDIDO DENTRO DA DOCUMENTAÇÃO -->
+
+<div class="restrito">
+
+<h3>PROJETO VANTA 13</h3>
+
+<div class="codigo">
+
+ARQUIVO: NG-V13-001<br>
+STATUS: CONFIDENCIAL<br>
+CLASSIFICAÇÃO: RESTRITA<br>
+DEPARTAMENTO: PESQUISA
+
+</div>
+
+<br>
+
+<button class="voltar"
+onclick="window.location.href='vanta13.html'">
+CONSULTAR
+</button>
 
 </div>
 
@@ -936,15 +869,17 @@ function verificarHorario(){
 const agora=new Date();
 
 const hora=agora.getHours();
+
 const minuto=agora.getMinutes();
 
-const dentroDoEvento=
+
+const dentroDoEvento =
 hora===1 &&
 minuto>=20 &&
 minuto<32;
 
 
-/* ENTRE 01:20 E 01:31 */
+/* 01:20 ATÉ 01:31 */
 
 if(dentroDoEvento){
 
@@ -952,7 +887,8 @@ document.body.classList.add("modo-0215");
 
 }
 
-/* A PARTIR DE 01:32 VOLTA AO NORMAL */
+
+/* 01:32 EM DIANTE: VOLTA AO NORMAL */
 
 else{
 
@@ -963,17 +899,16 @@ document.body.classList.remove("modo-0215");
 }
 
 
-/* VERIFICA IMEDIATAMENTE */
+/* VERIFICA AO CARREGAR */
 
 verificarHorario();
 
 
-/* CONTINUA VERIFICANDO A CADA SEGUNDO */
+/* VERIFICA A CADA SEGUNDO */
 
 setInterval(verificarHorario,1000);
 
 </script>
-
 
 </body>
   </html>
