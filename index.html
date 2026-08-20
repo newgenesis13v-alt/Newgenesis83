@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta name="google-site-verification" content="x5A6fI0DOp9udtS30MfXlbWA3edBpkVDXPrlmJyt0AQ" />
+
+    <meta name="google-site-verification" content="x5A6fI0DOp9udtS30MfXlbWA3edBpkVDXPrlmJyt0AQ">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -95,6 +98,7 @@
         }
 
         @keyframes aparecer {
+
             from {
                 opacity: 0;
                 transform: translateY(12px);
@@ -104,6 +108,7 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+
         }
 
         .banner {
@@ -265,181 +270,610 @@
         }
 
 
-        /* =====================================
-           MODO 01:20
-        ===================================== */
+        /* =========================================
+           EVENTO 01:50
+           CORRUPÇÃO DA NEWGENESIS
+        ========================================= */
 
-        body.modo-0120 {
-            background: #10120f;
-            color: #c7c7bd;
-            overflow-x: hidden;
-        }
-
-        body.modo-0120 header {
-            background: #10120f;
-            border-bottom: 1px solid #33382f;
-            text-align: left;
-            padding: 22px;
-        }
-
-        body.modo-0120 header .logo {
-            opacity: 0.35;
-            filter: grayscale(100%);
-            margin: 0;
-            width: 150px;
-        }
-
-        body.modo-0120 header h1 {
-            font-size: 23px;
-            letter-spacing: 3px;
-        }
-
-        body.modo-0120 header p {
-            color: #666a61;
-        }
-
-        body.modo-0120 nav {
-            background: #10120f;
-            border-bottom: 1px solid #33382f;
-        }
-
-        body.modo-0120 nav button {
-            background: #10120f;
-            color: #555a52;
-            border: 1px solid #252925;
-        }
-
-        body.modo-0120 main {
-            position: relative;
-        }
-
-        body.modo-0120 .tela.ativa {
-            background: #10120f;
-            border: 1px solid #33382f;
-            color: #c7c7bd;
-            box-shadow: none;
-        }
-
-        body.modo-0120 .tela h2,
-        body.modo-0120 .tela h3,
-        body.modo-0120 .tela h4 {
-            color: #aeb2a8;
-        }
-
-        body.modo-0120 .banner {
-            background: #10120f;
-            border-left: 2px solid #555b51;
-            text-align: left;
-        }
-
-        body.modo-0120 .bloco {
-            border-color: #30352f;
-            background: #10120f;
-        }
-
-        body.modo-0120 .ano {
-            color: #666b62;
-            border-color: #30352f;
-        }
-
-        body.modo-0120 footer {
-            background: #10120f;
-            color: #555a52;
-            border-top: 1px solid #33382f;
-        }
-
-        body.modo-0120 .corrompido {
-            display: block;
-        }
-
-        .corrompido {
-            display: none;
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 9999;
+        body.modo-0150 {
+            background: #050000;
+            color: #ffdddd;
             overflow: hidden;
         }
 
-        .frase {
-            position: absolute;
-            color: #777d73;
-            font-family: monospace;
-            font-size: 13px;
-            letter-spacing: 2px;
+        /* O SITE ORIGINAL DESAPARECE */
+
+        body.modo-0150 > header,
+        body.modo-0150 > nav,
+        body.modo-0150 > main,
+        body.modo-0150 > footer {
+            display: none;
         }
 
+
+        /* TELA CORROMPIDA */
+
+        body.modo-0150 .corrompido {
+            display: block;
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 99999;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #720000 0%,
+                    #420000 30%,
+                    #170000 65%,
+                    #020000 100%
+                );
+
+            animation: pulsar 0.13s infinite alternate;
+        }
+
+
+        /* LINHAS DE TV */
+
+        body.modo-0150 .corrompido::before {
+
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(255, 0, 0, 0.13) 0px,
+                    rgba(255, 0, 0, 0.13) 1px,
+                    transparent 1px,
+                    transparent 4px
+                );
+
+            pointer-events: none;
+
+            animation: linhas 0.07s infinite;
+        }
+
+
+        /* FLASH */
+
+        body.modo-0150 .corrompido::after {
+
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background: rgba(255, 0, 0, 0.12);
+
+            pointer-events: none;
+
+            animation: flash 0.7s infinite;
+        }
+
+
+        /* FRASES */
+
+        .frase {
+
+            position: absolute;
+
+            color: #ff1717;
+
+            font-family: monospace;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            text-shadow:
+                3px 0 #300000,
+                -3px 0 #ff0000;
+
+            opacity: 0.85;
+
+            user-select: none;
+
+            animation:
+                aparecerFrase 0.25s infinite alternate,
+                tremor 0.12s infinite;
+        }
+
+
         .frase1 {
-            top: 12%;
-            left: 7%;
+            top: 3%;
+            left: 4%;
+            font-size: 18px;
         }
 
         .frase2 {
-            top: 25%;
-            right: 8%;
+            top: 8%;
+            left: 31%;
+            font-size: 11px;
         }
 
         .frase3 {
-            bottom: 23%;
-            left: 10%;
+            top: 5%;
+            right: 5%;
+            font-size: 28px;
         }
 
         .frase4 {
-            bottom: 12%;
-            right: 15%;
+            top: 15%;
+            left: 12%;
+            font-size: 9px;
         }
 
         .frase5 {
-            top: 43%;
-            left: 3%;
-            transform: rotate(-4deg);
+            top: 19%;
+            right: 17%;
+            font-size: 17px;
         }
 
         .frase6 {
-            top: 68%;
-            right: 4%;
-            transform: rotate(3deg);
+            top: 24%;
+            left: 2%;
+            font-size: 30px;
         }
 
         .frase7 {
-            top: 8%;
-            right: 30%;
+            top: 27%;
+            left: 38%;
+            font-size: 12px;
         }
 
         .frase8 {
-            bottom: 5%;
-            left: 35%;
+            top: 31%;
+            right: 3%;
+            font-size: 9px;
         }
+
+        .frase9 {
+            top: 36%;
+            left: 15%;
+            font-size: 22px;
+        }
+
+        .frase10 {
+            top: 39%;
+            right: 24%;
+            font-size: 13px;
+        }
+
+        .frase11 {
+            top: 43%;
+            left: 1%;
+            font-size: 11px;
+        }
+
+        .frase12 {
+            top: 46%;
+            left: 45%;
+            font-size: 32px;
+        }
+
+        .frase13 {
+            top: 49%;
+            right: 5%;
+            font-size: 14px;
+        }
+
+        .frase14 {
+            top: 54%;
+            left: 8%;
+            font-size: 10px;
+        }
+
+        .frase15 {
+            top: 57%;
+            right: 16%;
+            font-size: 24px;
+        }
+
+        .frase16 {
+            top: 61%;
+            left: 29%;
+            font-size: 12px;
+        }
+
+        .frase17 {
+            top: 65%;
+            right: 2%;
+            font-size: 10px;
+        }
+
+        .frase18 {
+            top: 69%;
+            left: 4%;
+            font-size: 26px;
+        }
+
+        .frase19 {
+            top: 72%;
+            left: 51%;
+            font-size: 9px;
+        }
+
+        .frase20 {
+            top: 76%;
+            right: 13%;
+            font-size: 18px;
+        }
+
+        .frase21 {
+            top: 81%;
+            left: 18%;
+            font-size: 11px;
+        }
+
+        .frase22 {
+            top: 84%;
+            right: 4%;
+            font-size: 29px;
+        }
+
+        .frase23 {
+            top: 88%;
+            left: 3%;
+            font-size: 13px;
+        }
+
+        .frase24 {
+            top: 92%;
+            left: 42%;
+            font-size: 10px;
+        }
+
+        .frase25 {
+            top: 12%;
+            left: 55%;
+            font-size: 8px;
+            transform: rotate(-7deg);
+        }
+
+        .frase26 {
+            top: 33%;
+            left: 67%;
+            font-size: 20px;
+            transform: rotate(5deg);
+        }
+
+        .frase27 {
+            top: 59%;
+            left: 68%;
+            font-size: 9px;
+            transform: rotate(-3deg);
+        }
+
+        .frase28 {
+            top: 74%;
+            left: 35%;
+            font-size: 19px;
+            transform: rotate(4deg);
+        }
+
+        .frase29 {
+            top: 17%;
+            left: 72%;
+            font-size: 12px;
+        }
+
+        .frase30 {
+            top: 41%;
+            left: 23%;
+            font-size: 8px;
+        }
+
+        .frase31 {
+            top: 67%;
+            left: 45%;
+            font-size: 14px;
+        }
+
+        .frase32 {
+            top: 94%;
+            right: 25%;
+            font-size: 9px;
+        }
+
+
+        /* FRASES FANTASMAS */
+
+        .frase29,
+        .frase30,
+        .frase31,
+        .frase32 {
+
+            color: #690000;
+
+            opacity: 0.55;
+
+        }
+
+
+        /* TEXTO GIGANTE NO FUNDO */
+
+        .fundo-corrompido {
+
+            position: absolute;
+
+            font-family: monospace;
+
+            font-weight: bold;
+
+            color: rgba(255, 0, 0, 0.08);
+
+            font-size: 15vw;
+
+            transform: rotate(-8deg);
+
+            white-space: nowrap;
+
+            pointer-events: none;
+
+        }
+
+
+        /* SEGUNDO TEXTO GIGANTE */
+
+        .fundo-corrompido2 {
+
+            position: absolute;
+
+            font-family: monospace;
+
+            font-weight: bold;
+
+            color: rgba(255, 255, 255, 0.025);
+
+            font-size: 11vw;
+
+            transform: rotate(6deg);
+
+            white-space: nowrap;
+
+            pointer-events: none;
+
+        }
+
+
+        /* MENSAGEM CENTRAL */
 
         .mensagem-central {
+
             position: absolute;
+
             top: 50%;
             left: 50%;
+
+            width: 90%;
+
             transform: translate(-50%, -50%);
-            width: 80%;
+
             text-align: center;
-            color: #d0d0c7;
-            font-family: Georgia, serif;
-            font-size: 20px;
-            line-height: 1.8;
+
+            color: #ffffff;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 22px;
+
+            line-height: 1.7;
+
+            text-shadow:
+                0 0 5px #ff0000,
+                0 0 15px #ff0000;
+
+            animation: central 0.15s infinite;
         }
 
-        .mensagem-central strong {
-            display: block;
-            margin-top: 20px;
-            font-family: monospace;
-            font-size: 17px;
-            letter-spacing: 3px;
-        }
 
         .mensagem-central em {
-            font-size: 23px;
+
+            display: inline-block;
+
+            color: #ff0000;
+
+            font-size: 29px;
+
+            font-weight: bold;
+
+            text-shadow:
+                2px 0 #ffffff,
+                -2px 0 #500000;
+        }
+
+
+        .mensagem-central strong {
+
+            display: block;
+
+            margin-top: 25px;
+
+            color: #ff0000;
+
+            font-family: monospace;
+
+            font-size: 16px;
+
+            letter-spacing: 5px;
+
+            animation: piscar 0.35s infinite;
+        }
+
+
+        /* ANIMAÇÕES */
+
+        @keyframes pulsar {
+
+            from {
+                filter: brightness(0.85) contrast(1.2);
+            }
+
+            to {
+                filter: brightness(1.2) contrast(1.6);
+            }
+
+        }
+
+
+        @keyframes flash {
+
+            0%,
+            70%,
+            100% {
+                opacity: 0;
+            }
+
+            72% {
+                opacity: 1;
+            }
+
+            74% {
+                opacity: 0;
+            }
+
+        }
+
+
+        @keyframes linhas {
+
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(5px);
+            }
+
+        }
+
+
+        @keyframes tremor {
+
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(2px, -1px);
+            }
+
+            50% {
+                transform: translate(-2px, 2px);
+            }
+
+            75% {
+                transform: translate(1px, -2px);
+            }
+
+            100% {
+                transform: translate(-1px, 1px);
+            }
+
+        }
+
+
+        @keyframes aparecerFrase {
+
+            from {
+                opacity: 0.35;
+            }
+
+            to {
+                opacity: 1;
+            }
+
+        }
+
+
+        @keyframes central {
+
+            0% {
+                transform: translate(-50%, -50%);
+            }
+
+            50% {
+                transform: translate(-49%, -51%);
+            }
+
+            100% {
+                transform: translate(-51%, -49%);
+            }
+
+        }
+
+
+        @keyframes piscar {
+
+            0%,
+            40% {
+                opacity: 1;
+            }
+
+            41%,
+            70% {
+                opacity: 0.2;
+            }
+
+            71%,
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 28px;
+                letter-spacing: 5px;
+            }
+
+            main {
+                padding: 0 12px;
+            }
+
+            .tela {
+                padding: 22px;
+            }
+
+            .mensagem-central {
+                font-size: 18px;
+            }
+
+            .mensagem-central em {
+                font-size: 24px;
+            }
+
+            .mensagem-central strong {
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+
+            .frase {
+                letter-spacing: 1px;
+            }
+
         }
 
     </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -485,6 +919,9 @@
 
 <main>
 
+
+    <!-- INÍCIO -->
+
     <section id="inicio" class="tela ativa">
 
         <h2>
@@ -519,6 +956,7 @@
 
         <div class="blocos">
 
+
             <div class="bloco">
 
                 <h4>
@@ -531,6 +969,7 @@
                 </p>
 
             </div>
+
 
             <div class="bloco">
 
@@ -545,6 +984,7 @@
 
             </div>
 
+
             <div class="bloco">
 
                 <h4>
@@ -558,21 +998,31 @@
 
             </div>
 
+
         </div>
+
 
         <div class="ano">
+
             NEWGENESIS CORPORATION • 1983
+
         </div>
 
+
         <p class="aviso">
+
             Alguns conteúdos e projetos encontram-se restritos
             aos departamentos autorizados.
+
         </p>
+
 
         <div class="pista">
 
             <button onclick="abrirTela('arquivo')">
+
                 documentação interna
+
             </button>
 
         </div>
@@ -580,9 +1030,13 @@
     </section>
 
 
+    <!-- EMPRESA -->
+
     <section id="empresa" class="tela">
 
-        <h2>A EMPRESA</h2>
+        <h2>
+            A EMPRESA
+        </h2>
 
         <p>
             Fundada com o objetivo de expandir os limites da ciência,
@@ -592,283 +1046,21 @@
 
         <p>
             Nossa missão é simples:
+
             <strong>
                 criar hoje aquilo que será necessário amanhã.
             </strong>
+
         </p>
 
-        <h3>NOSSA FILOSOFIA</h3>
+        <h3>
+            NOSSA FILOSOFIA
+        </h3>
 
         <p>
             Acreditamos que cada descoberta possui o potencial
             de transformar o mundo.
         </p>
 
-        <button class="voltar" onclick="abrirTela('inicio')">
-            ← VOLTAR AO INÍCIO
-        </button>
-
-    </section>
-
-
-    <section id="pesquisa" class="tela">
-
-        <h2>PESQUISA E DESENVOLVIMENTO</h2>
-
-        <p>
-            Nossos laboratórios trabalham continuamente em projetos
-            experimentais destinados ao desenvolvimento de novas
-            tecnologias e métodos científicos.
-        </p>
-
-        <p>
-            Alguns projetos são realizados sob protocolos internos
-            de segurança e confidencialidade.
-        </p>
-
-        <h3>LABORATÓRIOS NEWGENESIS</h3>
-
-        <p>
-            Pesquisadores e engenheiros trabalham diariamente para
-            transformar descobertas científicas em aplicações reais.
-        </p>
-
-        <h3>CONFIDENCIALIDADE</h3>
-
-        <p>
-            Determinados projetos permanecem restritos aos membros
-            autorizados da organização.
-        </p>
-
-        <button class="voltar" onclick="abrirTela('inicio')">
-            ← VOLTAR AO INÍCIO
-        </button>
-
-    </section>
-
-
-    <section id="direcao" class="tela">
-
-        <h2>DIREÇÃO E PESQUISA</h2>
-
-        <h4>BENJAMIM CROSS</h4>
-
-        <p>
-            Diretor Executivo da NewGenesis Corporation.
-            Responsável pela administração geral e supervisão
-            dos projetos internos.
-        </p>
-
-        <h4>RICHARD MELO</h4>
-
-        <p>
-            Diretor de Pesquisa e Desenvolvimento.
-            Atua na coordenação dos programas científicos
-            e experimentais da empresa.
-        </p>
-
-        <h4>CARLOS DE SOUZA</h4>
-
-        <p>
-            Pesquisador e membro da equipe de desenvolvimento.
-            Carlos de Souza faleceu em circunstâncias não divulgadas.
-            A causa de sua morte permanece desconhecida.
-        </p>
-
-        <button class="voltar" onclick="abrirTela('inicio')">
-            ← VOLTAR AO INÍCIO
-        </button>
-
-    </section>
-
-
-    <section id="contato" class="tela">
-
-        <h2>CONTATO</h2>
-
-        <p>
-            <strong>NEWGENESIS CORPORATION</strong>
-        </p>
-
-        <p>
-            Departamento de Relações Públicas
-        </p>
-
-        <p>
-            Telefone: (000) 0000-1983
-        </p>
-
-        <h3>HORÁRIO DE ATENDIMENTO</h3>
-
-        <p>
-            Segunda a sexta-feira
-        </p>
-
-        <p>
-            08:00 — 01:20
-        </p>
-
-        <button class="voltar" onclick="abrirTela('inicio')">
-            ← VOLTAR AO INÍCIO
-        </button>
-
-    </section>
-
-
-    <section id="arquivo" class="tela">
-
-        <h2>DOCUMENTAÇÃO INTERNA</h2>
-
-        <div class="restrito">
-
-            <h3>ACESSO RESTRITO</h3>
-
-            <p class="codigo">
-                ARQUIVO: NG-001<br>
-                STATUS: INCOMPLETO<br>
-                CLASSIFICAÇÃO: INTERNO
-            </p>
-
-        </div>
-
-        <p>
-            Este registro não está disponível para consulta pública.
-        </p>
-
-        <p>
-            Parte da documentação deste arquivo foi encaminhada
-            ao Departamento de Pesquisa e Desenvolvimento.
-        </p>
-
-        <div class="arquivo-link">
-
-            <p>
-                <strong>REFERÊNCIA ENCONTRADA:</strong>
-            </p>
-
-            <p>
-                Registro experimental V-13.
-            </p>
-
-            <a href="vanta13.html">
-                CONSULTAR REGISTRO V-13
-            </a>
-
-        </div>
-
-        <button class="voltar" onclick="abrirTela('inicio')">
-            ← VOLTAR
-        </button>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    NEWGENESIS CORPORATION • TODOS OS DIREITOS RESERVADOS
-
-</footer>
-
-
-<div class="corrompido" id="corrompido">
-
-    <div class="frase frase1">
-        MICHAEL
-    </div>
-
-    <div class="frase frase2">
-        VANTA 13
-    </div>
-
-    <div class="frase frase3">
-        CARLOS
-    </div>
-
-    <div class="frase frase4">
-        FRACASSO
-    </div>
-
-    <div class="frase frase5">
-        MICHAEL
-    </div>
-
-    <div class="frase frase6">
-        VANTA 13
-    </div>
-
-    <div class="frase frase7">
-        CARLOS
-    </div>
-
-    <div class="frase frase8">
-        FRACASSO
-    </div>
-
-    <div class="mensagem-central">
-
-        Você veio pra investigar?
-
-        <br>
-
-        Oh oh oh, meu pequeno,
-
-        <br>
-
-        <em>
-            eu ainda estou aqui
-        </em>
-
-        <strong>
-            O NOVO MUNDO ESTÁ VINDO
-        </strong>
-
-    </div>
-
-</div>
-
-
-<script>
-
-function abrirTela(nome) {
-
-    const telas = document.querySelectorAll(".tela");
-
-    telas.forEach(function(tela) {
-        tela.classList.remove("ativa");
-    });
-
-    document.getElementById(nome).classList.add("ativa");
-
-    window.scrollTo(0, 0);
-}
-
-
-function verificarHorario() {
-
-    const agora = new Date();
-
-    const horas = agora.getHours();
-
-    const minutos = agora.getMinutes();
-
-    if (horas === 1 && minutos === 20) {
-
-        document.body.classList.add("modo-0120");
-
-        document.getElementById("corrompido").style.display = "block";
-
-    }
-
-}
-
-
-setInterval(verificarHorario, 1000);
-
-verificarHorario();
-
-</script>
-
-</body>
-    </html>
+        <button
+            c
