@@ -14,18 +14,22 @@
 
         body {
             margin: 0;
-            background: #F8FFF7;
-            color: #25251f;
+            background: #FFFFFF;
+            color: #202820;
             font-family: Georgia, "Times New Roman", serif;
             transition: 0.3s;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
-            background: #6EAF58;
-            color: #eee9d8;
+            background: #20B94B;
+            color: #FFFFFF;
             padding: 30px 20px 25px;
             text-align: center;
-            border-bottom: 7px solid #b39a55;
+            border-bottom: 7px solid #168A37;
         }
 
         .logo {
@@ -49,17 +53,21 @@
             letter-spacing: 4px;
         }
 
+        /* =========================
+           NAVEGAÇÃO
+        ========================= */
+
         nav {
-            background: #d8d2c2;
+            background: #FFFFFF;
             padding: 12px 8px;
             text-align: center;
-            border-bottom: 2px solid #9d947e;
+            border-bottom: 2px solid #20B94B;
         }
 
         nav button {
-            background: #173f35;
-            color: #eee9d8;
-            border: 2px solid #102f28;
+            background: #20B94B;
+            color: #FFFFFF;
+            border: 2px solid #168A37;
             padding: 9px 13px;
             margin: 3px;
             font-family: "Times New Roman", serif;
@@ -69,9 +77,13 @@
         }
 
         nav button:hover {
-            background: #295c4d;
+            background: #168A37;
             transform: translateY(-2px);
         }
+
+        /* =========================
+           CONTEÚDO
+        ========================= */
 
         main {
             max-width: 900px;
@@ -81,11 +93,11 @@
 
         .tela {
             display: none;
-            background: #f3efe3;
-            border: 2px solid #173f35;
+            background: #FFFFFF;
+            border: 2px solid #20B94B;
             padding: 32px;
             min-height: 350px;
-            box-shadow: 5px 5px 0 #c0b8a4;
+            box-shadow: 5px 5px 0 #D8E8DC;
         }
 
         .tela.ativa {
@@ -105,21 +117,29 @@
             }
         }
 
+        /* =========================
+           BANNER
+        ========================= */
+
         .banner {
-            background: #173f35;
-            color: #eee9d8;
+            background: #20B94B;
+            color: #FFFFFF;
             padding: 30px 22px;
             margin: 25px 0;
             text-align: center;
-            border-left: 9px solid #b39a55;
+            border-left: 9px solid #168A37;
         }
 
         .banner h3 {
-            color: #eee9d8;
+            color: #FFFFFF;
             font-size: 24px;
             margin-top: 0;
             letter-spacing: 1px;
         }
+
+        /* =========================
+           BLOCOS
+        ========================= */
 
         .blocos {
             display: flex;
@@ -131,24 +151,50 @@
         .bloco {
             flex: 1;
             min-width: 180px;
-            border: 1px solid #aaa18c;
+            border: 1px solid #B8C9BC;
             padding: 18px;
-            background: #e9e4d6;
+            background: #F7FAF7;
         }
 
         .bloco h4 {
-            color: #173f35;
+            color: #168A37;
             margin-top: 0;
             letter-spacing: 1px;
         }
+
+        /* =========================
+           TÍTULOS
+        ========================= */
+
+        .tela h2 {
+            color: #168A37;
+            font-size: 27px;
+            border-bottom: 3px double #20B94B;
+            padding-bottom: 10px;
+        }
+
+        .tela h3 {
+            color: #168A37;
+            margin-top: 30px;
+        }
+
+        .tela h4 {
+            color: #168A37;
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+
+        /* =========================
+           ANO
+        ========================= */
 
         .ano {
             text-align: center;
             margin-top: 35px;
             padding: 15px;
-            border-top: 2px solid #b39a55;
-            border-bottom: 2px solid #b39a55;
-            color: #173f35;
+            border-top: 2px solid #20B94B;
+            border-bottom: 2px solid #20B94B;
+            color: #168A37;
             font-weight: bold;
             letter-spacing: 3px;
         }
@@ -156,7 +202,7 @@
         .aviso {
             margin-top: 30px;
             font-size: 11px;
-            color: #68655b;
+            color: #686E68;
             text-align: center;
         }
 
@@ -164,40 +210,26 @@
             margin-top: 35px;
             text-align: center;
             font-size: 9px;
-            color: #d9d4c7;
+            color: #C7CEC8;
         }
 
         .pista button {
             background: none;
             border: none;
-            color: #d9d4c7;
+            color: #C7CEC8;
             font-family: monospace;
             font-size: 9px;
             cursor: pointer;
         }
 
-        .tela h2 {
-            color: #173f35;
-            font-size: 27px;
-            border-bottom: 3px double #b39a55;
-            padding-bottom: 10px;
-        }
-
-        .tela h3 {
-            color: #173f35;
-            margin-top: 30px;
-        }
-
-        .tela h4 {
-            color: #173f35;
-            margin-top: 25px;
-            margin-bottom: 5px;
-        }
+        /* =========================
+           BOTÕES
+        ========================= */
 
         .voltar {
-            background: #173f35;
-            color: #eee9d8;
-            border: 2px solid #102f28;
+            background: #20B94B;
+            color: #FFFFFF;
+            border: 2px solid #168A37;
             padding: 10px 18px;
             margin-top: 30px;
             font-family: "Times New Roman", serif;
@@ -207,19 +239,23 @@
         }
 
         .voltar:hover {
-            background: #295c4d;
+            background: #168A37;
             transform: translateY(-2px);
         }
 
+        /* =========================
+           ÁREA RESTRITA
+        ========================= */
+
         .restrito {
-            border: 2px solid #4a483f;
+            border: 2px solid #AAB5AC;
             padding: 25px;
             margin-top: 25px;
-            background: #ded9ca;
+            background: #F1F4F1;
         }
 
         .restrito h3 {
-            color: #292822;
+            color: #202820;
             margin-top: 0;
             letter-spacing: 2px;
         }
@@ -230,17 +266,21 @@
             line-height: 1.8;
         }
 
+        /* =========================
+           ARQUIVO
+        ========================= */
+
         .arquivo-link {
             margin-top: 25px;
             padding: 15px;
-            border: 1px solid #173f35;
-            background: #e4dfd1;
+            border: 1px solid #20B94B;
+            background: #F7FAF7;
         }
 
         .arquivo-link a {
             display: inline-block;
-            background: #173f35;
-            color: #eee9d8;
+            background: #20B94B;
+            color: #FFFFFF;
             padding: 10px 15px;
             text-decoration: none;
             font-family: "Times New Roman", serif;
@@ -249,13 +289,17 @@
         }
 
         .arquivo-link a:hover {
-            background: #295c4d;
+            background: #168A37;
             transform: translateY(-2px);
         }
 
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
-            background: #173f35;
-            color: #eee9d8;
+            background: #20B94B;
+            color: #FFFFFF;
             text-align: center;
             padding: 22px;
             margin-top: 30px;
@@ -750,7 +794,7 @@
             </p>
 
             <a href="vanta13.html">
-                CONSULTAR 
+                CONSULTAR
             </a>
 
         </div>
