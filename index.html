@@ -12,14 +12,10 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             margin: 0;
-            background: #d8d8c2;
-            color: #25251F;
+            background: #FFFFFF;
+            color: #25251f;
             font-family: Georgia, "Times New Roman", serif;
             transition: 0.3s;
         }
@@ -29,34 +25,32 @@
         ===================================== */
 
         header {
-            background: #073F35;
-            color: #EEE9D8;
-            padding: 42px 20px 32px;
+            background: #0B7728;
+            color: #eee9d8;
+            padding: 30px 20px 25px;
             text-align: center;
-            border-bottom: 7px solid #B39A55;
+            border-bottom: 7px solid #b39a55;
         }
 
         .logo {
             display: block;
             width: 230px;
-            max-width: 78%;
+            max-width: 75%;
             height: auto;
-            margin: 0 auto 25px;
+            margin: 0 auto 18px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 40px;
-            letter-spacing: 10px;
+            font-size: 38px;
+            letter-spacing: 8px;
             font-family: "Times New Roman", serif;
-            font-weight: bold;
         }
 
         header p {
-            margin: 13px 0 0;
+            margin: 10px 0 0;
             font-size: 12px;
-            letter-spacing: 5px;
-            color: #EEE9D8;
+            letter-spacing: 4px;
         }
 
         /* =====================================
@@ -64,28 +58,31 @@
         ===================================== */
 
         nav {
-            background: #D8D2C2;
-            padding: 20px 10px;
+            background: #d8d2c2;
+            padding: 12px 8px;
             text-align: center;
-            border-bottom: 2px solid #9D947E;
+            border-bottom: 2px solid #9d947e;
         }
 
         nav button {
-            background: #073F35;
-            color: #EEE9D8;
-            border: 2px solid #102F28;
-            padding: 12px 17px;
-            margin: 4px;
+            background: #0B7728;
+            color: #eee9d8;
+            border: 2px solid #07551c;
+            padding: 9px 13px;
+            margin: 3px;
             font-family: "Times New Roman", serif;
             font-weight: bold;
-            font-size: 14px;
             cursor: pointer;
             transition: 0.2s;
         }
 
         nav button:hover {
-            background: #295C4D;
+            background: #07551c;
             transform: translateY(-2px);
+        }
+
+        nav button:active {
+            transform: translateY(0);
         }
 
         /* =====================================
@@ -94,17 +91,17 @@
 
         main {
             max-width: 900px;
-            margin: 35px auto;
+            margin: 30px auto;
             padding: 0 20px;
         }
 
         .tela {
             display: none;
-            background: #F3EFE3;
-            border: 2px solid #073F35;
-            padding: 34px;
+            background: #FFFFFF;
+            border: 2px solid #0B7728;
+            padding: 32px;
             min-height: 350px;
-            box-shadow: 6px 6px 0 #BEB7A5;
+            box-shadow: 5px 5px 0 #c0b8a4;
         }
 
         .tela.ativa {
@@ -125,52 +122,23 @@
         }
 
         /* =====================================
-           TÍTULOS
-        ===================================== */
-
-        .tela h2 {
-            color: #073F35;
-            font-size: 29px;
-            letter-spacing: 1px;
-            border-bottom: 3px double #B39A55;
-            padding-bottom: 12px;
-            margin-top: 0;
-        }
-
-        .tela h3 {
-            color: #073F35;
-            margin-top: 32px;
-        }
-
-        .tela h4 {
-            color: #073F35;
-            margin-top: 27px;
-            margin-bottom: 6px;
-            letter-spacing: 1px;
-        }
-
-        /* =====================================
            BANNER
         ===================================== */
 
         .banner {
-            background: #073F35;
-            color: #EEE9D8;
-            padding: 32px 24px;
-            margin: 28px 0;
+            background: #0B7728;
+            color: #eee9d8;
+            padding: 30px 22px;
+            margin: 25px 0;
             text-align: center;
-            border-left: 9px solid #B39A55;
+            border-left: 9px solid #b39a55;
         }
 
         .banner h3 {
-            color: #EEE9D8;
+            color: #eee9d8;
             font-size: 24px;
             margin-top: 0;
             letter-spacing: 1px;
-        }
-
-        .banner p {
-            margin-bottom: 0;
         }
 
         /* =====================================
@@ -179,7 +147,7 @@
 
         .blocos {
             display: flex;
-            gap: 13px;
+            gap: 12px;
             flex-wrap: wrap;
             margin-top: 25px;
         }
@@ -187,15 +155,37 @@
         .bloco {
             flex: 1;
             min-width: 180px;
-            border: 1px solid #AAA18C;
-            padding: 19px;
-            background: #E9E4D6;
+            border: 1px solid #aaa18c;
+            padding: 18px;
+            background: #f3efe3;
         }
 
         .bloco h4 {
-            color: #073F35;
+            color: #0B7728;
             margin-top: 0;
             letter-spacing: 1px;
+        }
+
+        /* =====================================
+           TÍTULOS
+        ===================================== */
+
+        .tela h2 {
+            color: #0B7728;
+            font-size: 27px;
+            border-bottom: 3px double #b39a55;
+            padding-bottom: 10px;
+        }
+
+        .tela h3 {
+            color: #0B7728;
+            margin-top: 30px;
+        }
+
+        .tela h4 {
+            color: #0B7728;
+            margin-top: 25px;
+            margin-bottom: 5px;
         }
 
         /* =====================================
@@ -204,11 +194,11 @@
 
         .ano {
             text-align: center;
-            margin-top: 38px;
-            padding: 16px;
-            border-top: 2px solid #B39A55;
-            border-bottom: 2px solid #B39A55;
-            color: #073F35;
+            margin-top: 35px;
+            padding: 15px;
+            border-top: 2px solid #b39a55;
+            border-bottom: 2px solid #b39a55;
+            color: #0B7728;
             font-weight: bold;
             letter-spacing: 3px;
         }
@@ -216,7 +206,7 @@
         .aviso {
             margin-top: 30px;
             font-size: 11px;
-            color: #68655B;
+            color: #68655b;
             text-align: center;
         }
 
@@ -225,16 +215,16 @@
         ===================================== */
 
         .pista {
-            margin-top: 36px;
+            margin-top: 35px;
             text-align: center;
             font-size: 9px;
-            color: #C7C1B2;
+            color: #d9d4c7;
         }
 
         .pista button {
             background: none;
             border: none;
-            color: #C7C1B2;
+            color: #d9d4c7;
             font-family: monospace;
             font-size: 9px;
             cursor: pointer;
@@ -245,10 +235,10 @@
         ===================================== */
 
         .voltar {
-            background: #073F35;
-            color: #EEE9D8;
-            border: 2px solid #102F28;
-            padding: 11px 19px;
+            background: #0B7728;
+            color: #eee9d8;
+            border: 2px solid #07551c;
+            padding: 10px 18px;
             margin-top: 30px;
             font-family: "Times New Roman", serif;
             font-weight: bold;
@@ -257,8 +247,12 @@
         }
 
         .voltar:hover {
-            background: #295C4D;
+            background: #07551c;
             transform: translateY(-2px);
+        }
+
+        .voltar:active {
+            transform: translateY(0);
         }
 
         /* =====================================
@@ -266,10 +260,10 @@
         ===================================== */
 
         .restrito {
-            border: 2px solid #4A483F;
-            padding: 26px;
+            border: 2px solid #4a483f;
+            padding: 25px;
             margin-top: 25px;
-            background: #DED9CA;
+            background: #ded9ca;
         }
 
         .restrito h3 {
@@ -290,16 +284,16 @@
 
         .arquivo-link {
             margin-top: 25px;
-            padding: 16px;
-            border: 1px solid #073F35;
-            background: #E4DFD1;
+            padding: 15px;
+            border: 1px solid #0B7728;
+            background: #e4dfd1;
         }
 
         .arquivo-link a {
             display: inline-block;
-            background: #073F35;
-            color: #EEE9D8;
-            padding: 11px 17px;
+            background: #0B7728;
+            color: #eee9d8;
+            padding: 10px 15px;
             text-decoration: none;
             font-family: "Times New Roman", serif;
             font-weight: bold;
@@ -307,7 +301,7 @@
         }
 
         .arquivo-link a:hover {
-            background: #295C4D;
+            background: #07551c;
             transform: translateY(-2px);
         }
 
@@ -316,72 +310,14 @@
         ===================================== */
 
         footer {
-            background: #073F35;
-            color: #EEE9D8;
+            background: #0B7728;
+            color: #eee9d8;
             text-align: center;
-            padding: 24px;
-            margin-top: 35px;
+            padding: 22px;
+            margin-top: 30px;
             font-size: 11px;
             letter-spacing: 1px;
-            border-top: 6px solid #B39A55;
-        }
-
-
-        /* =====================================
-           RESPONSIVO
-        ===================================== */
-
-        @media (max-width: 600px) {
-
-            header {
-                padding: 35px 15px 28px;
-            }
-
-            .logo {
-                width: 220px;
-                max-width: 85%;
-            }
-
-            header h1 {
-                font-size: 31px;
-                letter-spacing: 7px;
-            }
-
-            header p {
-                font-size: 9px;
-                letter-spacing: 3px;
-            }
-
-            nav {
-                padding: 18px 8px;
-            }
-
-            nav button {
-                font-size: 13px;
-                padding: 11px 15px;
-            }
-
-            main {
-                margin: 25px auto;
-                padding: 0 12px;
-            }
-
-            .tela {
-                padding: 25px 20px;
-            }
-
-            .tela h2 {
-                font-size: 25px;
-            }
-
-            .banner {
-                padding: 27px 18px;
-            }
-
-            .bloco {
-                min-width: 100%;
-            }
-
+            border-top: 6px solid #b39a55;
         }
 
 
@@ -390,14 +326,14 @@
         ===================================== */
 
         body.modo-0120 {
-            background: #10120F;
-            color: #C7C7BD;
+            background: #10120f;
+            color: #c7c7bd;
             overflow-x: hidden;
         }
 
         body.modo-0120 header {
-            background: #10120F;
-            border-bottom: 1px solid #33382F;
+            background: #10120f;
+            border-bottom: 1px solid #33382f;
             text-align: left;
             padding: 22px;
         }
@@ -415,18 +351,23 @@
         }
 
         body.modo-0120 header p {
-            color: #666A61;
+            color: #666a61;
         }
 
         body.modo-0120 nav {
-            background: #10120F;
-            border-bottom: 1px solid #33382F;
+            background: #10120f;
+            border-bottom: 1px solid #33382f;
         }
 
         body.modo-0120 nav button {
-            background: #10120F;
-            color: #555A52;
+            background: #10120f;
+            color: #555a52;
             border: 1px solid #252925;
+        }
+
+        body.modo-0120 nav button:hover {
+            background: #10120f;
+            transform: none;
         }
 
         body.modo-0120 main {
@@ -434,38 +375,38 @@
         }
 
         body.modo-0120 .tela.ativa {
-            background: #10120F;
-            border: 1px solid #33382F;
-            color: #C7C7BD;
+            background: #10120f;
+            border: 1px solid #33382f;
+            color: #c7c7bd;
             box-shadow: none;
         }
 
         body.modo-0120 .tela h2,
         body.modo-0120 .tela h3,
         body.modo-0120 .tela h4 {
-            color: #AEB2A8;
+            color: #aeb2a8;
         }
 
         body.modo-0120 .banner {
-            background: #10120F;
-            border-left: 2px solid #555B51;
+            background: #10120f;
+            border-left: 2px solid #555b51;
             text-align: left;
         }
 
         body.modo-0120 .bloco {
-            border-color: #30352F;
-            background: #10120F;
+            border-color: #30352f;
+            background: #10120f;
         }
 
         body.modo-0120 .ano {
-            color: #666B62;
-            border-color: #30352F;
+            color: #666b62;
+            border-color: #30352f;
         }
 
         body.modo-0120 footer {
-            background: #10120F;
-            color: #555A52;
-            border-top: 1px solid #33382F;
+            background: #10120f;
+            color: #555a52;
+            border-top: 1px solid #33382f;
         }
 
         body.modo-0120 .corrompido {
@@ -487,7 +428,7 @@
 
         .frase {
             position: absolute;
-            color: #777D73;
+            color: #777d73;
             font-family: monospace;
             font-size: 13px;
             letter-spacing: 2px;
@@ -542,7 +483,7 @@
             transform: translate(-50%, -50%);
             width: 80%;
             text-align: center;
-            color: #D0D0C7;
+            color: #d0d0c7;
             font-family: Georgia, serif;
             font-size: 20px;
             line-height: 1.8;
@@ -558,6 +499,60 @@
 
         .mensagem-central em {
             font-size: 23px;
+        }
+
+
+        /* =====================================
+           CELULAR
+        ===================================== */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 28px 15px 24px;
+            }
+
+            .logo {
+                width: 220px;
+            }
+
+            header h1 {
+                font-size: 31px;
+                letter-spacing: 6px;
+            }
+
+            header p {
+                font-size: 9px;
+                letter-spacing: 3px;
+            }
+
+            nav {
+                padding: 12px 5px;
+            }
+
+            nav button {
+                padding: 9px 12px;
+                font-size: 12px;
+            }
+
+            main {
+                padding: 0 12px;
+                margin: 25px auto;
+            }
+
+            .tela {
+                padding: 25px 20px;
+            }
+
+            .bloco {
+                min-width: 100%;
+            }
+
+            .mensagem-central {
+                width: 90%;
+                font-size: 17px;
+            }
+
         }
 
     </style>
@@ -586,23 +581,23 @@
 
 <nav>
 
-    <button onclick="abrirTela('inicio')">
+    <button type="button" onclick="abrirTela('inicio')">
         INÍCIO
     </button>
 
-    <button onclick="abrirTela('empresa')">
+    <button type="button" onclick="abrirTela('empresa')">
         A EMPRESA
     </button>
 
-    <button onclick="abrirTela('pesquisa')">
+    <button type="button" onclick="abrirTela('pesquisa')">
         PESQUISA
     </button>
 
-    <button onclick="abrirTela('direcao')">
+    <button type="button" onclick="abrirTela('direcao')">
         DIREÇÃO
     </button>
 
-    <button onclick="abrirTela('contato')">
+    <button type="button" onclick="abrirTela('contato')">
         CONTATO
     </button>
 
@@ -612,9 +607,7 @@
 <main>
 
 
-    <!-- ==============================
-         INÍCIO
-    =============================== -->
+    <!-- INÍCIO -->
 
     <section id="inicio" class="tela ativa">
 
@@ -652,7 +645,6 @@
 
 
         <div class="blocos">
-
 
             <div class="bloco">
 
@@ -695,7 +687,6 @@
 
             </div>
 
-
         </div>
 
 
@@ -712,7 +703,9 @@
 
         <div class="pista">
 
-            <button onclick="abrirTela('arquivo')">
+            <button
+                type="button"
+                onclick="abrirTela('arquivo')">
                 documentação interna
             </button>
 
@@ -721,9 +714,7 @@
     </section>
 
 
-    <!-- ==============================
-         EMPRESA
-    =============================== -->
+    <!-- EMPRESA -->
 
     <section id="empresa" class="tela">
 
@@ -753,7 +744,9 @@
             de transformar o mundo.
         </p>
 
+
         <button
+            type="button"
             class="voltar"
             onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
@@ -762,9 +755,7 @@
     </section>
 
 
-    <!-- ==============================
-         PESQUISA
-    =============================== -->
+    <!-- PESQUISA -->
 
     <section id="pesquisa" class="tela">
 
@@ -801,7 +792,9 @@
             autorizados da organização.
         </p>
 
+
         <button
+            type="button"
             class="voltar"
             onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
@@ -810,9 +803,7 @@
     </section>
 
 
-    <!-- ==============================
-         DIREÇÃO
-    =============================== -->
+    <!-- DIREÇÃO -->
 
     <section id="direcao" class="tela">
 
@@ -854,6 +845,7 @@
 
 
         <button
+            type="button"
             class="voltar"
             onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
@@ -862,9 +854,7 @@
     </section>
 
 
-    <!-- ==============================
-         CONTATO
-    =============================== -->
+    <!-- CONTATO -->
 
     <section id="contato" class="tela">
 
@@ -898,7 +888,9 @@
             08:00 — 01:20
         </p>
 
+
         <button
+            type="button"
             class="voltar"
             onclick="abrirTela('inicio')">
             ← VOLTAR AO INÍCIO
@@ -907,14 +899,12 @@
     </section>
 
 
-    <!-- ==============================
-         ARQUIVO INTERNO
-    =============================== -->
+    <!-- ARQUIVO -->
 
     <section id="arquivo" class="tela">
 
         <h2>
-            documentação interna
+            arquivo interno
         </h2>
 
 
@@ -935,4 +925,22 @@
 
         <p>
             Este registro não está disponível para consulta pública.
- 
+        </p>
+
+        <p>
+            Parte da documentação deste arquivo foi encaminhada
+            ao Departamento de Pesquisa e Desenvolvimento.
+        </p>
+
+
+        <div class="arquivo-link">
+
+            <p>
+                <strong>?:</strong>
+            </p>
+
+            <p>
+                v13
+            </p>
+
+            <a href="vanta13.html"
