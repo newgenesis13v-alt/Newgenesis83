@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>NewGenesis Corporation</title>
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NewGenesis Corporation</title><style>
 
 /* =========================
    NEWGENESIS • INDEX
@@ -162,9 +157,7 @@ nav button{
 
 nav button:hover{
     transform:translate(2px,2px);
-
     box-shadow:1px 1px #173f35;
-
     background:#a6d98f;
 }
 
@@ -365,6 +358,20 @@ p{
 
 .icone{
     font-size:42px;
+}
+
+
+/* LINK DO CARLOS */
+
+.link-carlos{
+    color:#0b7728;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.link-carlos:hover{
+    text-decoration:underline;
+    color:#173f35;
 }
 
 
@@ -809,760 +816,550 @@ body.modo-corrompido .corrompido{
 
 }
 
-</style>
-</head>
+</style></head><body><header><img
+    src="IMG-20260819-WA0053.jpg"
+    class="logo"
+    alt="Logo da NewGenesis Corporation"
+    onclick="segredoLogo()"
+>
 
+<h1>NEWGENESIS</h1>
 
-<body>
+<p>CIÊNCIA • DESENVOLVIMENTO • FUTURO</p>
 
+</header><nav><button onclick="abrirTela('inicio')">
+    INÍCIO
+</button>
 
-<!-- =========================
-     CABEÇALHO
-     ========================= -->
+<button onclick="abrirTela('empresa')">
+    SOBRE NÓS
+</button>
 
-<header>
+<button onclick="abrirTela('pesquisa')">
+    PESQUISA
+</button>
 
-    <img
-        src="IMG-20260819-WA0053.jpg"
-        class="logo"
-        alt="Logo da NewGenesis Corporation"
-        onclick="segredoLogo()"
-    >
+<button onclick="abrirTela('pessoas')">
+    PESSOAS
+</button>
 
-    <h1>NEWGENESIS</h1>
+<button onclick="abrirTela('contato')">
+    CONTATO
+</button>
 
-    <p>CIÊNCIA • DESENVOLVIMENTO • FUTURO</p>
+</nav><main><!-- INÍCIO --><section id="inicio" class="tela ativa"><div class="caixa">
 
-</header>
+    <div class="hero">
 
+        <div class="hero-texto">
 
+            <h2>Olá! Seja bem-vindo!</h2>
 
-<!-- =========================
-     MENU
-     ========================= -->
-
-<nav>
-
-    <button onclick="abrirTela('inicio')">
-        INÍCIO
-    </button>
-
-    <button onclick="abrirTela('empresa')">
-        SOBRE NÓS
-    </button>
-
-    <button onclick="abrirTela('pesquisa')">
-        PESQUISA
-    </button>
-
-    <button onclick="abrirTela('pessoas')">
-        PESSOAS
-    </button>
-
-    <button onclick="abrirTela('contato')">
-        CONTATO
-    </button>
-
-</nav>
-
-
-
-<main>
-
-
-<!-- =========================
-     INÍCIO
-     ========================= -->
-
-<section id="inicio" class="tela ativa">
-
-    <div class="caixa">
-
-        <div class="hero">
-
-            <div class="hero-texto">
-
-                <h2>
-                    Olá! Seja bem-vindo!
-                </h2>
-
-                <p class="frase-grande">
-                    Aqui na NewGenesis, acreditamos
-                    que o futuro pode começar hoje.
-                </p>
-
-                <p>
-                    Somos uma organização dedicada à ciência,
-                    tecnologia e desenvolvimento de novas ideias
-                    para um mundo em constante transformação.
-                </p>
-
-                <button
-                    class="botao"
-                    onclick="abrirTela('empresa')"
-                >
-                    CONHEÇA A NEWGENESIS
-                </button>
-
-            </div>
-
-
-            <div class="sol">
-                🔬
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="banner">
-
-        <h3>
-            UM NOVO AMANHÃ COMEÇA HOJE!
-        </h3>
-
-        <p>
-            Descobrir • Criar • Desenvolver
-        </p>
-
-    </div>
-
-
-    <div class="caixa">
-
-        <h2>
-            O QUE FAZEMOS?
-        </h2>
-
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="icone">
-                    🧬
-                </div>
-
-                <h3>
-                    CIÊNCIA
-                </h3>
-
-                <p>
-                    Investigamos novas possibilidades
-                    e caminhos para o conhecimento.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icone">
-                    ⚙️
-                </div>
-
-                <h3>
-                    TECNOLOGIA
-                </h3>
-
-                <p>
-                    Criamos soluções para acompanhar
-                    as necessidades do futuro.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icone">
-                    🌱
-                </div>
-
-                <h3>
-                    DESENVOLVIMENTO
-                </h3>
-
-                <p>
-                    Transformamos descobertas em
-                    novas oportunidades.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="pista">
-
-        <button onclick="abrirTela('arquivo')">
-            eu te odeio.
-        </button>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     EMPRESA
-     ========================= -->
-
-<section id="empresa" class="tela">
-
-    <div class="caixa">
-
-        <h2>
-            SOBRE A NEWGENESIS
-        </h2>
-
-        <p>
-            Fundada em 1983, a NewGenesis Corporation
-            nasceu com o objetivo de ajudar a construir
-            um futuro melhor.
-        </p>
-
-        <p>
-            Reunimos pesquisadores, cientistas,
-            desenvolvedores e profissionais dedicados
-            a transformar ideias em realidade.
-        </p>
-
-        <div class="alerta">
-
-            NOSSA MISSÃO:
-            criar hoje aquilo que será necessário amanhã.
-
-        </div>
-
-    </div>
-
-
-    <div class="caixa">
-
-        <h2>
-            NOSSA HISTÓRIA
-        </h2>
-
-        <div class="linha">
-
-            <div class="marco">
-
-                <div class="ano">
-                    1983
-                </div>
-
-                <p>
-                    Fundação da NewGenesis Corporation.
-                </p>
-
-            </div>
-
-
-            <div class="marco">
-
-                <div class="ano">
-                    PESQUISA
-                </div>
-
-                <p>
-                    Expansão dos departamentos científicos.
-                </p>
-
-            </div>
-
-
-            <div class="marco">
-
-                <div class="ano">
-                    FUTURO
-                </div>
-
-                <p>
-                    Novos projetos continuam sendo desenvolvidos.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <button
-        class="botao"
-        onclick="abrirTela('inicio')"
-    >
-        ← VOLTAR
-    </button>
-
-</section>
-
-
-
-<!-- =========================
-     PESQUISA
-     ========================= -->
-
-<section id="pesquisa" class="tela">
-
-    <div class="caixa">
-
-        <h2>
-            PESQUISA & DESENVOLVIMENTO
-        </h2>
-
-        <p>
-            Nosso departamento de pesquisa trabalha
-            constantemente na exploração de novas
-            possibilidades científicas.
-        </p>
-
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="icone">
-                    🧫
-                </div>
-
-                <h3>
-                    BIOLOGIA
-                </h3>
-
-                <p>
-                    Estudos sobre organismos,
-                    adaptação e desenvolvimento.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icone">
-                    🖥️
-                </div>
-
-                <h3>
-                    SISTEMAS
-                </h3>
-
-                <p>
-                    Desenvolvimento de tecnologias
-                    e sistemas experimentais.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icone">
-                    📁
-                </div>
-
-                <h3>
-                    PROJETOS
-                </h3>
-
-                <p>
-                    Alguns projetos possuem
-                    acesso limitado.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="caixa">
-
-        <h2>
-            STATUS DO DEPARTAMENTO
-        </h2>
-
-        <div class="documento">
-
-            STATUS: ATIVO<br>
-            DEPARTAMENTO: PESQUISA<br>
-            AUTORIZAÇÃO: NECESSÁRIA<br>
-            ARQUIVOS DISPONÍVEIS: LIMITADOS<br>
-            <br>
-            ALGUNS REGISTROS FORAM REMOVIDOS.
-
-        </div>
-
-    </div>
-
-
-    <button
-        class="botao"
-        onclick="abrirTela('inicio')"
-    >
-        ← VOLTAR
-    </button>
-
-</section>
-
-
-
-<!-- =========================
-     PESSOAS
-     ========================= -->
-
-<section id="pessoas" class="tela">
-
-    <div class="caixa">
-
-        <h2>
-            QUEM SOMOS?
-        </h2>
-
-        <p>
-            A NewGenesis é formada por pessoas
-            dedicadas ao desenvolvimento de seus
-            principais projetos.
-        </p>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-
-                <div class="icone">
-                    👤
-                </div>
-
-                <h3>
-                    BENJAMIM CROSS
-                </h3>
-
-                <p>
-                    Diretor responsável pela administração
-                    e supervisão da organização.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icone">
-                    🔬
-                </div>
-
-                <h3>
-                    RICHARD MELO
-                </h3>
-
-                <p>
-                    Pesquisador associado ao departamento
-                    de desenvolvimento e pesquisa.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icone">
-                    📄
-                </div>
-
-                <h3>
-                    CARLOS DE SOUZA
-                </h3>
-
-                <p>
-                    Antigo integrante da NewGenesis Corporation.
-                    Carlos participou das atividades da organização
-                    durante seus primeiros anos de funcionamento.
-                </p>
-
-                <p>
-                    Seu registro permanece disponível para consulta.
-                </p>
-
-                <button
-                    class="botao"
-                    onclick="window.location.href='carlosdesouza.html'"
-                >
-                    CONSULTAR REGISTRO
-                </button>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <button
-        class="botao"
-        onclick="abrirTela('inicio')"
-    >
-        ← VOLTAR
-    </button>
-
-</section>
-
-
-
-<!-- =========================
-     CONTATO
-     ========================= -->
-
-<section id="contato" class="tela">
-
-    <div class="caixa">
-
-        <h2>
-            FALE CONOSCO!
-        </h2>
-
-        <p>
-            O departamento administrativo da
-            NewGenesis está disponível para informações
-            e esclarecimentos.
-        </p>
-
-
-        <div class="telefone">
-
-            📞
-                       <br>
-
-            DEPARTAMENTO ADMINISTRATIVO
-
-            <span class="numero">
-                5700-1358
-            </span>
-
-            <p>
-                Atendimento disponível diariamente.
+            <p class="frase-grande">
+                Aqui na NewGenesis, acreditamos
+                que o futuro pode começar hoje.
             </p>
 
-        </div>
+            <p>
+                Somos uma organização dedicada à ciência,
+                tecnologia e desenvolvimento de novas ideias
+                para um mundo em constante transformação.
+            </p>
 
-
-        <div class="alerta">
-
-            HORÁRIO DE ATENDIMENTO:
-            08:00 ATÉ 01:20
-
-        </div>
-
-    </div>
-
-
-    <button
-        class="botao"
-        onclick="abrirTela('inicio')"
-    >
-        ← VOLTAR
-    </button>
-
-</section>
-
-
-
-<!-- =========================
-     ARQUIVO SECRETO
-     ========================= -->
-
-<section id="arquivo" class="tela">
-
-    <div class="caixa">
-
-        <h2>
-            DOCUMENTAÇÃO INTERNA
-        </h2>
-
-        <p>
-            Esta área não está disponível através
-            da navegação pública da NewGenesis.
-        </p>
-
-        <div class="documento">
-
-            ARQUIVO: NG-1983-001<br>
-
-            STATUS: CONFIDENCIAL<br>
-
-            ACESSO: AUTORIZADO<br>
-
-            DEPARTAMENTO: ADMINISTRAÇÃO<br>
-
-            <br>
-
-            REGISTROS INTERNOS DISPONÍVEIS.
+            <button
+                class="botao"
+                onclick="abrirTela('empresa')"
+            >
+                CONHEÇA A NEWGENESIS
+            </button>
 
         </div>
 
-    </div>
-
-
-    <div class="caixa">
-
-        <h2>
-            PROJETO VANTA 13
-        </h2>
-
-        <p>
-            Um projeto associado ao departamento
-            de pesquisa da NewGenesis Corporation.
-        </p>
-
-        <div class="documento">
-
-            ARQUIVO: NG-V13-001<br>
-
-            STATUS: CONFIDENCIAL<br>
-
-            CLASSIFICAÇÃO: RESTRITA<br>
-
-            DEPARTAMENTO: PESQUISA
-
+        <div class="sol">
+            🔬
         </div>
-
-        <br>
-
-        <button
-            class="botao"
-            onclick="window.location.href='vanta13.html'"
-        >
-            CONSULTAR ARQUIVO
-        </button>
-
-    </div>
-
-
-    <button
-        class="botao"
-        onclick="abrirTela('inicio')"
-    >
-        ← VOLTAR
-    </button>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =========================
-     RODAPÉ
-     ========================= -->
-
-<footer>
-
-    NEWGENESIS CORPORATION © 1983
-
-    <br><br>
-
-    CIÊNCIA • DESENVOLVIMENTO • FUTURO
-
-</footer>
-
-
-
-<!-- =========================
-     EVENTO CORROMPIDO
-     ========================= -->
-
-<div class="corrompido">
-
-    <div class="palavra p1">
-        MICHAEL
-    </div>
-
-    <div class="palavra p2">
-        VANTA 13
-    </div>
-
-    <div class="palavra p3">
-        CARLOS
-    </div>
-
-    <div class="palavra p4">
-        FRACASSO
-    </div>
-
-    <div class="palavra p5">
-        NÃO OLHE
-    </div>
-
-    <div class="palavra p6">
-        ELE ESTÁ AQUI
-    </div>
-
-    <div class="palavra p7">
-        NEWGENESIS
-    </div>
-
-
-    <div class="mensagem-central">
-
-        <h2>
-            Você veio pra investigar?
-        </h2>
-
-        <p>
-            Oh oh oh meu pequeno...
-        </p>
-
-        <span class="grande">
-            EU AINDA ESTOU AQUI
-        </span>
 
     </div>
 
 </div>
 
 
+<div class="banner">
 
-<!-- =========================
-     JAVASCRIPT
-     ========================= -->
+    <h3>UM NOVO AMANHÃ COMEÇA HOJE!</h3>
 
-<script>
+    <p>
+        Descobrir • Criar • Desenvolver
+    </p>
+
+</div>
 
 
-/* =========================
-   TROCAR TELAS
-   ========================= */
+<div class="caixa">
+
+    <h2>O QUE FAZEMOS?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icone">🧬</div>
+
+            <h3>CIÊNCIA</h3>
+
+            <p>
+                Investigamos novas possibilidades
+                e caminhos para o conhecimento.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">⚙️</div>
+
+            <h3>TECNOLOGIA</h3>
+
+            <p>
+                Criamos soluções para acompanhar
+                as necessidades do futuro.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🌱</div>
+
+            <h3>DESENVOLVIMENTO</h3>
+
+            <p>
+                Transformamos descobertas em
+                novas oportunidades.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SEGREDO DA CHAMADA -->
+
+<div class="pista">
+
+    <button onclick="window.location.href='chamada.html'">
+        eu te odeio.
+    </button>
+
+</div>
+
+</section><!-- EMPRESA --><section id="empresa" class="tela"><div class="caixa">
+
+    <h2>SOBRE A NEWGENESIS</h2>
+
+    <p>
+        Fundada em 1983, a NewGenesis Corporation
+        nasceu com o objetivo de ajudar a construir
+        um futuro melhor.
+    </p>
+
+    <p>
+        Reunimos pesquisadores, cientistas,
+        desenvolvedores e profissionais dedicados
+        a transformar ideias em realidade.
+    </p>
+
+    <div class="alerta">
+
+        NOSSA MISSÃO:
+        criar hoje aquilo que será necessário amanhã.
+
+    </div>
+
+</div>
+
+
+<div class="caixa">
+
+    <h2>NOSSA HISTÓRIA</h2>
+
+    <div class="linha">
+
+        <div class="marco">
+
+            <div class="ano">1983</div>
+
+            <p>
+                Fundação da NewGenesis Corporation.
+            </p>
+
+        </div>
+
+
+        <div class="marco">
+
+            <div class="ano">PESQUISA</div>
+
+            <p>
+                Expansão dos departamentos científicos.
+            </p>
+
+        </div>
+
+
+        <div class="marco">
+
+            <div class="ano">FUTURO</div>
+
+            <p>
+                Novos projetos continuam sendo desenvolvidos.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<button
+    class="botao"
+    onclick="abrirTela('inicio')"
+>
+    ← VOLTAR
+</button>
+
+</section><!-- PESQUISA --><section id="pesquisa" class="tela"><div class="caixa">
+
+    <h2>PESQUISA & DESENVOLVIMENTO</h2>
+
+    <p>
+        Nosso departamento de pesquisa trabalha
+        constantemente na exploração de novas
+        possibilidades científicas.
+    </p>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icone">🧫</div>
+
+            <h3>BIOLOGIA</h3>
+
+            <p>
+                Estudos sobre organismos,
+                adaptação e desenvolvimento.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🖥️</div>
+
+            <h3>SISTEMAS</h3>
+
+            <p>
+                Desenvolvimento de tecnologias
+                e sistemas experimentais.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">📁</div>
+
+            <h3>PROJETOS</h3>
+
+            <p>
+                Alguns projetos possuem
+                acesso limitado.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="caixa">
+
+    <h2>STATUS DO DEPARTAMENTO</h2>
+
+    <div class="documento">
+
+        STATUS: ATIVO<br>
+        DEPARTAMENTO: PESQUISA<br>
+        AUTORIZAÇÃO: NECESSÁRIA<br>
+        ARQUIVOS DISPONÍVEIS: LIMITADOS<br>
+
+        <br>
+
+        ALGUNS REGISTROS FORAM REMOVIDOS.
+
+    </div>
+
+</div>
+
+
+<button
+    class="botao"
+    onclick="abrirTela('inicio')"
+>
+    ← VOLTAR
+</button>
+
+</section><!-- PESSOAS --><section id="pessoas" class="tela"><div class="caixa">
+
+    <h2>QUEM SOMOS?</h2>
+
+    <p>
+        A NewGenesis é formada por pessoas
+        dedicadas ao desenvolvimento de seus
+        principais projetos.
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icone">👤</div>
+
+            <h3>BENJAMIM CROSS</h3>
+
+            <p>
+                Diretor responsável pela administração
+                e supervisão da organização.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🔬</div>
+
+            <h3>RICHARD MELO</h3>
+
+            <p>
+                Pesquisador associado ao departamento
+                de desenvolvimento e pesquisa.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">📄</div>
+
+            <h3>
+                <a
+                    href="carlosdesouza.html"
+                    class="link-carlos"
+                >
+                    CARLOS DE SOUZA
+                </a>
+            </h3>
+
+            <p>
+                Antigo integrante da NewGenesis Corporation.
+                Carlos participou das atividades da organização
+                durante seus primeiros anos de funcionamento.
+            </p>
+
+            <p>
+                Seu registro permanece disponível para consulta.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<button
+    class="botao"
+    onclick="abrirTela('inicio')"
+>
+    ← VOLTAR
+</button>
+
+</section><!-- CONTATO --><section id="contato" class="tela"><div class="caixa">
+
+    <h2>FALE CONOSCO!</h2>
+
+    <p>
+        O departamento administrativo da
+        NewGenesis está disponível para informações
+        e esclarecimentos.
+    </p>
+
+
+    <div class="telefone">
+
+        📞
+
+        <br><br>
+
+        DEPARTAMENTO ADMINISTRATIVO
+
+        <span class="numero">
+            5700-1358
+        </span>
+
+        <p>
+            Atendimento disponível diariamente.
+        </p>
+
+    </div>
+
+
+    <div class="alerta">
+
+        HORÁRIO DE ATENDIMENTO:
+        08:00 ATÉ 01:20
+
+    </div>
+
+</div>
+
+
+<button
+    class="botao"
+    onclick="abrirTela('inicio')"
+>
+    ← VOLTAR
+</button>
+
+</section><!-- ARQUIVO INTERNO --><section id="arquivo" class="tela"><div class="caixa">
+
+    <h2>DOCUMENTAÇÃO INTERNA</h2>
+
+    <p>
+        Esta área não está disponível através
+        da navegação pública da NewGenesis.
+    </p>
+
+    <div class="documento">
+
+        ARQUIVO: NG-1983-001<br>
+        STATUS: CONFIDENCIAL<br>
+        ACESSO: AUTORIZADO<br>
+        DEPARTAMENTO: ADMINISTRAÇÃO<br>
+
+        <br>
+
+        REGISTROS INTERNOS DISPONÍVEIS.
+
+    </div>
+
+</div>
+
+
+<div class="caixa">
+
+    <h2>PROJETO VANTA 13</h2>
+
+    <p>
+        Um projeto associado ao departamento
+        de pesquisa da NewGenesis Corporation.
+    </p>
+
+    <div class="documento">
+
+        ARQUIVO: NG-V13-001<br>
+        STATUS: CONFIDENCIAL<br>
+        CLASSIFICAÇÃO: RESTRITA<br>
+        DEPARTAMENTO: PESQUISA
+
+    </div>
+
+    <br>
+
+    <button
+        class="botao"
+        onclick="window.location.href='vanta13.html'"
+    >
+        CONSULTAR ARQUIVO
+    </button>
+
+</div>
+
+
+<button
+    class="botao"
+    onclick="abrirTela('inicio')"
+>
+    ← VOLTAR
+</button>
+
+</section></main><footer>NEWGENESIS CORPORATION © 1983
+
+<br><br>
+
+CIÊNCIA • DESENVOLVIMENTO • FUTURO
+
+</footer><!-- EVENTO CORROMPIDO --><div class="corrompido"><div class="palavra p1">MICHAEL</div>
+<div class="palavra p2">VANTA 13</div>
+<div class="palavra p3">CARLOS</div>
+<div class="palavra p4">FRACASSO</div>
+<div class="palavra p5">NÃO OLHE</div>
+<div class="palavra p6">ELE ESTÁ AQUI</div>
+<div class="palavra p7">NEWGENESIS</div>
+
+
+<div class="mensagem-central">
+
+    <h2>
+        Você veio pra investigar?
+    </h2>
+
+    <p>
+        Oh oh oh meu pequeno...
+    </p>
+
+    <span class="grande">
+        EU AINDA ESTOU AQUI
+    </span>
+
+</div>
+
+</div><script>
+
+
+/* TROCAR TELAS */
 
 function abrirTela(id){
 
     const telas =
         document.querySelectorAll(".tela");
 
-
     telas.forEach(function(tela){
 
         tela.classList.remove("ativa");
 
-    });
+    })
 
-
-    const tela =
+       const telaSelecionada =
         document.getElementById(id);
 
+    if(telaSelecionada){
 
-    if(tela){
-
-        tela.classList.add("ativa");
+        telaSelecionada.classList.add("ativa");
 
         window.scrollTo({
             top:0,
@@ -1574,56 +1371,55 @@ function abrirTela(id){
 }
 
 
-
 /* =========================
    SEGREDO DA LOGO
-   5 CLIQUES → 3.HTML
+   5 CLIQUES = VAI PARA 3.HTML
    ========================= */
 
 let cliquesLogo = 0;
 
-let tempoLogo;
+let tempoClique;
 
 
 function segredoLogo(){
 
     cliquesLogo++;
 
-
-    clearTimeout(tempoLogo);
-
-
-    tempoLogo = setTimeout(function(){
-
-        cliquesLogo = 0;
-
-    },3000);
+    clearTimeout(tempoClique);
 
 
-    if(cliquesLogo >= 5){
+    /* Se clicar 5 vezes */
+
+    if(cliquesLogo === 5){
 
         window.location.href = "3.html";
 
     }
 
-}
 
+    /* Reseta os cliques depois de 2 segundos */
+
+    tempoClique = setTimeout(function(){
+
+        cliquesLogo = 0;
+
+    },2000);
+
+}
 
 
 /* =========================
    EVENTO NOTURNO
-   01:20 ATÉ 01:32
+   01:20 ATÉ 01:31
    ========================= */
 
 function verificarHorario(){
 
     const agora = new Date();
 
-    const hora =
-        agora.getHours();
+    const hora = agora.getHours();
 
-    const minuto =
-        agora.getMinutes();
+    const minuto = agora.getMinutes();
 
 
     const dentroDoEvento =
@@ -1654,14 +1450,12 @@ function verificarHorario(){
 }
 
 
-
-/* VERIFICA AO ABRIR */
+/* Verifica imediatamente */
 
 verificarHorario();
 
 
-
-/* VERIFICA CONSTANTEMENTE */
+/* Verifica novamente a cada segundo */
 
 setInterval(
     verificarHorario,
@@ -1670,7 +1464,6 @@ setInterval(
 
 
 </script>
-
 
 </body>
 </html>
