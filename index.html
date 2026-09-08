@@ -1376,36 +1376,524 @@ function abrirTela(id){
    5 CLIQUES = VAI PARA 3.HTML
    ========================= */
 
+/* =========================
+   SEGREDO DOS 5 CLIQUES
+   ========================= */
+
 let cliquesLogo = 0;
-
-let tempoClique;
-
+let segredoAtivado = false;
 
 function segredoLogo(){
 
+    if(segredoAtivado) return;
+
     cliquesLogo++;
-
-    clearTimeout(tempoClique);
-
-
-    /* Se clicar 5 vezes */
 
     if(cliquesLogo === 5){
 
-        window.location.href = "3.html";
+        segredoAtivado = true;
+
+        iniciarSistemaSecreto();
+
+    }
+
+}
+
+
+/* =========================
+   SISTEMA SECRETO
+   ========================= */
+
+function iniciarSistemaSecreto(){
+
+    document.body.innerHTML = `
+
+        <div id="sistema-secreto">
+
+            <div id="terminal">
+
+                <div class="titulo-terminal">
+                    NEWGENESIS CORPORATION
+                    <br>
+                    SISTEMA INTERNO
+                </div>
+
+                <div class="linha-terminal"></div>
+
+                <div id="mensagem-terminal"></div>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    adicionarEstiloSistema();
+
+
+    const mensagem =
+        document.getElementById("mensagem-terminal");
+
+
+    mensagem.innerText =
+        "ACESSO DETECTADO.";
+
+
+    setTimeout(function(){
+
+        mensagem.innerText =
+            "VOCÊ NÃO ESTÁ REGISTRADO.";
+
+    }, 1800);
+
+
+    setTimeout(function(){
+
+        mensagem.innerText =
+            "...\n\nMAS ALGUÉM JÁ ESTEVE AQUI.";
+
+    }, 4000);
+
+
+    setTimeout(function(){
+
+        mensagem.innerHTML = `
+
+            <p>
+                VERIFICAR REGISTRO
+            </p>
+
+            <button
+                class="botao-terminal"
+                onclick="verificarRegistro()"
+            >
+                VERIFICAR
+            </button>
+
+        `;
+
+    }, 6500);
+
+}
+
+
+/* =========================
+   ESTILO DO SISTEMA
+   ========================= */
+
+function adicionarEstiloSistema(){
+
+    const estilo =
+        document.createElement("style");
+
+
+    estilo.innerHTML = `
+
+        #sistema-secreto{
+
+            position:fixed;
+
+            inset:0;
+
+            z-index:999999;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            background:#050505;
+
+            color:#d8ffd8;
+
+            font-family:monospace;
+
+        }
+
+
+        #terminal{
+
+            width:min(90%,700px);
+
+            min-height:300px;
+
+            padding:30px;
+
+            border:2px solid #4caf50;
+
+            background:#071007;
+
+            box-shadow:
+                0 0 30px
+                rgba(76,175,80,.25);
+
+            font-size:
+                clamp(14px,3vw,20px);
+
+        }
+
+
+        .titulo-terminal{
+
+            text-align:center;
+
+            font-weight:bold;
+
+            letter-spacing:2px;
+
+            line-height:1.6;
+
+        }
+
+
+        .linha-terminal{
+
+            width:100%;
+
+            height:1px;
+
+            background:#4caf50;
+
+            margin:25px 0;
+
+        }
+
+
+        #mensagem-terminal{
+
+            min-height:150px;
+
+            white-space:pre-line;
+
+            line-height:1.8;
+
+        }
+
+
+        .botao-terminal{
+
+            margin-top:20px;
+
+            padding:12px 20px;
+
+            background:#071007;
+
+            color:#d8ffd8;
+
+            border:2px solid #4caf50;
+
+            font-family:monospace;
+
+            font-weight:bold;
+
+            cursor:pointer;
+
+        }
+
+
+        .botao-terminal:hover{
+
+            background:#4caf50;
+
+            color:#000;
+
+        }
+
+
+        /* MODO VANTA 13 */
+
+        #sistema-secreto.vermelho{
+
+            background:#160000;
+
+            animation:
+                tremerTela .12s infinite;
+
+        }
+
+
+        #sistema-secreto.vermelho #terminal{
+
+            background:#100000;
+
+            border-color:#ff2222;
+
+            color:#ff3333;
+
+            box-shadow:
+                0 0 45px
+                rgba(255,0,0,.7);
+
+        }
+
+
+        #sistema-secreto.vermelho .linha-terminal{
+
+            background:#ff2222;
+
+        }
+
+
+        .frase-vanta{
+
+            width:100%;
+
+            text-align:center;
+
+            font-size:
+                clamp(18px,4vw,32px);
+
+            font-weight:bold;
+
+            animation:
+                aparecerFrase .4s ease;
+
+        }
+
+
+        @keyframes tremerTela{
+
+            0%{
+
+                transform:
+                    translate(0,0);
+
+            }
+
+            25%{
+
+                transform:
+                    translate(4px,-3px);
+
+            }
+
+            50%{
+
+                transform:
+                    translate(-4px,3px);
+
+            }
+
+            75%{
+
+                transform:
+                    translate(3px,4px);
+
+            }
+
+            100%{
+
+                transform:
+                    translate(0,0);
+
+            }
+
+        }
+
+
+        @keyframes aparecerFrase{
+
+            from{
+
+                opacity:0;
+
+                transform:
+                    scale(.9);
+
+            }
+
+            to{
+
+                opacity:1;
+
+                transform:
+                    scale(1);
+
+            }
+
+        }
+
+    `;
+
+
+    document.head.appendChild(estilo);
+
+}
+
+
+/* =========================
+   VERIFICAR REGISTRO
+   ========================= */
+
+function verificarRegistro(){
+
+    const mensagem =
+        document.getElementById(
+            "mensagem-terminal"
+        );
+
+
+    mensagem.innerHTML = `
+
+        REGISTROS ENCONTRADOS.
+
+        <br><br>
+
+        BENJAMIM CROSS ........ ATIVO
+
+        <br>
+
+        RICHARD MELO .......... ATIVO
+
+        <br>
+
+        <span id="status-carlos">
+
+            CARLOS DE SOUZA ..... REMOVIDO
+
+        </span>
+
+    `;
+
+
+    setTimeout(function(){
+
+        document.getElementById(
+            "status-carlos"
+        ).innerText =
+            "CARLOS DE SOUZA ..... ARQUIVADO";
+
+    }, 2000);
+
+
+    setTimeout(function(){
+
+        document.getElementById(
+            "status-carlos"
+        ).innerText =
+            "CARLOS DE SOUZA ..... NÃO LOCALIZADO";
+
+    }, 4000);
+
+
+    setTimeout(function(){
+
+        document.getElementById(
+            "status-carlos"
+        ).innerText =
+            "CARLOS DE SOUZA ..... ...";
+
+    }, 6000);
+
+
+    setTimeout(function(){
+
+        document.getElementById(
+            "status-carlos"
+        ).innerText =
+            "CARLOS DE SOUZA ..... AINDA AQUI";
+
+    }, 8000);
+
+
+    setTimeout(function(){
+
+        iniciarVanta13();
+
+    }, 10500);
+
+}
+
+
+/* =========================
+   MENSAGENS DO VANTA 13
+   ========================= */
+
+function iniciarVanta13(){
+
+    const sistema =
+        document.getElementById(
+            "sistema-secreto"
+        );
+
+
+    const mensagem =
+        document.getElementById(
+            "mensagem-terminal"
+        );
+
+
+    sistema.classList.add(
+        "vermelho"
+    );
+
+
+    const frases = [
+
+        "CURIOSO.",
+
+        "SEMPRE UM CURIOSO.",
+
+        "MAIS NADA ESCAPA DO VANTA 13.",
+
+        "NADA ESCAPA DE MIM.",
+
+        "ARTHUR, MICHAEL, NEM ELES ESCAPARAM.",
+
+        "LOGO VOCÊ VAI ESCAPAR?",
+
+        "você é que nem o carlos."
+
+    ];
+
+
+    let fraseAtual = 0;
+
+
+    function mostrarFrase(){
+
+        if(fraseAtual < frases.length){
+
+            mensagem.innerHTML = `
+
+                <div class="frase-vanta">
+
+                    ${frases[fraseAtual]}
+
+                </div>
+
+            `;
+
+
+            fraseAtual++;
+
+
+            setTimeout(
+                mostrarFrase,
+                2300
+            );
+
+        }
+
+        else{
+
+            setTimeout(function(){
+
+                window.location.href =
+                    "3.html";
+
+            }, 2500);
+
+        }
 
     }
 
 
-    /* Reseta os cliques depois de 2 segundos */
+    mostrarFrase();
 
-    tempoClique = setTimeout(function(){
-
-        cliquesLogo = 0;
-
-    },2000);
-
-}
+   }
 
 
 /* =========================
