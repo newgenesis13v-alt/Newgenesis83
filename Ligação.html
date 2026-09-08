@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NewGenesis</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #050505;
+        min-height: 100vh;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: "Courier New", monospace;
+        color: white;
+    }
+
+    /* Pequeno ruído visual */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+
+        background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.02) 0px,
+            rgba(255,255,255,0.02) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .container {
+        text-align: center;
+        position: relative;
+    }
+
+    /* TELEFONE */
+
+    .telefone {
+        width: 220px;
+        height: 170px;
+
+        position: relative;
+        margin: auto;
+
+        cursor: pointer;
+
+        transition: transform 0.2s;
+    }
+
+    .telefone:hover {
+        transform: scale(1.03);
+    }
+
+    /* Corpo do telefone */
+
+    .base {
+        width: 220px;
+        height: 120px;
+
+        background: #8f0000;
+
+        border-radius: 40px 40px 15px 15px;
+
+        position: absolute;
+        bottom: 0;
+
+        box-shadow:
+        0 15px 25px rgba(0,0,0,0.8),
+        inset 0 -10px 0 rgba(0,0,0,0.2);
+    }
+
+    /* Disco */
+
+    .disco {
+        width: 75px;
+        height: 75px;
+
+        border-radius: 50%;
+
+        background: #1a1a1a;
+
+        border: 7px solid #5a0000;
+
+        position: absolute;
+
+        left: 50%;
+        top: 35px;
+
+        transform: translateX(-50%);
+
+        box-shadow: inset 0 0 10px black;
+    }
+
+    /* Fone */
+
+    .fone {
+        width: 180px;
+        height: 50px;
+
+        background: #b00000;
+
+        border-radius: 30px;
+
+        position: absolute;
+
+        left: 50%;
+        top: 0;
+
+        transform: translateX(-50%);
+
+        box-shadow:
+        0 8px 10px rgba(0,0,0,0.7),
+        inset 0 -7px rgba(0,0,0,0.2);
+    }
+
+    .fone::before,
+    .fone::after {
+        content: "";
+
+        width: 45px;
+        height: 65px;
+
+        background: #920000;
+
+        position: absolute;
+
+        top: -8px;
+
+        border-radius: 15px;
+    }
+
+    .fone::before {
+        left: 0;
+    }
+
+    .fone::after {
+        right: 0;
+    }
+
+    /* ANIMAÇÃO QUANDO TOCA */
+
+    .tocando {
+        animation: tocar 0.12s infinite alternate;
+    }
+
+    @keyframes tocar {
+        from {
+            transform: rotate(-4deg);
+        }
+
+        to {
+            transform: rotate(4deg);
+        }
+    }
+
+    /* TEXTO */
+
+    #dialogo {
+        margin-top: 50px;
+
+        width: 500px;
+        max-width: 85vw;
+
+        line-height: 1.7;
+
+        font-size: 18px;
+
+        opacity: 0;
+
+        transition: opacity 2s;
+
+        min-height: 80px;
+    }
+
+    #fraseFinal {
+        margin-top: 30px;
+
+        font-size: 17px;
+
+        color: #aaa;
+
+        opacity: 0;
+
+        transition: opacity 3s;
+    }
+
+    .mostrar {
+        opacity: 1 !important;
+    }
+
+    /* Tela inicial */
+
+    #aviso {
+        position: fixed;
+
+        bottom: 40px;
+
+        color: #555;
+
+        font-size: 13px;
+
+        letter-spacing: 2px;
+
+        opacity: 0;
+
+        transition: opacity 2s;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TELEFONE -->
+
+    <div class="telefone" id="telefone">
+
+        <div class="fone"></div>
+
+        <div class="base"></div>
+
+        <div class="disco"></div>
+
+    </div>
+
+
+    <!-- DIÁLOGO -->
+
+    <div id="dialogo">
+
+        "Alô? Alô? Carlos? Por favor... meu amor, volte pra mim... Eu sinto sua falta..."
+
+    </div>
+
+
+    <!-- FRASE FINAL -->
+
+    <div id="fraseFinal">
+
+        Mas ele nunca ouviu essa ligação.
+
+    </div>
+
+</div>
+
+
+<div id="aviso">
+
+    VOCÊ VAI ATENDER?
+
+</div>
+
+
+<!-- ÁUDIO DA LIGAÇÃO -->
+
+<audio id="toque" loop>
+
+    <!-- COLOQUE UM ARQUIVO CHAMADO toque.mp3 -->
+    <source src="toque.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<audio id="voz">
+
+    <!-- COLOQUE UM ARQUIVO CHAMADO ligacao.mp3 -->
+    <source src="ligacao.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<script>
+
+const telefone = document.getElementById("telefone");
+
+const toque = document.getElementById("toque");
+
+const voz = document.getElementById("voz");
+
+const dialogo = document.getElementById("dialogo");
+
+const fraseFinal = document.getElementById("fraseFinal");
+
+const aviso = document.getElementById("aviso");
+
+
+let tocando = false;
+
+let atendeu = false;
+
+
+/* DEPOIS DE ALGUNS SEGUNDOS O TELEFONE COMEÇA */
+
+setTimeout(() => {
+
+    if (atendeu) return;
+
+    tocando = true;
+
+    telefone.classList.add("tocando");
+
+    aviso.classList.add("mostrar");
+
+    toque.play().catch(() => {
+
+        console.log("O navegador bloqueou o áudio automático.");
+
+    });
+
+}, 5000);
+
+
+/* ATENDER */
+
+telefone.addEventListener("click", () => {
+
+    if (!tocando || atendeu) return;
+
+    atendeu = true;
+
+    tocando = false;
+
+
+    /* PARA O TOQUE */
+
+    toque.pause();
+
+    toque.currentTime = 0;
+
+
+    telefone.classList.remove("tocando");
+
+    aviso.classList.remove("mostrar");
+
+
+    /* MOSTRA O DIÁLOGO */
+
+    setTimeout(() => {
+
+        dialogo.classList.add("mostrar");
+
+        /* TOCA O ÁUDIO DA VOZ */
+
+        voz.play().catch(() => {
+
+            console.log("Não foi possível tocar o áudio.");
+
+        });
+
+    }, 500);
+
+
+    /* FRASE FINAL */
+
+    setTimeout(() => {
+
+        fraseFinal.classList.add("mostrar");
+
+    }, 7500);
+
+});
+
+</script>
+
+</body>
+</html>
