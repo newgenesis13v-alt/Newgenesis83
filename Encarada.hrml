@@ -1,0 +1,373 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title></title><style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#000;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* =========================
+   OLHO
+   ========================= */
+
+.olho{
+
+    position:relative;
+
+    width:min(75vw,800px);
+    height:min(38vw,400px);
+
+    background:#eee8dc;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 0 35px rgba(255,255,255,.08),
+        0 0 100px rgba(150,0,0,.08);
+
+    animation:
+        piscar 8s infinite,
+        respirar 5s ease-in-out infinite;
+
+}
+
+
+/* =========================
+   ÍRIS
+   ========================= */
+
+.iris{
+
+    position:absolute;
+
+    width:43%;
+    aspect-ratio:1;
+
+    top:50%;
+    left:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+
+            #000 0%,
+            #000 18%,
+
+            #2a0808 20%,
+            #6e1010 42%,
+
+            #260404 70%,
+
+            #000 100%
+
+        );
+
+    box-shadow:
+
+        inset 0 0 30px #000,
+
+        0 0 25px rgba(120,0,0,.45);
+
+    animation:
+        olhar 7s ease-in-out infinite;
+
+}
+
+
+/* =========================
+   PUPILA
+   ========================= */
+
+.pupila{
+
+    position:absolute;
+
+    width:30%;
+    height:72%;
+
+    top:50%;
+    left:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    background:#000;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 20px #000;
+
+}
+
+
+/* =========================
+   BRILHO
+   ========================= */
+
+.brilho{
+
+    position:absolute;
+
+    width:18%;
+    aspect-ratio:1;
+
+    top:22%;
+    left:24%;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.75);
+
+    filter:
+        blur(2px);
+
+    opacity:.7;
+
+}
+
+
+/* =========================
+   VINHETA
+   ========================= */
+
+.vinheta{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+
+            transparent 15%,
+
+            rgba(0,0,0,.25) 55%,
+
+            rgba(0,0,0,.92) 100%
+
+        );
+
+}
+
+
+/* =========================
+   ESTÁTICA
+   ========================= */
+
+.estatica{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.06;
+
+    background:
+
+        repeating-linear-gradient(
+
+            0deg,
+
+            transparent 0px,
+            transparent 3px,
+
+            white 4px,
+
+            transparent 5px
+
+        );
+
+    animation:
+        estatica .12s infinite;
+
+}
+
+
+/* =========================
+   ANIMAÇÕES
+   ========================= */
+
+
+/* MOVIMENTO DO OLHAR */
+
+@keyframes olhar{
+
+    0%,
+    100%{
+
+        transform:
+            translate(-50%,-50%);
+
+    }
+
+    20%{
+
+        transform:
+            translate(-60%,-54%);
+
+    }
+
+    40%{
+
+        transform:
+            translate(-43%,-48%);
+
+    }
+
+    60%{
+
+        transform:
+            translate(-55%,-44%);
+
+    }
+
+    80%{
+
+        transform:
+            translate(-47%,-56%);
+
+    }
+
+}
+
+
+/* PISCAR */
+
+@keyframes piscar{
+
+    0%,
+    43%,
+    47%,
+    100%{
+
+        transform:
+            scaleY(1);
+
+    }
+
+    44%{
+
+        transform:
+            scaleY(.02);
+
+    }
+
+    45%{
+
+        transform:
+            scaleY(.01);
+
+    }
+
+    46%{
+
+        transform:
+            scaleY(.5);
+
+    }
+
+}
+
+
+/* RESPIRAÇÃO */
+
+@keyframes respirar{
+
+    0%,
+    100%{
+
+        filter:
+            brightness(1);
+
+    }
+
+    50%{
+
+        filter:
+            brightness(.82);
+
+    }
+
+}
+
+
+/* ESTÁTICA */
+
+@keyframes estatica{
+
+    0%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(6px);
+
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media(max-width:700px){
+
+    .olho{
+
+        width:92vw;
+        height:46vw;
+
+    }
+
+}
+
+</style></head><body><!-- OLHO --><div class="olho"><div class="iris">
+
+    <div class="pupila"></div>
+
+    <div class="brilho"></div>
+
+</div>
+
+</div><!-- EFEITOS --><div class="vinheta"></div><div class="estatica"></div></body>
+</html>
